@@ -1,0 +1,41 @@
+body{
+    flex-direction: column;
+    background-color: #f4f4f4;
+    display: flex;
+    height: 100vh;
+    justify-content: space-between;
+    font-family: 'Graphic';
+
+}
+.header{
+    border-collapse: collapse;
+    border-spacing: 30px;
+    background-color: #1f1f1f;
+    color: #A5A5A5;
+    text-align: center;
+    vertical-align: middle;
+    flex-direction: row;
+}
+
+.kinoHead{
+color: white;
+}
+@font-face {
+    font-family: Graphic;
+    src: url(./public/fonts/GraphikLCG-Bold.ttf);
+}
+
+input{
+    background-color: #3e3e3e;
+    border-radius: 5px;
+    width: 100px;
+}
+
+.plus{
+    color:white;
+width: 300%;
+}
+
+.plustxt{
+    width: 300%;
+}
