@@ -44,9 +44,11 @@ input {
 /* dcjknskdnc */
 .plus {
     color: white;
-    width: 300%;
+    width: 50%;
     background: linear-gradient(150deg, blue, blue, violet, orange);
-    border-radius: 5px;
+    border-radius: 40%;
+    
+    
 }
 
 .plustxt {
@@ -57,12 +59,21 @@ input {
     border-collapse: collapse;
     margin: auto;
     height: 20px;
-    text-align: ;
+    text-align:right ;
     width: 30px;
     margin-top: 10px;
     margin-bottom: 10px;
+    width: 40px;
 }
-
+.avatar{
+    border-radius: 50%;
+}
+.avatarRound{
+    border-radius: 50%;
+}
+.mark{
+    text-align: right;
+}
 /* .headRow{
     flex-direction: row;
 } /*   flex-direction: row;
@@ -85,13 +96,20 @@ input{
     margin-top: 5%;
     border-right: 1px solid gray;
     width: 20%;
-    color: #a5a5a5;
+    color: white;
     font-family: "GraphicItal";
     
     
     
 }
+.leftMenu{
+    filter:brightness(50%)
+}
 
 .space{
     height: 100%;
+}
+.glav{
+    color: black;
+    filter: brightness(0%);
 }
