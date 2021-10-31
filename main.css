@@ -1,50 +1,66 @@
-body{
+body {
     flex-direction: column;
     background-color: #f4f4f4;
     display: flex;
     height: 100vh;
-    justify-content: space-between;
-    font-family: 'Graphic';
+    /* justify-content: space-between; */
+    
+    margin:0%
+    
 
 }
-.header{
+
+.header {
     border-collapse: collapse;
-    border-spacing: 30px;
+    border-spacing: 50px;
     background-color: #1f1f1f;
     color: #A5A5A5;
     text-align: center;
     vertical-align: middle;
+    margin: 0%;
+    font-family: 'Graphic';
 
 }
 
-.kinoHead{
-color: white;
+.kinoHead {
+    color: white;
 }
+
 @font-face {
     font-family: Graphic;
     src: url(./public/fonts/GraphikLCG-Bold.ttf);
 }
+@font-face {
+    font-family: "graphicItal";
+    src: url(./public/fonts/GraphikLCG-SemiboldItalic.ttf);
+}
 
-input{
+input {
     background-color: #3e3e3e;
     border-radius: 5px;
     width: 100px;
 }
+
 /* dcjknskdnc */
-.plus{
-    color:white;
-width: 300%;
-background: linear-gradient(150deg, blue,blue,violet, orange);
-border-radius: 5px;
+.plus {
+    color: white;
+    width: 300%;
+    background: linear-gradient(150deg, blue, blue, violet, orange);
+    border-radius: 5px;
 }
 
-.plustxt{
+.plustxt {
     width: 300%;
 }
 
-.headPlus{
+.headPlus {
     border-collapse: collapse;
     margin: auto;
+    height: 20px;
+    text-align: ;
+    width: 30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 /* .headRow{
@@ -52,3 +68,30 @@ border-radius: 5px;
 } /*   flex-direction: row;
     width: 100;
 } */
+
+td {
+    vertical-align: center;
+}
+
+input{
+    background-color: #fff;
+    size: 200px;
+
+}
+
+.leftMenu{
+    border-collapse: collapse;
+    margin-left: 5%;
+    margin-top: 5%;
+    border-right: 1px solid gray;
+    width: 20%;
+    color: #a5a5a5;
+    font-family: "GraphicItal";
+    
+    
+    
+}
+
+.space{
+    height: 100%;
+}
