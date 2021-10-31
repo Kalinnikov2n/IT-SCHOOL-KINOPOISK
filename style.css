@@ -7,6 +7,10 @@
   text-decoration: none;
 }
 
+*:focus {
+  outline: none;
+}
+
 /* Убираем внутренние отступы */
 ul[class],
 ol[class] {
@@ -130,12 +134,12 @@ header {
     content: "";
     width: 25px;
     margin-right: 10px;
-    background: url(src/play-btn-passive.svg);
+    background: url(src/play-btn-passive.svg) no-repeat;
     transition: 100ms;
 }
 
 .menu-item:first-child:hover::before{
-    background: url(src/play-btn.svg);
+    background: url(src/play-btn.svg) no-repeat;
     transition: 100ms;
     cursor: pointer;
 }
@@ -144,12 +148,12 @@ header {
     content: "";
     width: 25px;
     margin-right: 10px;
-    background: url(src/tv-btn-passive.svg);
+    background: url(src/tv-btn-passive.svg) no-repeat;
     transition: 100ms;
 }
 
 .menu-item:last-child:hover::before{
-    background: url(src/tv-btn.svg);
+    background: url(src/tv-btn.svg) no-repeat;
     transition: 100ms;
     cursor: pointer;
 }
@@ -160,5 +164,89 @@ header {
     transition: 100ms;
 }
 
+.search-bar input {
+  background-color: #414141;
+  color: black;
+  width: 340px;
+  height: 33px;
+  border-width:0px;
+  border:none;
+  padding: 10px 17px;
+  border-radius: 3px;
+  transition: all 100ms;
+}
+
+.search-bar input:focus {
+  background-color: #F2F2F2;
+  transition: all 100ms;
+}
 
 
+.search-bar input::placeholder {
+  color: rgb(138, 138, 138);
+}
+
+
+@media screen and (max-width: 1280px)  {
+
+  .header-container {
+    width: 1000px;
+  }
+  
+  .menu-item:last-child {
+    display: none;
+  }
+
+}
+
+@media screen and (max-width: 1035px)  {
+
+  .header-container {
+    width: 900px;
+  }
+  
+  .menu-item:last-child {
+    display: none;
+  }
+
+}
+
+
+@media screen and (max-width: 1000px)  {
+
+  .header-container {
+    width: 700px;
+  }
+  
+  .menu-item{
+    display: none;
+  }
+
+
+}
+
+@media screen and (max-width: 900px)  {
+
+  .header-container {
+    width: 600px;
+  }
+  
+  .search-bar {
+    display: none;
+  }
+
+
+}
+
+@media screen and (max-width: 630px)  {
+
+  .header-container {
+    width: 350px;
+  }
+  
+  .profile-options {
+    display: none;
+  }
+
+
+}
