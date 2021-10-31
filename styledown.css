@@ -1,0 +1,225 @@
+header{
+    background-color: rgb(12,12,12);
+    opacity: 0.9;
+    height: 80px;
+    color: whitesmoke;
+    font-family: Geneva, Tahoma, sans-serif;
+
+}
+
+
+.Kino{
+    position: absolute;
+    left: 130px;
+    top: 25px;
+    font-size: xx-large;
+}
+
+.console{
+ position: relative ;
+    top: 25px;
+    left: 160px;
+    height: 40px;
+    opacity: 0;
+    width: 150px;
+}
+
+.search{
+    position: fixed;
+    top: 28px;
+    right: 350px;
+    left: 770px;
+    width: 330px;
+    height: 40px;
+    border-radius: 7px;
+}
+
+.nayti{
+    position: fixed;
+    top: 39px;
+    left: 1050px;
+}
+
+.text1 {
+    position: fixed;
+    right: 870px;
+    left: 350px;
+    top: 39px;
+    color: gray;
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden; 
+    opacity: 1;
+    font-size: 17px;
+}
+
+.text2 {
+    position: fixed;
+    right: 600px;
+    left: 550px;
+    top: 40px;
+    color: gray;
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden; 
+    opacity: 1;
+    font-size: 17px;
+
+
+}
+
+.text1:hover {
+    opacity: 0.6;
+}
+.text2:hover {
+    opacity: 0.6;
+}
+
+
+
+.start{
+    position: fixed;
+
+    top: 24px;
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden; 
+    opacity: 1;
+}
+.start:hover {
+    opacity: 0.6;
+}
+
+.play{
+    position: fixed;
+    left: 330px;
+    top: 37px;
+}
+
+.playbut{
+    position: fixed;
+    left: 330px;
+    top: 33px;
+    height: 27px;   
+    width: 25px;
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden; 
+
+}
+
+.pc{
+    position: fixed;
+    left: 520px;
+    top: 36px;
+}
+
+.pcbut{
+    position: fixed;
+    left: 520px;
+    top: 30px;
+    height: 30px;
+    width: 30px;
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+}
+
+.log{
+    position: fixed;
+    top: 35px;
+    left: 1300px;
+    right: 10px;
+
+    background-size: contain
+
+}
+.chi{
+    position: fixed;
+    left: 1250px;
+    top: 35px;
+}
+.bookmark{
+    position: fixed;
+    left: 1211px;
+    top: 35px;
+}
+
+.zakl1{
+    position: absolute;
+    height: 23px;
+    width: 15px;
+    top: 35px;
+    left: 1218px;
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    
+ 
+}
+
+.zakl2{
+    position: absolute;
+    height: 25px;
+    width: 40px;
+    left: 1245px;
+    top: 35px;
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+
+    
+}
+
+.zakl33{
+    position: absolute;
+    height: 25px;
+    width: 25px;
+    left: 1298px;
+    top: 35px;
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    
+}
+
+
+footer{
+    position: relative;
+    background-color: rgb(12,12,12);
+    opacity: 0.9;
+    height: 230px;
+    width: 1200px;
+}
+
+.under{
+    font-size: 18px;
+}
+hr{
+    background-color:rgb(12,12,12) ;
+    opacity: 0.1;
+    left: 20px;
+}
+
+.GG-center{
+    margin: auto;
+}
+.GG-right{
+    text-align: right;
+}
