@@ -1,0 +1,164 @@
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  color: white;
+  text-decoration: none;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+
+
+
+.wrapper {
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+}
+
+header {
+    background: #1F1F1F;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.header-container {
+    height: 72px;
+    width: 1184px;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    margin-right: 76px;
+}
+
+.logo img {
+    width: 162px;
+    height: 20px;
+}
+
+.menu-buttons {
+    display: flex;
+
+}
+
+.title a {
+    color: #A5A5A5;
+    transition: 100ms;
+}
+
+.menu-item {
+    display: flex;
+    margin-right: 24px;
+}
+
+.menu-item:first-child::before{
+    content: "";
+    width: 25px;
+    margin-right: 10px;
+    background: url(src/play-btn-passive.svg);
+    transition: 100ms;
+}
+
+.menu-item:first-child:hover::before{
+    background: url(src/play-btn.svg);
+    transition: 100ms;
+    cursor: pointer;
+}
+
+.menu-item:last-child::before{
+    content: "";
+    width: 25px;
+    margin-right: 10px;
+    background: url(src/tv-btn-passive.svg);
+    transition: 100ms;
+}
+
+.menu-item:last-child:hover::before{
+    background: url(src/tv-btn.svg);
+    transition: 100ms;
+    cursor: pointer;
+}
+
+
+.title a:hover {
+    color: #fff;
+    transition: 100ms;
+}
+
+
+
