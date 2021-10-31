@@ -14,7 +14,7 @@ body{
     color: #A5A5A5;
     text-align: center;
     vertical-align: middle;
-    flex-direction: row;
+
 }
 
 .kinoHead{
@@ -30,12 +30,25 @@ input{
     border-radius: 5px;
     width: 100px;
 }
-
+/* dcjknskdnc */
 .plus{
     color:white;
 width: 300%;
+background: linear-gradient(150deg, blue,blue,violet, orange);
+border-radius: 5px;
 }
 
 .plustxt{
     width: 300%;
 }
+
+.headPlus{
+    border-collapse: collapse;
+    margin: auto;
+}
+
+/* .headRow{
+    flex-direction: row;
+} /*   flex-direction: row;
+    width: 100;
+} */
