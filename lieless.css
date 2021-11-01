@@ -1,0 +1,21 @@
+.left_sidebar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 230px;
+    height: 100vh;
+    margin-left: 17%;
+    margin-right: 16px;
+    border-right: 1px solid rgba(31,31,31,.1);
+    background-color:rgb(253, 250, 245);
+}
+.menu {
+    width: 180px;
+    height: 24px;
+    padding-left: 12%;
+    margin-top: 12px;
+    font-size: large;
+}
+#main {
+    margin-top: 23px;
+}
