@@ -12,14 +12,24 @@
     height: 72px;
     width: 70px;
 }
+.block4{
+    height: 72px;
+    width: 60px;
+}
+.img3{
+    margin-top: 14px;
+height: 45px;
+width: 100px;
+outline: none;
+cursor: pointer;
+}
 .online{
     display: flex;
     height: 72px;
     width: 160px;
-}
-.{
-    width: 200px;
-    height: 72px;
+    text-decoration: none;
+    outline: none;
+    cursor: pointer;
 }
 .triangle-right {
     margin-top: 30px;
@@ -28,6 +38,26 @@
     border-top: 6px solid transparent;
     border-left: 12px solid whitesmoke;
     border-bottom: 6px solid transparent;
+}
+.searchbar{
+    height: 30px;
+    color: whitesmoke;
+    background-color: rgb(61,61,61);
+}
+.join{
+    font-size: 15px;
+    margin-top: 30px;
+    margin-left: 10px;
+    border: none;
+    background-color: rgb(31, 31, 31);
+    color: rgb(201, 201, 201);
+    text-decoration: none;
+    
+    outline: none;
+    cursor: pointer;
+}
+.join:hover{
+    color: white;
 }
 .kino{
     display: flex;
@@ -39,7 +69,19 @@
 }
 .kinoTV{
     margin-top: 25px;
-    color: whitesmoke;
+    color: rgb(201, 201, 201);
+    text-decoration: none;
+    outline: none;
+    cursor: pointer;
+}
+.kinoTV:hover{
+    color: white;
+}
+.button1{
+    margin-top: 20px;
+    height: 30px;
+    width: 70px;
+    background-color: rgb(61, 61, 61);
 }
 .probel2{
     height: 72px;
@@ -50,15 +92,55 @@
     width: 10px;
 }
 .online_text{
-    color: whitesmoke;
+    color: rgb(201, 201, 201);
     margin-top: 27px;
+}
+.online_text:hover{
+    color: white;
 }
 .kinopoisk{
     margin-top: 20px;
     border: 0px;
     padding: 0px;
     background-color: rgb(31, 31, 31);
+    text-decoration: none;
+    outline: none;
+    cursor: pointer;
+}
+.img3:hover{
+    margin-top: 12px;
+height: 50px;
+width: 110px;
 }
 body{
     margin: 0px;
 }
+.sideMenuBlock
+{
+    position: absolute;
+    left: 350px;
+    top: 100px;
+    width: 200px;
+    height: 300px;
+}
+.sideMenuButton {
+    border:           none;
+    background-color: white;
+    color:            #494545;
+    margin-left:      8px;
+    text-decoration:  none;
+    
+    outline:          none;
+    cursor:           pointer;
+  }
+  .form{
+      margin-top: 18px;
+  }
+  .probel3{
+      height: 72px;
+      width: 250px;
+  }
+  .sideMenuButton:hover {
+    color:            rgb(0, 0, 0);
+  }
+
