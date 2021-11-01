@@ -1,0 +1,617 @@
+function CheckFields(form)
+{
+    fill_form = false;
+
+    $(".form_"+form+" select").each(function(e){
+        if (!this.value || this.value == 0) {
+            this.disabled = true;
+        } else {
+            fill_form = true;
+        }
+    });
+
+    $(".form_"+form+" input").each(function(e){
+        if (this.type != 'hidden' && this.type != 'button') {
+            if (!this.value || this.value == 0) {
+                this.disabled = true;
+            } else {
+                fill_form = true;
+            }
+        }
+    });
+
+    if (form == 4) {
+        if($(".form_4 .el_4").val() > 0 && $(".form_4 .el_5").val() > 0 && $(".form_4 .el_4").val() > $(".form_4 .el_5").val()) {
+            fill_form = false;
+            alert("Задан неверный возраст");
+        }
+
+        if (fill_form) {
+            if(
+                $("#social").val().length > 2 ||
+                $("#find_user").val().length > 2 ||
+                $("#name").val().length > 2 ||
+                $(".form_4 .el_1").val().length > 2
+            ) {
+
+            } else {
+                var fields = 0;
+                if ($(".form_4 .el_3").val() ) fields++;
+                if ($(".form_4 .el_4").val() > 0 || $(".form_4 .el_5").val() > 0 ) fields++;
+                if ($(".form_4 .el_6").val() != 0 ) fields++;
+                if ($(".form_4 .el_7").val() ) fields++;
+                if ($(".form_4 .el_8").val().length > 2 ) fields++;
+
+                if (fields < 3) {
+                    fill_form = false;
+                    alert("Пожалуйста, уточните запрос");
+                }
+            }
+        }
+    }
+
+    if (!fill_form) {
+        $(".form_"+form+" select").each(function(e){
+            this.disabled = false;
+        });
+        $(".form_"+form+" input").each(function(e){
+            this.disabled = false;
+        });
+    }
+
+    return fill_form;
+}
+
+
+function excessLimits(no_alert)
+{
+    var genres = getCountGenresSelected();
+    var years = getCountYearsSelected();
+    var country = getCountrySelected();
+
+    // - если выбрал более 3-х жанров и больше ничего выдаем алерт
+    if (genres > 3 && !years && !country) {
+        if (!no_alert) {
+            alert('Пожалуйста конкретизируйте свой запрос, либо уменьшите количество жанров (максимум 3 жанра).');
+        }
+        return true;
+    }
+
+    // - если выбрал более 10 лет и больше ничего выдаем алерт
+    if (years > 10 && !genres && !country) {
+        if (!no_alert) {
+            alert('Пожалуйста конкретизируйте свой запрос, либо уменьшите количество лет (максимум 10 лет).');
+        }
+        return true;
+    }
+
+    // заполнено более одного поля, но слишком большие диапазоны
+    if (genres > 3 && years > 5) {
+        if (!no_alert) {
+            alert('Пожалуйста конкретизируйте свой запрос, либо уменьшите количество жанров или лет.');
+        }
+        return true;
+    }
+
+    return false;
+}
+
+
+function getCountGenresSelected()
+{
+    var genres = 0;
+
+    var obj = $('select.__genreSB__').get(0);
+    for (i=0; i < obj.options.length; i++) {
+        if (obj.options[i].value && obj.options[i].selected == true) {
+            genres++;
+        }
+    }
+
+    return genres;
+}
+
+
+function getCountYearsSelected()
+{
+    var year  = $('select.__yearSB__').val();
+    var year1 = $('select.__yearSB1__').val();
+    var year2 = $('select.__yearSB2__').val();
+
+    if (year) {
+        return 1;
+    }
+
+    if (!year1 && !year2) {
+        return 0;
+    }
+
+    if (!year1 && year2) {
+        year1 = 1890;
+    }
+    if (year1 && !year2) {
+        year2 = (new Date()).getFullYear();
+    }
+
+    return Math.abs(year1 - year2) + 1;
+}
+
+
+function getCountrySelected()
+{
+    var c = $('select.__countrySB__').val();
+    return (c != '' && c > 0);
+}
+
+
+/**
+ *  Обязательные поля
+ */
+function MandatoryFieldsFilled()
+{
+    return  document.getElementById('find_film').value ||
+            document.getElementById('year').value ||
+            document.getElementById('from_year').value ||
+            document.getElementById('to_year').value ||
+            document.getElementById('country').value ||
+            document.getElementById('m_act[genre]').value ||
+            document.getElementById('company').value;
+}
+
+
+function PremiereFieldsFilled()
+{
+    return  document.getElementById('prem_month').value &&
+            document.getElementById('prem_year').value &&
+            document.getElementById('prem_type').value;
+}
+
+
+function valid(find_pole, pole)
+{
+    if (document.getElementById(find_pole).value.length<1) {
+        alert("Заполните поле "+pole);
+        return false;
+    } else {
+        return true;
+    }
+}
+
+
+function valid_sex()
+{
+    if (   !document.getElementById('find_people').value
+        && !document.getElementById('birthday').value
+        && !document.getElementById('sex').value
+        && !document.getElementById('location').value
+    )
+        return false;
+
+
+	if(document.getElementById('birthday').value && (document.getElementById('birthday').value < 1890 || document.getElementById('birthday').value > 2011)){
+		alert("Некорректный год рождения");
+        return false;
+	}
+
+	if (document.getElementById('find_people').value.replace(/[^a-zA-Zа-яА-ЯёЁ]/g,'').length > 2 ) {
+
+    } else {
+		var fields=0;
+		if($('#birthday').val()) fields++;
+		if($('#location').val()) fields++;
+		if($('#birthday').val()) fields++;
+		if($('.form_2 .el_6').val()) fields++;
+		if($('.form_2 .el_4').val()) fields++;
+		if($('.form_2 .el_3').val()) fields++;
+
+		if(fields < 2) {
+			alert("Пожалуйста, уточните запрос");
+			return false;
+		}
+	}
+
+	return true;
+}
+
+
+function serialize( mixed_value )
+{
+    var _getType = function( inp ) {
+        var type = typeof inp, match;
+        var key;
+        if (type == 'object' && !inp) {
+            return 'null';
+        }
+        if (type == "object") {
+            if (!inp.constructor) {
+                return 'object';
+            }
+            var cons = inp.constructor.toString();
+            if (match = cons.match(/(\w+)\(/)) {
+                cons = match[1].toLowerCase();
+            }
+            var types = ["boolean", "number", "string", "array"];
+            for (key in types) {
+                if (cons == types[key]) {
+                    type = types[key];
+                    break;
+                }
+            }
+        }
+        return type;
+    };
+    var type = _getType(mixed_value);
+    var val, ktype = '';
+
+    switch (type) {
+        case "function":
+            val = "";
+            break;
+        case "undefined":
+            val = "N";
+            break;
+        case "boolean":
+            val = "b:" + (mixed_value ? "1" : "0");
+            break;
+        case "number":
+            val = (Math.round(mixed_value) == mixed_value ? "i" : "d") + ":" + mixed_value;
+            break;
+        case "string":
+            val = "s:" + mixed_value.length + ":\"" + mixed_value + "\"";
+            break;
+        case "array":
+        case "object":
+            val = "a";
+            if (type == "object") {
+                var objname = mixed_value.constructor.toString().match(/(\w+)\(\)/);
+                if (objname == undefined) {
+                    return;
+                }
+                objname[1] = serialize(objname[1]);
+                val = "O" + objname[1].substring(1, objname[1].length - 1);
+            }
+            var count = 0;
+            var vals = "";
+            var okey;
+            var key;
+            for (key in mixed_value) {
+                ktype = _getType(mixed_value[key]);
+                if (ktype == "function") {
+                    continue;
+                }
+
+                okey = (key.match(/^[0-9]+$/) ? parseInt(key) : key);
+                vals += serialize(okey) +
+                        serialize(mixed_value[key]);
+                count++;
+            }
+            val += ":" + count + ":{" + vals + "}";
+            break;
+    }
+
+    if (type != "object" && type != "array")
+        val += ";";
+
+    return val;
+}
+
+
+// поиск по создателям
+CR={};
+
+CR.insertField = function(value,callback){
+
+    var i=$('.form_6 input[type=text]').length+1;
+    while ($('#cr_search_field_'+i).attr('id'))
+        i++;
+
+    var html = '<div style="display:none" id="cr_search_field_'+i+'_div">'+
+        '   <select class="text" style="float: left; margin-right: 3px" id="cr_search_field_'+i+'_select">'+
+        '      <option value="actor">Актер</option>'+
+        '      <option value="director">Режиссер</option>'+
+        '      <option value="writer">Сценарист</option>'+
+        '      <option value="producer">Продюсер</option>'+
+        '      <option value="composer">Композитор</option>'+
+        '      <option value="operator">Оператор</option>'+
+        '      <option value="editor">Монтажер</option>'+
+        '      <option value="design">Художник</option>'+
+        '      <option value="voice">Актер дубляжа</option>'+
+        '      <option value="voice_director">Режиссер дубляжа</option>'+
+        '   </select>'+
+        '   <input class="text" style="float: left" type="text" value=""  id="cr_search_field_'+i+'" />'+
+        (CR.closebutton ? '   <a href="#" class="close" onclick="if($(\'#cr_search_field_'+i+'_div input\').val()) { $(\'#cr_search_field_'+i+'_div\').remove(); CR.reBuildFields();} return false;"></a>' : '')+
+        '   <div class="clear"></div>'+
+        '</div>';
+
+    $("#btn_search_6").before(html);
+    $('#cr_search_field_'+i+'_div').fadeIn();
+
+
+    CR.initAutoComplit('#cr_search_field_'+i);
+    //$('#cr_search_field_'+i+'').get(0).focus();
+
+    $('#cr_search_field_'+i).bind("keyup", function(){
+        CR.reBuildFields();
+    });
+
+    $('#cr_search_field_'+i+'_select').bind("change", function(){
+        CR.searchWords();
+    });
+}
+
+CR.initAutoComplit = function(id){
+    $( id ).autocomplete({
+        source: function( request, response ) {
+            $.ajax({
+                url: "/handler_search_people.php",
+                dataType: "json",
+                data: {
+                    q: request.term
+                },
+                success: function( data ) {
+                    response( $.map( data, function( item ) {
+                        return item;
+                    }));
+                }
+            });
+        },
+        minLength: 2,
+        delay: 200,
+		focus: function( event, ui ){
+			if(event.keyCode > 0){
+				$(this).val(ui.item.name).attr("alt",ui.item.id);
+			}
+			return false;
+		},
+        select: function( event, ui ) {
+
+            $(this).val(ui.item.name)
+                .attr("alt",ui.item.id)
+                .parents("div").find(".close").fadeIn();
+            CR.reBuildFields();
+            return false;
+        },
+        close: function() {
+            //if(!$(this).attr('alt'))
+            //    $(this).val('');
+            $( this ).removeClass( "ui-corner-top" ).addClass( "ui-corner-all" );
+            return false;
+        }
+    }).data( "ui-autocomplete" )._renderItem = function( ul, item ) {
+        txt="<a><span class='act'>" + item.name +"</span></a>";
+        ret=$( "<li></li>" )
+            .data( "ui-autocomplete-item", item )
+            .append( txt )
+            .appendTo( ul );
+        return ret;
+    };
+    $( id ).autocomplete('widget').addClass('people-search-autocomplete');
+}
+
+CR.insertWords = function(data){
+    if(data)
+        for(var k in data){
+            $('#cr_search_field_'+(parseInt(k)+1)+'_select').val(data[k].role);
+            $('#cr_search_field_'+(parseInt(k)+1)+'_div .close').fadeIn();
+            $('#cr_search_field_'+(parseInt(k)+1)).val(data[k].name).attr('alt',data[k].id);
+            CR.reBuildFields();
+        }
+}
+
+CR.reBuildFields = function(){
+    var i=0;
+    var empty=new Array();
+        $('.form_6 input[type=text]').each(function(){
+            if($(this).val()=='')
+                empty[i++]=$(this).attr('id');
+        });
+        if(i==0)
+            CR.insertField("");
+        if(i>1 && $('.form_6 input[type=text]').length > 2) {
+            var k=0;
+            while(k<=i-2){
+                $('#'+empty[k++]+"_div").remove();
+            }
+        }
+    CR.searchWords();
+}
+search_timeout=null;
+search_false_timeout=null;
+search_timeout_result=null;
+search_last_phrase=null;
+
+CR.searchWords = function(){
+    search_words=new Array();
+    $('.form_6 input[type=text]').each(function(){
+        if($(this).val()){
+            clearTimeout(search_timeout);
+            clearTimeout(search_false_timeout);
+            if($(this).attr('alt'))
+            search_words[search_words.length]=$("#"+$(this).attr('id')+"_select").val()+":"+$(this).attr('alt');
+            search_timeout=setTimeout(function(){
+            var phrase=search_words.join(";;");
+                if(phrase && search_last_phrase!=phrase){
+                    $.get("/handler_search_people.php?",{creator_string:phrase},function(data){
+
+                        if(data)
+                        {
+                            clearTimeout(search_timeout_result);
+                            var url='/s/?m_act[what]=content&m_act[creator_array]='+(phrase);
+                            $("#block_result_6").css({"display":"none"}).html('<a href="'+url+'">'+data+'</a>').fadeIn();
+                            $("#btn_search_6").get(0).disabled=false;
+                            $("#btn_search_6").click(function(){
+                                top.location=url;
+                            });
+                        } else {
+                            clearTimeout(search_timeout_result);
+                            $("#block_result_6").css({"display":"none"}).fadeIn();
+                            $("#block_result_6").html('Фильмов не найдено');
+                            search_timeout_result=setTimeout(function(){$("#block_result_6").fadeOut();},3000);
+                            $("#btn_search_6").get(0).disabled=true;
+                        }
+                        search_last_phrase=phrase;
+                    });
+                } else {
+                    if(!phrase) {
+                        $("#block_result_6").fadeOut();
+                        $("#btn_search_6").get(0).disabled=true;
+                    }
+
+                }
+            },200);
+        } else {
+            if(search_words.length==0)
+                search_false_timeout=setTimeout(function(){
+                     $("#block_result_6").fadeOut().html('');
+                     $("#btn_search_6").get(0).disabled=true;
+                },400);
+        }
+
+    });
+}
+
+// поиск по словам
+KW={};
+KW.insertField = function(value,callback){
+    var i=$('.form_5 input[type=text]').length+1;
+    while ($('#search_field_'+i).attr('id'))
+        i++;
+
+    $("#search_button").before(
+    '<div id="search_field_'+i+'_div">'+
+        '<input style="display:none" id="search_field_'+i+'" class="text" type="text" alt="'+value+'" value="'+value+'" />'+
+        (KW.closebutton ? '   <a href="#" class="close" onclick="if($(\'#search_field_'+i+'_div input\').val()) { $(\'#search_field_'+i+'_div\').remove(); KW.reBuildFields();} return false;"></a>' : '')+
+    '</div>');
+
+    KW.initAutoComplit('#search_field_'+i);
+
+    $('#search_field_'+i+'').fadeIn();
+    //$('#search_field_'+i+'').get(0).focus();
+
+    $('#search_field_'+i).bind("keyup", function(){
+        KW.reBuildFields();
+    });
+}
+
+KW.insertWords = function(data){
+    if(data)
+        for(var k in data){
+            $('#search_field_'+(parseInt(k)+1)).val(data[k]).attr("alt",data[k]);
+            $('#search_field_'+(parseInt(k)+1)+'_div .close').fadeIn();
+            KW.reBuildFields();
+        }
+}
+// KW.search_
+KW.initAutoComplit = function(id){
+    $( id ).autocomplete({
+        source: function( request, response ) {
+            $.ajax({
+                url: "/handler_search_keyword.php",
+                dataType: "json",
+                data: {
+                    q: request.term
+                },
+                success: function( data ) {
+                    response( $.map( data, function( item ) {
+                        return item;
+                    }));
+                }
+            });
+        },
+        minLength: 2,
+        delay: 500,
+		focus: function( event, ui ){
+			if(event.keyCode > 0){
+				$(this).val(ui.item.keyword).attr("alt", ui.item.keyword);
+			}
+			return false;
+		},
+        select: function( event, ui ) {
+            $(this).val(ui.item.keyword).attr("alt", ui.item.keyword)
+                .parents("div").find(".close").fadeIn();
+            KW.reBuildFields();
+            return false;
+        },
+        close: function() {
+            $( this ).removeClass( "ui-corner-top" ).addClass( "ui-corner-all" );
+            return false;
+        }
+    }).data( "ui-autocomplete" )._renderItem = function( ul, item ) {
+        txt="<a><span class='act'>" + item.keyword +"</span></a>";
+        ret=$( "<li></li>" )
+            .data( "ui-autocomplete-item", item )
+            .append( txt )
+            .appendTo( ul );
+        return ret;
+    };
+    $( id ).autocomplete('widget').addClass('keyword-search-autocomplete');
+}
+
+KW.reBuildFields = function(){
+    var i=0;
+    var empty=new Array();
+        $('.form_5 input[type=text]').each(function(){
+            if($(this).val() == ''){
+				$(this).attr('alt','');
+                empty[i++]=$(this).attr('id');
+			}
+        });
+        if(i==0)
+            KW.insertField("");
+        if(i>1) {
+            var k=0;
+            while(k<=i-2)
+                $('#'+empty[k++]+"_div").remove();
+        }
+    KW.searchWords();
+}
+search_timeout=null;
+search_timeout_result=null;
+search_timeout_start=null;
+search_last_search_str=null;
+
+KW.searchWords = function(){
+    clearTimeout(search_timeout);
+
+    search_words = new Array();
+    $('.form_5 input[type=text]').each(function(){
+        var val = $(this).attr('alt');
+        if (val != '' && typeof(val) != 'undefined') {
+            search_words[search_words.length] = val;
+        }
+    });
+	clearTimeout(search_timeout_start);
+    search_timeout_start = setTimeout(function(){
+
+
+        if (search_words.length) {
+            var phrase = search_words.join(";;;");
+			if(search_last_search_str == phrase) {
+				return;
+			}
+			search_last_search_str = phrase;
+            search_timeout = setTimeout(function(){
+                $.post("/handler_search_keyword.php?", {keyword_string: phrase}, function(data){
+                    if (data) {
+                        clearTimeout(search_timeout_result);
+                        var url='/s/?m_act[what]=content&m_act[keyword_array]='+(encodeURIComponent(search_words.join(";;")));
+                        $("#kw_result").css({display: 'none'}).html('<a href="'+url+'">'+data+'</a>').fadeIn();;
+                        $("#search_button").get(0).disabled=false;
+                        $("#search_button").click(function(){
+                            top.location=url;
+                        })
+                    } else {
+                        clearTimeout(search_timeout_result);
+                        $("#kw_result").css({display: 'none'}).html('Фильмов не найдено').fadeIn();
+                        search_timeout_result=setTimeout(function(){$("#kw_result").fadeOut();},3000);
+                        $("#search_button").get(0).disabled=true;
+                    }
+                });
+            }, 300);
+        } else {
+            $("#kw_result").fadeOut();
+            $("#search_button").get(0).disabled = true;
+        }
+    }, 500);
+
+}

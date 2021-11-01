@@ -1,0 +1,22 @@
+span.friends {word-spacing: 7px}
+span.friends * {white-space: normal !important}
+
+input.mykp_m {background: #fff; font-family: tahoma, verdana; font-size: 11px; width: 200px; color:#333; padding: 4px 3px 5px 3px; border:1px solid #999;}
+input.mykp_s {background: #fff; font-family: tahoma, verdana; font-size: 11px; width: 75px; padding: 4px 3px 5px 3px; border:1px solid #999;}
+td.f_name {color:#f00; font-weight:bold; line-height:18px;}
+small.mykp {color: #333; font-weight: normal; line-height: 12px; display: block; }
+select.mykp {font-family: tahoma, verdana; font-size: 11px; padding: 1px 2px 2px 2px; color:#333; border:1px solid #999999;}
+textarea.mykp {background: #fff; width:100%; height:80px; font-family: tahoma, verdana; font-size: 11px; font-weight: normal; color:#333; padding:4px; border:1px solid #999;	}
+textarea.mykp_blog {background: #fff; width:95%; font-family: tahoma, verdana; font-size: 11px; font-weight: normal; color:#000; border:1px solid #999; background-color: #FFE3D1}
+input.button_mykp {font-family: tahoma, verdana; font-size: 11px; font-weight: bold; border-bottom: 1px solid #555; border-right: 1px solid #555; border-left: 1px solid #fff; border-top: 1px solid #fff; color: #444; padding-top: 4px; padding-bottom: 5px;}
+
+/* from COMM.CSS */
+
+.profile-name {color:#007; padding:0px; margin:0px; font-weight:100; font-size:19px}
+td.profile-nav {text-align:center; background-color:#f2f2f2;}
+h4.vote {text-align:center; margin:0px; font-size:16px}
+a.comm-link {color:#777; text-decoration:underline}
+img.user {position:relative; top:4px}
+td.comm-user {width:55%; height:30px; padding:15px; padding-left:0px; background-color:#f2f2f2; vertical-align:top}
+td.comm-pic {width:10%;	background-color:#f2f2f2}
+td.comm-title {background-color:#f2f2f2; vertical-align:top; height:40px; font-family: arial; font-size: 14px; font-weight: bold}
