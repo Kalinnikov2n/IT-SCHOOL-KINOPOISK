@@ -113,3 +113,91 @@ input{
     color: black;
     filter: brightness(0%);
 }
+
+/* .photo1
+{  margin-top: 40px;
+    margin-bottom: 600px; 
+    margin-right: 500px; 
+    margin-left: 500px; 
+} */
+
+.raschet
+{
+margin-top: 0px;
+margin-bottom: 1000px;
+margin-right: 150px;
+margin-left: 600px;
+
+}
+
+.igrok
+{
+
+position: absolute;
+top: 55%;
+left: 32%;
+color: #f4f4f4;
+font-stretch: ultra-condensed;
+}
+
+.roli
+{position: absolute;
+top: 62%;
+left: 32%;
+color: dimgray;
+font-stretch: ultra-condensed;
+}
+
+.oscar
+{position: absolute;
+top: 65%;
+left: 32%;
+color: #f4f4f4;
+font-stretch: ultra-condensed;
+}
+
+.regisser
+{position: absolute;
+top: 68%;
+left: 32%;
+color: dimgray;
+font-stretch: ultra-condensed;
+}
+
+.pol
+{position: absolute;
+top: 68%;
+left: 36%;
+color: #f4f4f4;
+font-stretch: ultra-condensed;
+}
+
+.smotr
+{position: absolute;
+top: 71%;
+left: 32%;
+color:blueviolet;
+font-stretch: ultra-condensed;
+}
+
+.button1
+{ width: 100px;
+height: 50px;
+background:linear-gradient(150deg, blue, blue, violet, orange);
+color: #f4f4f4;
+border-radius: 10px;
+position: absolute;
+top: 78%;
+left: 32%;
+}
+
+.button2
+{ width: 100px;
+height: 50px;
+background:gray;
+color: #f4f4f4;
+border-radius: 10px;
+position: absolute;
+top: 78%;
+left: 40%;
+}
