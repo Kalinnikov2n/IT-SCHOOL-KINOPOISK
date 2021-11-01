@@ -1,0 +1,98 @@
+body {
+    margin: 0%;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #1f1f1f;
+    height: 72px;
+    display: flex;
+    align-items: center;
+    
+}
+
+footer {
+    display: flex;
+    justify-content: space-around;
+    background-color: #1f1f1f;
+    margin-left: 15%;
+    margin-right: 15%;
+    height: 344px;
+}
+
+.nav {
+    padding: 10px;
+    background-color: #ffffff;
+    width: 15%;
+    height: 100vh;
+    margin-left: 15%;
+    border-right: 1px solid rgba(31, 31, 31, .1);
+
+}
+
+.p {
+    background-color: #ffffff;
+    width: 55%;
+    margin-right: 15%;
+}
+
+.items {
+    margin-top: 20px;
+    padding-left: 25px;
+}
+.main {
+    display: flex;
+    justify-content: space-around;
+    background-color: #f4f4f4;
+
+
+}
+
+#logo {
+    height: 80px;
+    margin: 25px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.menu  {
+    text-align: center;
+    color: #a5a5a5;
+    padding-left: 40px;
+    align-items: center;
+    display: inline-flex;
+    
+    
+}
+
+.menu .icons {
+    width: 25px;
+    height: 25px;
+}
+
+
+.icons {
+    width: 16px;
+    height: 16px;
+    margin-right: 5px;
+    
+}
+
+#user {
+    width: 40px;
+}
+
+#fav {
+    width: 25px;
+    height: 25px;
+}
+
+.carousel {
+    margin: 20px;
+}
+
+.poster {
+    width: 140px;
+    height: 210px;
+}
