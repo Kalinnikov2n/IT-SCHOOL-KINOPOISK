@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@600&display=swap');
+
+.headerBackGround{
+    display: flex;
+    background-color: rgb(31, 31, 31);
+    margin: 0px;
+    height: 72px;
+}
+.block{
+    height: 72px;
+    width: 357px;
+}
+.block1{
+    height: 72px;
+    width: 50px;
+}
+.block2{
+    height: 72px;
+    width: 50px;
+}
+.kinopoisk{
+    margin-top: 20px;
+    border: 0px;
+    padding: 0px;
+    background-color: rgb(31, 31, 31);
+}
+body{
+    margin: 0px;
+}
