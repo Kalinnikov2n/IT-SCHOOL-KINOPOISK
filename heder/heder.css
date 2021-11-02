@@ -27,7 +27,7 @@ header{
   
 .stroka{
     display: block;
-    justify-content: space-benween;
+    justify-content: space-between;
     margin: auto;
 }
 
@@ -46,4 +46,32 @@ header{
 #Kinopoisk{
     color: white;
     margin-top: 20px;
+}
+
+
+.novosti{
+    display: inline-flex;
+    margin-top: 2%;
+    color:rgb(83, 38, 83);
+}
+
+
+.popular{
+    display: flex;
+    flex-direction: column;
+    margin-left: 25%;
+}
+
+.glavnaya{
+    display: flex;
+    flex-direction: column;
+}
+
+.video{
+    display: flex;
+    flex-direction: column;
+}
+
+#loko{
+    color: black;
 }
