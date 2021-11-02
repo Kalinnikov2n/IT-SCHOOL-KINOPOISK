@@ -221,11 +221,20 @@ header {
   font-size: 9pt;
   line-height: 13px;
   transition: all 100ms;
+  margin-right: 14px;
 }
 
 .yand-btn:hover {
   transform: scale(1.05);
   transition: all 100ms;
+  
+}
+
+.profile-pic {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background: #414141;
 }
 
 .content {
@@ -235,9 +244,108 @@ header {
   margin: 0 auto;
 }
 
+.side-bar {
+  width: 240px;
+  height: 100%;
+  padding: 32px 32px 0 45px;
+  border: 1px solid #E8E8E8;
+}
+
+.side-item{
+  height: 17px;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.side-item .title a{
+  font-size: 11.5pt;
+}
+
+.side-item.active a{
+    color: #1F1F1F;
+    font-weight: 600;
+}
+
+.side-item.active:hover::before{
+  color: #1F1F1F;
+  opacity: 1;
+}
+
+.side-item:nth-child(1)::before {
+    content: "";
+    width: 16px;
+    height: 25px;
+    margin-right: 10px;
+    background: url(src/main.svg) center no-repeat;
+    border-bottom: 3px solid #ED6F2D;
+}
+
+.side-item:hover a {
+  color: #484848;
+}
 
 
 
+.side-item:nth-child(2)::before {
+  cursor: pointer;
+  content: "";
+  width: 16px;
+  height: 25px;
+  margin-right: 10px;
+  background: url(src/side-play-btn.svg) center no-repeat;
+  opacity: .4;
+  filter: invert(1);
+}
+
+.side-item:nth-child(3)::before {
+  cursor: pointer;
+  content: "";
+  width: 16px;
+  height: 25px;
+  margin-right: 10px;
+  background: url(src/movs.svg) center no-repeat;
+  opacity: .4;
+  filter: invert(1);
+}
+
+.side-item:nth-child(4)::before {
+  cursor: pointer;
+  content: "";
+  width: 16px;
+  height: 25px;
+  margin-right: 10px;
+  background: url(src/series.svg) center no-repeat;
+  opacity: .4;
+  filter: invert(1);
+}
+
+.side-item:nth-child(5)::before {
+  cursor: pointer;
+  content: "";
+  width: 16px;
+  height: 25px;
+  margin-right: 10px;
+  background: url(src/tickets.svg) center no-repeat;
+  opacity: .4;
+  filter: invert(1);
+}
+
+.side-item:nth-child(6)::before {
+  cursor: pointer;
+  content: "";
+  width: 16px;
+  height: 25px;
+  margin-right: 10px;
+  background: url(src/media.svg) center no-repeat;
+  opacity: .4;
+  filter: invert(1);
+}
+
+.side-item:hover::before {
+  opacity: .6;
+}
 
 
 @media screen and (max-width: 1280px)  {
@@ -291,6 +399,10 @@ header {
 
   .header-container {
     width: 600px;
+  }
+
+  .side-bar {
+    display: none;
   }
 
   .content {
