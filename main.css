@@ -59,3 +59,14 @@ header a:hover {
 .scroll{
     height: 1200px;
 }
+.choicepic {
+    position:absolute;
+    left:180px;
+    top:500px;
+    height: 125%;
+    width: 500px;
+    zoom: 200%;}
+.choice { 
+    position:absolute;
+    left:361px;
+    top:940px;}
