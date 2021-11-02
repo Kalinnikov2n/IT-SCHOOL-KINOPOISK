@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
 .headerBackGround{
     display: flex;
     background-color: rgb(31, 31, 31);
@@ -15,13 +16,6 @@
 .block4{
     height: 72px;
     width: 60px;
-}
-.img30{
-    transition: 0,3s;
-    height: 60px;
-}
-.img30:hover{
-    transform: scale(1.1);
 }
 .img3{
     margin-top: 14px;
@@ -114,6 +108,11 @@ cursor: pointer;
     outline: none;
     cursor: pointer;
 }
+.img3:hover{
+    margin-top: 12px;
+height: 50px;
+width: 110px;
+}
 body{
     margin: 0px;
 }
@@ -131,7 +130,6 @@ body{
     color:            #494545;
     margin-left:      8px;
     text-decoration:  none;
-    
     outline:          none;
     cursor:           pointer;
   }
@@ -145,4 +143,78 @@ body{
   .sideMenuButton:hover {
     color:            rgb(0, 0, 0);
   }
+.mainFooterBlock{
+    display: flex;
+    align-items: center;
+}
+.block2{
+    display: flex;
+    flex-direction: column;
+    height: 1500px;
+    width: 50px;
+}
+.text_tickets{
+    display: flex;
+    justify-content: flex-start;
+    font-size: 35px;
+    text-decoration: none;
+    color: black;
+    font-family: 'Roboto', sans-serif;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+.probel1{
+    height: 72px;
+    width: 600px;
+}
+.gray{
+    color: rgb(167, 167, 167);
+    font-size: 30px;
+    font-weight: lighter;
+}
+.img_footer{
+    height: 500px;
+    border-radius: 20px;
+    margin: 10px;
+}
+.imgButton{
+    display: flex;
+    justify-content: space-between;
 
+}
+.imgButton{
+    position: relative;
+    top: 300px;
+    right: 380px;
+}
+.img_footer{
+    box-shadow: 0px 0px 10px black
+}
+.imgItems{
+    transition: 0.3s; 
+}
+.imgItems:hover {
+    transform: scale(1.1); 
+}
+.MainContent{
+    position: absolute;
+    height: 1400px;
+    left: 200px;
+    top: -28px;
+    width: 1050px;
+    background-color:rgb(241, 241, 241);
+}
+.imgItems:hover{
+    color:black
+}
+.mainphoto{
+    position: absolute;
+    top: 40px;
+    left: 55px;
+    border-radius: 10px;
+}
+.mainphoto:hover{
+    cursor: pointer;
+}
