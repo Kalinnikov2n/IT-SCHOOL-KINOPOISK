@@ -129,7 +129,6 @@ body{
     color:            #494545;
     margin-left:      8px;
     text-decoration:  none;
-    
     outline:          none;
     cursor:           pointer;
   }
@@ -143,4 +142,22 @@ body{
   .sideMenuButton:hover {
     color:            rgb(0, 0, 0);
   }
-
+.mainFooterBlock{
+    display: flex;
+    align-items: center;
+}
+.block2{
+    display: flex;
+    flex-direction: column;
+    height: 1500px;
+    width: 50px;
+}
+.text_tickets{
+    display: flex;
+    justify-content: flex-start;
+    font-size: 35px;
+}
+.probel1{
+    height: 72px;
+    width: 600px;
+}
