@@ -1,0 +1,86 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.leftpanel{
+    height: 100%;
+    width: 250px;
+    position: fixed; 
+    z-index: 1;
+    top: 0;
+    left: 100px;
+    background-color: #ffffff;
+    overflow-x: hidden;
+    padding-top: 50px;
+}
+.leftpanel a{
+    padding: 6px 8px 6px 60px;
+    text-decoration: none;
+    font-size: 21px;
+    color: #818181;
+    display: block;
+    line-height: 30px;
+    
+}
+.leftpanel a:hover{
+    color: #666666;
+    transition: all 0.4s linear;
+    -o-transition: all 0.4s linear;
+    -webkit-transition: all 0.4s linear;
+    -moz-transition: all 0.4s linear;
+    -ms-transition: all 0.4s linear;
+}
+body{
+    background: #f2f2f2;
+}
