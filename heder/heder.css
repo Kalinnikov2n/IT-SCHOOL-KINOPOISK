@@ -1,62 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Paytone+One&display=swap');
 header{
-    width: 100%;
-    background: rgb(34, 34, 34);
-    height: 70px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    background-color: #1F1F1F;
+    height: 60px;
+    padding-top: 15px;
+    font-family: 'Paytone One', sans-serif;
    }
 
-   .container{
-    max-width: 1600px;
-    margin: 0px auto;
-    padding: 0px auto;
-}
+   body {
+    margin: 0;
+    background-color: white; 
+   }
 
-
-.KinoPoisk{
-    font-family: 'Paytone One', sans-serif;
-    color: white;
-    font-size: 32px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    margin-left: 120px;
-    padding-top: 10px;
-}
-
-.flex {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    margin-left: 350px;
-    margin-top: -60px;
-}
-
-.online{
-    font-family: 'Paytone One', sans-serif;
-    font-size: 16px;
-    display: flex;
-    flex-wrap: wrap;
-    color: gray;
-    margin-left: 8px;
-    margin-top: -2px;
-
-}
-
-.na{
-    font-family: 'Paytone One', sans-serif;
-    font-size: 16px;
-    display: flex;
-    flex-wrap: wrap;
-    color: gray;
-    margin-left: 8px;
-    margin-top: -2px;
-}
-
-.otstup{
-       margin-left: 20px;
-}
-
-.button {     
+   .button {     
     display: flex;
     flex-wrap: wrap;
     background-color: Transparent;
@@ -64,27 +22,28 @@ header{
     border: none;
     cursor:pointer;
     overflow: hidden;  
-    margin-left: 100px;
-    margin-top:-17px; 
-
+    border-radius: 15px;
+}
+  
+.stroka{
+    display: block;
+    justify-content: space-benween;
+    margin: auto;
 }
 
-.str{
-    margin-left: 80px;
-    margin-top:-6px;
+.kino{
+    display: inline-block;
+    margin-bottom: 50px;
+    padding-right: 30px;
+    color: #A1A1A1;
+    font-size: large;
 }
 
-.voti{
-    font-family: 'Paytone One', sans-serif;
-    font-size: 16px;
-    display: flex;
-    flex-wrap: wrap;
-    color: gray;
-    margin-left: 58px;
-    margin-top: -5px;
+.img{
+    border-radius: 5px;
 }
 
-body {
-    margin: 0;
-    background-color: white; 
-   }
+#Kinopoisk{
+    color: white;
+    margin-top: 20px;
+}
