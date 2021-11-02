@@ -209,5 +209,84 @@ left: 40%;
 }
 .content{
    font-family: "graphicItal";
-   color:red
+   
 }
+.container img {
+
+    border-radius: 30px;
+    padding:20px;
+    }
+    
+    .btn {
+    position: absolute;
+    top: 45%;
+    right: 70%;
+    transform: translate(-25%, -25%);
+    -ms-transform: translate(-25%, -25%);
+    background-color:rgb(255, 123, 0);
+    color: white;
+    font-size:25px;
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    }
+    
+    }
+    .btn:hover {
+    background-color: rgb(255, 136, 0);
+    }
+    
+    p{
+    font-size: 2em;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    
+    }
+    #right{
+    float:right;
+    align:right;
+    
+    
+    }
+    .colortext{
+    color:grey;
+    font-weight: none;
+    }
+    
+    #badge {
+    position: absolute;
+    top:460px;
+    left:940px;
+    }
+    #badge1 {
+    position: absolute;
+    top:460px;
+    left:1570px;
+    }
+    #badge2 {
+    position: absolute;
+    top:100px;
+    left:1320px;
+    }
+    h2{
+    position:absolute;
+    top:0;
+    left: 22px;
+    width:100%;
+    color:white;
+    
+    }
+    #badge3{
+    position: absolute;
+    top:100px;
+    left:670px;
+    }
+    h3{
+    position:absolute;
+    top:0;
+    left: 24px;
+    width:100%;
+    color:white;
+    
+    }
