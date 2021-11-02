@@ -87,10 +87,51 @@ footer {
     width: 25px;
     height: 25px;
 }
-
+.carouselBlock{
+    display:flex;
+    flex-direction: column;
+    margin-left:30px;
+    margin-right:30px;
+}
+.carouselBlockHeader{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.carouselBlockHeader div:nth-of-type(1){
+    font-size: 24px;
+    font-weight: bold;
+}
+.carouselBlockHeader div:nth-of-type(1)::after{
+    content:"";
+    display: inline-block;
+    padding: 6px;
+    transform: rotate(-45deg);
+    border: solid rgba(0, 0, 0, 0.4);
+    border-width: 0 2px 2px 0;
+    margin-top:4px;
+    margin-right:20px;
+}
+.carouselBlockHeader div:nth-of-type(1) span:nth-of-type(2){
+    position:relative;
+    top:1px;
+    font-size: 25px;
+    font-weight: normal;
+    opacity:0.5;
+}
+.carouselBlockHeader div:nth-of-type(2){
+    position: relative;
+    top:8px;
+    font-size: 15px;
+}
+.carousel{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
 .carouselItem {
     position: relative;
-    margin: 20px;
+    margin: 20px 0px;
     display:flex;
     flex-direction: column;
 
