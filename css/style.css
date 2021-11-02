@@ -198,28 +198,6 @@ a{
 .imgItems:hover {
     transform: scale(1.1); 
 }
-<<<<<<< HEAD
-.MainContent{
-    position: absolute;
-    height: 1400px;
-    left: 200px;
-    top: -28px;
-    width: 1050px;
-    background-color:rgb(241, 241, 241);
-}
 .imgItems:hover{
     color:black
-}
-.mainphoto{
-    position: absolute;
-    top: 40px;
-    left: 55px;
-    border-radius: 10px;
-}
-.mainphoto:hover{
-    cursor: pointer;
-=======
-.imgItems:hover{
-    color:black
->>>>>>> main_footer
 }
