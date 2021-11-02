@@ -16,6 +16,13 @@
     height: 72px;
     width: 60px;
 }
+.img30{
+    transition: 0,3s;
+    height: 60px;
+}
+.img30:hover{
+    transform: scale(1.1);
+}
 .img3{
     margin-top: 14px;
 height: 45px;
@@ -106,11 +113,6 @@ cursor: pointer;
     text-decoration: none;
     outline: none;
     cursor: pointer;
-}
-.img3:hover{
-    margin-top: 12px;
-height: 50px;
-width: 110px;
 }
 body{
     margin: 0px;
