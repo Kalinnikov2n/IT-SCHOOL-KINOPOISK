@@ -72,14 +72,20 @@ header a:hover {
     top:940px;}
 
     .choicepic2 {
-        position:absolute;
-        left:180px;
-        top:700px;
-        height: 125%;
-        width: 500px;
-        zoom: 200%;}
-    .choice2 { 
-        position:absolute;
-        left:361px;
-        top: 1335px;}
+    position:absolute;
+    left:180px;
+    top:700px;
+    height: 125%;
+    width: 500px;
+    zoom: 200%;}
+.choice2 { 
+    position:absolute;
+    left:361px;
+    top: 1335px;}
 
+.mainphoto {position:absolute;
+    left:410px;
+    top:100px;
+    height: 125%;
+    width: 500px;
+    zoom: 88%;}
