@@ -5,12 +5,12 @@ body {
     height: 100vh;
     /* justify-content: space-between; */
     
-    margin:0%
+    margin:0%;
+    font-family:    'Graphic';
     
 
 }
-.lastm{
-}
+
 
 .header {
     border-collapse: collapse;
@@ -21,8 +21,45 @@ body {
     vertical-align: middle;
     margin: 0%;
     font-family: 'Graphic';
-    ;
+    position;
+    
 
+}
+.redactionchos{
+    margin-left: 25%;
+}
+.redactionchos td img{
+    width: 220px;
+}
+.redactionchos {
+    border-spacing: 20px;
+}
+.redactionchos tr td p{
+    font-size: 1.5em;
+    width: 220px;
+
+}
+.moviesplus img{
+    margin-top: 30px;
+    width:129px;
+}
+.bubalda{
+    color: gray;
+    font-size: 2em;
+    
+}
+.moviesplus{
+    background-color: rgb(26, 24, 24);
+    margin-left: 23%;
+    margin-right: 5%;
+    text-align: center;
+}
+.yaplusmain{
+    color:white;
+    width:50%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
 }
 
 .kinoHead {
@@ -30,7 +67,7 @@ body {
 }
 
 @font-face {
-    font-family: Graphic;
+    font-family: 'Graphic';
     src: url(./public/fonts/GraphikLCG-Bold.ttf);
 }
 @font-face {
@@ -45,10 +82,43 @@ input {
     height: 35px;
 }
 
+.zaebalsia{
+    color: white;
+    width: 205px;
+    background: linear-gradient(150deg, blue, blue, violet, orange);
+    border-radius: 5px;
+    height: 44px;
+    border: hidden;
+}
+.blyat{
+    color: white;
+}
+.moviesseries{
+    text-align: center;
+}
+.moviesseries tr td img{
+    width: 220px;
+}
+.trtabpriK td p{
+    color: gray;
+    font-size: 1em;
+    vertical-align: top;
+}
+.prikolblia{
+    
+    border-spacing: 30px;
+    width: 100%;
+    color: white;
+    font-family: "graphicital";
+    
+}
+.prikolblia tr td{
+    border-radius: 5px;
+}
 /* dcjknskdnc */
 .plus {
     color: white;
-    width: 50%;
+    width: 50px;
     background: linear-gradient(150deg, blue, blue, violet, orange);
     border-radius: 40px;
     
@@ -102,13 +172,14 @@ input{
     width: 20%;
     color: white;
     font-family: "GraphicItal";
+
     
     
     
 }
 .leftMenu{
     filter:brightness(50%);
-    position: absolute;
+    position: fixed;
     margin-top: 10%;
     width: 18%;
     border-spacing: 15px;
@@ -216,6 +287,9 @@ left: 40%;
     border-radius: 30px;
     padding:20px;
     }
+    .tvstd{
+        filter: brightness(50%);
+    }
     
     .btn {
     position: absolute;
@@ -232,20 +306,20 @@ left: 40%;
     border-radius: 10px;
     }
     
-    }
+    
     .btn:hover {
     background-color: rgb(255, 136, 0);
     }
     
     p{
-    font-size: 2em;
-    font-family: 'Times New Roman', Times, serif;
+    /* font-size: 2em; */
+    font-family: 'graphicItal', Times, serif;
     font-weight: bold;
     
     }
     #right{
     float:right;
-    align:right;
+    text-align:right;
     
     
     }
