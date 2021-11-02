@@ -18,6 +18,7 @@
     width: 60px;
 }
 .img3{
+    transition: 0,3s;
     margin-top: 14px;
 height: 45px;
 width: 100px;
@@ -58,7 +59,7 @@ cursor: pointer;
     cursor: pointer;
 }
 .join:hover{
-    color: white;
+    color: white; 
 }
 .kino{
     display: flex;
@@ -110,8 +111,7 @@ cursor: pointer;
 }
 .img3:hover{
     margin-top: 12px;
-height: 50px;
-width: 110px;
+    transform: scale(1.1); 
 }
 body{
     margin: 0px;
