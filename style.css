@@ -247,9 +247,9 @@ header {
 }
 
 .side-bar {
-  width: 240px;
+  width: 260px;
   height: 100%;
-  padding: 32px 32px 0 45px;
+  padding: 32px 15px 0 45px;
   border-right: 1px solid #E8E8E8;
 }
 
@@ -262,7 +262,7 @@ header {
 }
 
 .side-item .title a{
-  font-size: 11.5pt;
+  font-size: 10.5pt;
 }
 
 .side-item.active a{
@@ -350,6 +350,7 @@ header {
 }
 
 .main-content {
+  overflow: hidden;
   width: 100%;
   padding: 31px 50px;
   display: flex;
