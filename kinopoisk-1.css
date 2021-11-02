@@ -93,6 +93,9 @@ footer {
     margin-left:30px;
     margin-right:30px;
 }
+.carouselBlockYandexPlus{
+    margin:0;
+}
 .carouselBlockHeader{
     display:flex;
     flex-direction: row;
@@ -185,6 +188,17 @@ footer {
     background-color: #f60;
     border-radius: 3px;
 }
+.carouselItemPlus{
+    position:absolute;
+    top:185px;
+    left:90px;
+    display: inline-block;
+    width: 43px;
+    height: 18px;
+    background: url("img/icons/YandexPlusMini.svg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
 .carouselRedactionChoiceBlock{
     display: flex;
     flex-direction: row;
@@ -196,4 +210,74 @@ footer {
 .carouselRedactionChoiceItemImage{
     width: 220px;
     height: 220px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+.YandexPlusAddBlock{
+    padding:30px;
+    background-color: #141414;
+    color:#fff;
+}
+.YandexPlusAddBlockIntro{
+    margin-top:10px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+.YandexPlusAddBlockIntro span{
+    width:600px;
+    margin-top:10px;
+    text-align: center;
+}
+.YandexPlusAddBlockIntro span:nth-of-type(1){
+    font-size: 35px;
+    font-weight: 900;
+}
+.YandexPlusAddBlockIntro span:nth-of-type(2){
+    font-size: 27px;
+    opacity: 0.7;
+}
+.YandexPlusAddBlockIntro span:nth-of-type(3){
+    margin-top:20px;
+    margin-bottom:20px;
+    font-size: 18px;
+    font-weight: 500;
+    padding:10px 20px;
+    width:auto;
+    border-radius: 4px;
+    background: linear-gradient(130.16deg,#505add 34.4%,#be40c0 66.11%,#fba82b 96.37%);
+}
+.YandexPlusAddBlockDevices{
+    position:relative;
+    display: flex;
+    margin-top: 65px;
+    font-family: Arial,Tahoma,Verdana,sans-serif;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 4px;
+    background: #222;
+}
+.YandexPlusAddBlockDevices img{
+    position: absolute;
+    top: -23px;
+    right: 50px;
+    width: 390px;
+    height: 235px;
+    object-fit: contain;
+}
+.YandexPlusAddBlockDevicesText{
+    box-sizing: border-box;
+    max-width: 520px;
+    padding: 58px 0 58px 58px;
+}
+.YandexPlusAddBlockDevicesText span:nth-of-type(1){
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 42px;
+}
+.YandexPlusAddBlockDevicesText span:nth-of-type(2){
+    font-size: 16px;
+    line-height: 24px;
+    color: white;
+    opacity: 0.7;
 }
