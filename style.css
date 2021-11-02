@@ -1,100 +1,46 @@
-/* Указываем box sizing */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  color: white;
-  text-decoration: none;
-}
-button {
-  padding: 0;
-  border: none;
-  font: inherit;
-  color: inherit;
-  background-color: transparent;
-  /* отображаем курсор в виде руки при наведении; некоторые
-  считают, что необходимо оставлять стрелочный вид для кнопок */
-  cursor: pointer;
-}
-*:focus {
-  outline: none;
-}
 
-/* Убираем внутренние отступы */
-ul[class],
-ol[class] {
-  padding: 0;
+/*Обнуление*/
+*{
+	padding: 0;
+	margin: 0;
+	border: 0;
 }
-
-/* Убираем внешние отступы */
-body,
-h1,
-h2,
-h3,
-h4,
-p,
-ul[class],
-ol[class],
-li,
-figure,
-figcaption,
-blockquote,
-dl,
-dd {
-  margin: 0;
+*,*:before,*:after{
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
 }
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
 
-/* Выставляем основные настройки по-умолчанию для body */
-body {
-  min-height: 100vh;
-  scroll-behavior: smooth;
-  text-rendering: optimizeSpeed;
-  line-height: 1.5;
+nav,footer,header,aside{display: block;}
+
+html,body{
+	height: 100%;
+	width: 100%;
+	font-size: 100%;
+	line-height: 1;
+	font-size: 14px;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
 }
+input,button,textarea{font-family:inherit;}
 
-/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
-ul[class],
-ol[class] {
-  list-style: none;
-}
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner {padding:0;border:0;}
+a, a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
 
-/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
-a:not([class]) {
-  text-decoration-skip-ink: auto;
-}
-
-/* Упрощаем работу с изображениями */
-img {
-  max-width: 100%;
-  display: block;
-}
-
-/* Указываем понятную периодичность в потоке данных у article*/
-article > * + * {
-  margin-top: 1em;
-}
-
-/* Наследуем шрифты для инпутов и кнопок */
-input,
-button,
-textarea,
-select {
-  font: inherit;
-}
-
-/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
-@media (prefers-reduced-motion: reduce) {
-  * {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
-}
-
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
+/*--------------------*/
 
 body {
   background: #F4F4F4;
+  overflow-x: none;
 }
 
 .wrapper {
@@ -107,10 +53,13 @@ body {
 }
 
 header {
+    position: fixed;
+    top: 0;
     background: #1F1F1F;
     width: 100%;
     display: flex;
     justify-content: center;
+    z-index: 1;
 }
 
 .header-container {
@@ -222,6 +171,7 @@ header {
   line-height: 13px;
   transition: all 100ms;
   margin-right: 14px;
+  color: #fff;
 }
 
 .yand-btn:hover {
@@ -238,6 +188,9 @@ header {
 }
 
 .content {
+  
+  position: relative;
+  top: 72px;
   width: 1282px;
   background: #ffffff;
   height: 100vh;
@@ -247,6 +200,8 @@ header {
 }
 
 .side-bar {
+  position: fixed;
+  top: 72px; 
   width: 260px;
   height: 100%;
   padding: 32px 15px 0 45px;
@@ -350,11 +305,15 @@ header {
 }
 
 .main-content {
+  
   overflow: hidden;
+  min-height: 2000px;
   width: 100%;
-  padding: 31px 50px;
+  padding: 31px 50px 0 291px;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background: #ffffff;
 }
 
 .banner-movie {
@@ -362,13 +321,166 @@ header {
   height: 400px;
   background: #484848;
   border-radius: 5px;
+  margin-bottom: 35px;
 }
+
+.movie-sliders {
+  width: 100%;
+}
+
+.tickets-bar {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 33px;
+}
+
+.tickets-title {
+  display: flex;
+  align-items: center;
+}
+
+.tickets-title .title {
+  font-weight: 700;
+  font-size: 24px;
+  margin-right: 10px;
+}
+.tickets-title .count {
+  font-size: 26px;
+  color: rgba(31,31,31,.4);
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+}
+
+.tickets-title .count:after {
+  content: "";
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  background: url(src/more.svg) center no-repeat;
+  background-size: auto 100%;
+}
+
+.more-option {
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.movies {
+  display: flex;
+  margin-bottom: 40px;
+}
+
+.movie-item {
+  cursor: pointer;
+  width: 140px;
+  margin-right: 20px;
+}
+
+.movie-item .thumbnail{
+  background: #484848;
+  height: 210px;
+  width: 140px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.movie-item .rating{
+  height: 20px;
+  width: 40px;
+  background: #3BB33B;
+  color: white;
+  border-radius: 5px;
+  font-size: 13px;
+
+  position: relative;
+  top: 5px;
+  right: 5px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.movie-item .ticket{
+  height: 18px;
+  width: 24px;
+  border-radius: 3px;
+  background: #ED6F2D;
+
+  position: relative;
+  top: 160px;
+  left: 108px;
+}
+
+.ticket .icon {
+  height: 18px;
+  width: 24px;
+  background: url(/src/ticket.svg) no-repeat center
+}
+
+.name .title{
+  font-size: 13px;
+  font-weight: 700;
+  color: #000;
+}
+
+.name .description{
+  font-size: 13px;
+  color: rgba(0,0,0,.4);
+}
+
+.chosen-movies {
+  width: 100%;
+}
+
+.chosen-movies .title{
+  margin-bottom: 33px;
+} 
+
+.chosen-items {
+  display: flex;
+
+}
+
+.chosen-items .item {
+  background: #484848;
+  height: 225px;
+  width: 225px;
+  border-radius: 10px;
+  margin-right: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 @media screen and (max-width: 1280px)  {
 
   .header-container {
     width: 1000px;
+    
   }
 
   .content {
@@ -421,6 +533,7 @@ header {
 
   .side-bar {
     display: none;
+    
   }
 
   .content {
