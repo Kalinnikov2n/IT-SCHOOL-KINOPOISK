@@ -97,12 +97,13 @@ footer {
     display:flex;
     flex-direction: row;
     justify-content: space-between;
+    margin-top:20px;
 }
 .carouselBlockHeader div:nth-of-type(1){
     font-size: 24px;
     font-weight: bold;
 }
-.carouselBlockHeader div:nth-of-type(1)::after{
+.carouselBlockHeaderArrow div:nth-of-type(1)::after{
     content:"";
     display: inline-block;
     padding: 6px;
@@ -183,4 +184,16 @@ footer {
     color: #fff;
     background-color: #f60;
     border-radius: 3px;
+}
+.carouselRedactionChoiceBlock{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.carouselRedactionChoiceItem{
+    margin:20px 0px;
+}
+.carouselRedactionChoiceItemImage{
+    width: 220px;
+    height: 220px;
 }
