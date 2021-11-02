@@ -62,33 +62,44 @@ header a:hover {
 .choicepic {
     position:absolute;
     left:180px;
-    top:500px;
+    top: 580px;
     height: 125%;
     width: 500px;
     zoom: 200%;}
 .choice { 
     position:absolute;
     left:361px;
-    top:940px;
+    top: 1090px;
 }
-
-    .choicepic2 {
+.choicepic2 {
         position:absolute;
         left:180px;
-        top:700px;
+        top: 760px;
         height: 125%;
         width: 500px;
         zoom: 200%;}
     .choice2 { 
         position:absolute;
         left:361px;
-        top: 1335px;}
+        top: 1450px;}
 .PhotoT {
     position:absolute;
     left: 180px;
-    top: 300px;
+    top: 370px;
     height: 125%;
     width: 500px;
     zoom: 200%;
 }
-.tickets
+.tickets {
+    top: 680px;
+    position:absolute;
+    margin-left: 361px;
+}
+
+.mainphoto {
+    position:absolute;
+    left:410px;
+    top:100px;
+    height: 125%;
+    width: 500px;
+    zoom: 88%;}
