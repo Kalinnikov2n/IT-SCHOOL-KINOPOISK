@@ -69,7 +69,8 @@ header a:hover {
 .choice { 
     position:absolute;
     left:361px;
-    top:940px;}
+    top:940px;
+}
 
     .choicepic2 {
         position:absolute;
@@ -82,4 +83,12 @@ header a:hover {
         position:absolute;
         left:361px;
         top: 1335px;}
-
+.PhotoT {
+    position:absolute;
+    left: 180px;
+    top: 300px;
+    height: 125%;
+    width: 500px;
+    zoom: 200%;
+}
+.tickets
