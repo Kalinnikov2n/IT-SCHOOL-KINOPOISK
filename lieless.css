@@ -20,6 +20,7 @@
 }
 #main {
     margin-top: 23px;
+    color: black;
 }
 .MainDiv {
     display: flex;
@@ -53,75 +54,87 @@ footer {
     justify-content: space-between;
     width: 264px;
     margin: auto;
+    /* margin-left: 30%; */
     padding: 20px;
+    align-self: center;
 }
 .foot_icon {
     display: block;
     width: 26px;
     height: 26px;
-    margin-right: 15px;
+    margin-right: 20px;
+    /* margin: 0 70px; */
 }
 .second_foot {
     margin: auto;
     text-align: center;
     padding: 0;
     display: block;
-    list-style-type: disc;
-    margin-block-start: 1em;
+    /* list-style-type: disc; */
+    /* margin-block-start: 1em;
     margin-block-end: 1em;
     margin-inline-start: 0px;
-    margin-inline-end: 0px;
+    margin-inline-end: 0px; */
     padding-inline-start: 40px;
-    /* align-self: center; */
+    align-self: center;
 }
 .ul-items {
     display: inline-block;
     margin-bottom: 5px;
     padding-right: 27px;
-    color: #F4F4F4;
+    color: #A5A5A5;
     font-size: large;
 }
 .section_buttons {
     align-self: center;
     margin: 35px 0 56px;
-    display: grid;
+    /* display: grid;
     grid-template-columns: max-content max-content max-content;
-    grid-column-gap: 15px;
-    column-gap: 15px;
+    grid-column-gap: 15px; */
+    /* column-gap: 30px; */
 }
 .buttons {
     width: 160px;
     height: 45px;
-    color: #F4F4F4;
+    color: #A5A5A5;
     background-color: rgb(87, 87, 87);
     border-radius: 3px;
+    margin: 0 10px;
 }
 .foot_bottom {
-    display: grid;
+    display: inline-flex;
     align-self: center;
-    grid-template-columns: 1fr max-content 1fr;
+    /* grid-template-columns: 1fr max-content 1fr; */
     width: 89%;
     padding: 28px 0 29px;
     font-size: 16px;
-    line-height: 15px;
+    /* line-height: 15px; */
     border-top: 1px solid hsla(0,0%,100%,.05);
 }
 .left_bottom {
     display: block;
     justify-self: flex-start;
-    color: #F4F4F4;
+    color: #A5A5A5;
 }
 .center_bottom {
     display: block;
-    margin: 0;
+    /* margin: 0;
     padding: 0;
-    padding-inline-start: 30px;
+    padding-inline-start: 30px; */
+    margin: 0 20%;
     text-align: center;
-    color: #F4F4F4;
+    color: #A5A5A5;
 }
 .right_bottom {
     display: flex;
     justify-self: flex-end;
     align-items: flex-end;
-    color: #F4F4F4;
+    color: #A5A5A5;
 }
+.menu_icons {
+    height: 16px;
+    width: 16px;
+}
+/* #main_icon {
+    border-bottom:1px solid orange;
+} */
