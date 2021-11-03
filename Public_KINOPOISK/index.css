@@ -183,9 +183,6 @@ outline: none;
 cursor: pointer;
 }
 
-body{
-margin: 0px;
-}
 .emptyThird{
 width: 500px;
 }
@@ -194,6 +191,419 @@ width: 2000px;
 height: 1px;
 background-color: black;
 }
+
+
+
+
+a {
+
+	color: black;
+	
+	text-decoration: none;
+	
+	}
+	
+	.style_root__12-uL {
+	
+	color: #fff;
+	
+	background-color: #141414;
+	
+	height: 1030px;
+	
+	width: 1100px;
+	
+	padding-top: 50px;
+	
+	padding-right: 35px;
+	
+	padding-bottom: 50px;
+	
+	padding-left: 50px;
+	
+	margin-top: 0px;
+	
+	margin-right: 0px;
+	
+	margin-bottom: 0px;
+	
+	margin-left: 135px;
+	
+	}
+	
+	.style_root__3{
+	
+	display: -webkit-box;
+	
+	display: -webkit-box;
+	
+	display: -ms-flexbox;
+	
+	display: flex;
+	
+	-webkit-box-orient: vertical;
+	
+	-webkit-box-direction: normal;
+	
+	flex-direction: column;
+	
+	-webkit-box-align: center;
+	
+	align-items: center;
+	
+	width: 100%;
+	
+	margin-bottom: 50px;
+	
+	text-align: center;
+	
+	}
+	
+	.style_title__2{
+	
+	width: 600px;
+	
+	font-size: 36px;
+	
+	font-weight: 700;
+	
+	line-height: 42px;
+	
+	margin: 20px 0 6px;
+	
+	margin-top: 20px;
+	
+	margin-right: 0px;
+	
+	margin-bottom: 6px;
+	
+	margin-left: 0px;
+	
+	}
+	
+	
+	
+	.styles_description{
+	
+	margin-bottom: 32px;
+	
+	font-size: 26px;
+	
+	line-height: 32px;
+	
+	letter-spacing: -1px;
+	
+	color: hsla(0, 0%, 100%, .7);
+	
+	}
+	
+	.style_carousel{
+	
+	margin-left: -5px;
+	
+	-webkit-transform: translateZ(0);
+	
+	transform: translateZ(0);
+	
+	}
+	
+	.parents{
+	
+	display: flex;
+	
+	flex-direction: row;
+	
+	margin-right: 5px;
+	
+	margin-left: 5px;
+	
+	}
+	
+	.text {
+	
+	display: flex;
+	
+	margin-top: 2px;
+	
+	padding: 2px;
+	
+	width: 100%;
+	
+	}
+	
+	.films{
+	
+	font-size: 38px;
+	
+	}
+	
+	.img1{
+	
+	margin-right: 30px;
+	
+	border-radius: 8px;
+	
+	}
+	
+	.img2{
+	
+	margin-right: 30px;
+	
+	border-radius: 8px;
+	
+	}
+	
+	.img3{
+	
+	margin-right: 30px;
+	
+	border-radius: 8px;
+	
+	}
+	
+	.img4{
+	
+	margin-right: 30px;
+	
+	border-radius: 8px;
+	
+	}
+	
+	.img{
+	
+	margin-right: 20px;
+	
+	}
+	
+	.textwrapper{
+	
+	max-width: 1000px;
+	
+	padding: 58px 0 58px 58px;
+	
+	background: #222;
+	
+	border: 30px;
+	
+	}
+	
+	.textstyle2{
+	
+	font-size: 32px;
+	
+	font-weight: 600px;
+	
+	line-height: 42px;
+	
+	}
+	
+	.textstyle3{
+	
+	font-size: 16px;
+	
+	line-height: 24px;
+	
+	color: hsla(0, 0%, 100%, .7);
+	
+	}
+	
+	.img9{
+	
+	display: flex;
+	
+	top: -23px;
+	
+	right: 0px;
+	
+	width: 390px;
+	
+	height: 235px;
+	
+	object-fit: contain;
+	
+	float: right;
+	
+	object-fit: contain;
+	
+	}
+	
+	.block3{
+	
+	height: 0px;
+	
+	width: 0px;
+	
+	}
+	
+	.primeLogo1{
+	
+	transition: 0,3s;
+	
+	margin-top: 0px;
+	
+	outline: none;
+	
+	cursor: pointer;
+	
+	width: 300px;
+	
+	height: 75px;
+	
+	}
+	
+	.primeLogo1:hover{
+	
+	margin-top: 0px;
+	
+	transform: scale(1.1);
+	
+	}
+	
+	.button4{
+	
+	top: 86px;
+	
+	opacity: 1;
+	
+	box-sizing: border-box;
+	
+	width: 44px;
+	
+	height: 44px;
+	
+	margin: 0 auto;
+	
+	padding: 0;
+	
+	border-radius: 50%;
+	
+	margin:auto;
+	
+	display:block;
+	
+	}
+	
+	.parents1{
+	
+	display: flex;
+	
+	flex-direction: row;
+	
+	}
+	
+	.button5{
+	
+	top: 86px;
+	
+	opacity: 1;
+	
+	box-sizing: border-box;
+	
+	width: 44px;
+	
+	height: 44px;
+	
+	margin: 0 auto;
+	
+	padding: 0;
+	
+	border-radius: 50%;
+	
+	margin:auto;
+	
+	display:block;
+	
+	}
+	
+	.article{
+	
+	margin-top: 0px;
+	
+	}
+
+
+
+	a{
+		text-decoration: none;
+	}
+	li{
+		 text-decoration: none;
+		list-style:none;
+		
+	}
+	
+	#left, #right {
+	background:gainsboro;
+	position: fixed;
+			}
+		#left, #right {
+				top: 0; bottom: 0;
+				width: 124px;
+					}
+				#left { left: 0; }
+				#right { right: 0; }  
+	
+	.advertisement{
+		display: flex;
+		justify-content: center;
+		max-width: 100%;
+		width: 100%;
+	}
+	
+	.familybudget{
+		display: flex;
+		justify-content: right;
+		margin-top: 20px;
+		padding:5px;
+		margin-right: 250px;
+	
+	}
+	.tickets{
+		font-size: 16pt;
+		margin-left: 363px;
+		justify-content: right;
+		font-family: Verdana, Geneva, Tahoma, sans-serif;
+		font-weight: bold;
+		padding: 20px;
+	}
+	
+	.movies_item{
+		width: 62%;
+		justify-content: space-between;
+		text-align: left;
+		font-size: 10pt;
+		display: inline-flex;
+		font-family: Arial, Helvetica, sans-serif;
+		margin-left: 384px;
+		float: left;
+	}
+	h1{
+		font-size: 10pt;
+		text-align: left;
+		font-weight: bold;
+	}
+	
+	.redactor{
+		justify-content: center;
+		display: flex;
+		font-size: 16pt;
+		margin-left: -548px;
+		font-family: Verdana, Geneva, Tahoma, sans-serif;
+		font-weight: bold;
+		padding: 20px;
+	}
+	
+	.reccomendations_item{
+		width: 62%;
+		justify-content: space-between;
+		text-align: left;
+		font-size: 10pt;
+		display: inline-flex;
+		font-family: Arial, Helvetica, sans-serif;
+		margin-left: 384px;
+		float: left;
+	}
+	
 
 
 
