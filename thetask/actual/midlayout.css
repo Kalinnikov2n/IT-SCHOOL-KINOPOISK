@@ -1,10 +1,11 @@
 body {
-    font-family: Helvetica;
+    font-family: Arial;
 }
 .boxoutline {
     display: flex;
     width: 1030px;
     height: 400px;
+    margin-left: 5%;
     
 }
 

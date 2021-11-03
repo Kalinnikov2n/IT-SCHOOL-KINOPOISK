@@ -1,11 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Paytone+One&display=swap');
 header{
+    position: fixed;  
     display: flex;
     justify-content: space-around;
     flex-direction: column;
     background-color: #1F1F1F;
     height: 60px;
     padding-top: 15px;
+    margin-top: -6%;
     font-family: 'Paytone One', sans-serif;
    }
 
@@ -14,7 +16,7 @@ header{
     background-color: white; 
    }
 
-   .button {     
+   .button {   
     display: flex;
     flex-wrap: wrap;
     background-color: Transparent;
@@ -51,7 +53,7 @@ header{
 
 .novosti{
     display: inline-flex;
-    margin-top: 2%;
+    margin-top: 10%;
     color:rgb(83, 38, 83);
 }
 
@@ -59,17 +61,19 @@ header{
 .popular{
     display: flex;
     flex-direction: column;
-    margin-left: 25%;
+    margin-left: 3%;
 }
 
 .glavnaya{
     display: flex;
     flex-direction: column;
+    margin-left: 2%;
 }
 
 .video{
     display: flex;
     flex-direction: column;
+    margin-left: 2%;
 }
 
 #loko{

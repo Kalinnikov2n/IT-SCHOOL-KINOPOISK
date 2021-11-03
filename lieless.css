@@ -3,7 +3,7 @@
     flex-direction: column;
     align-items: center;
     width: 15%;
-    height: 220vh;
+    height: 800vh;
     margin-left: 15%;
     /* margin-left: -17%; */
     /* margin-right: 16px; */
@@ -15,7 +15,7 @@
     height: 24px;
     padding-left: 12%;
     margin-top: 14px;
-    font-size: large;
+    font-size: 16px;
     color: #A5A5A5;
 }
 #main {
@@ -26,6 +26,8 @@
     display: flex;
     justify-content: space-around;
     background-color: #F4F4F4;
+    margin-top: 5.9%;
+    height: 100%;
 }
 .content {
     background-color: white;
@@ -47,8 +49,7 @@ footer {
     background-color: #1F1F1F;
     height: 344px;
     padding-top: 44px;
-    margin-left: 15%;
-    margin-right: 15%;
+    margin-top: 
 }
 li {
     color: #A5A5A5;
@@ -152,10 +153,12 @@ li {
     line-height: 1.15;
     color: #1f1f1f;
     border-bottom: 1px solid #000;
+    
 }
 .wrapper {
     display: flex;
     justify-content: space-between;
+    width: 50%;
 }
 .left_wrapper_l {
     font-family: Arial, Helvetica, sans-serif;
@@ -170,14 +173,16 @@ li {
     margin: 0;
     /* padding: 0 0 0 21px; */
     padding-inline-start: 40px;
-    width: 30%;
+    width: 25%;
 }
+
+
 .li_left {
     display: list-item;
     margin-top: 12px;
     padding-bottom: 12px;
     border-bottom: 1px solid rgba(52,47,144,.1);
-    width: max-content;
+    width: 30px;
 }
 .artic_releases {
     display: flex;
@@ -255,6 +260,7 @@ li {
     color: #1f1f1f;
     font-size: 24px;
     font-weight: 700;
+    margin-left: -7%;
 }
 .A {
     font-size: 13px;
@@ -265,11 +271,12 @@ li {
 }
 .trailer_blocks {
     display: flex;
+    margin-left: -7%;
 }
 .block {
     display: block;
-    margin-right: 20px;
-    flex: 0 0 220px;
+    margin-right: 2%;
+    flex: 0 0 25%;
 }
 .block_img {
     display: block;
@@ -298,3 +305,33 @@ li {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
 }
+
+.boxoutline {
+    display: flex;
+    width: 1030px;
+    height: 400px;
+    margin-top: 3%;
+    margin-left: -2%;
+    
+}
+
+.insideleftbox {
+    margin-top: 100px;
+    margin-left: 10px;
+    text-align: left;
+}
+.leftbox {
+    align-items: center;
+    color: white;
+    background-color: black;
+    border-radius: 15px 0px 0px 15px;
+}
+
+
+.rightbox {
+    
+    background-color: black;
+    border-radius: 0px 15px 15px 0px;
+}
+
+
