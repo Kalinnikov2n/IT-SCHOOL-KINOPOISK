@@ -932,3 +932,159 @@ span1 {
 #j:hover{
     color:orange;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.Кнопки-загрузки {
+    align-self: center;
+    margin: 35px 0 56px;
+}
+.Кнопки {
+    width: 160px;
+    height: 45px;
+    color:#A5A5A5;
+    background-color: rgb(87, 87, 87);
+    border-radius: 3px;
+    margin:0 10px;
+}
+.Нижние-кнопки {
+    display: inline-flex;
+    align-self: center;
+    width: 89%;
+    padding: 28px 0 29px;
+    font-size: 16px;
+}
+.Левая-кнопка {
+    display: block;
+    justify-self: flex-start;
+    color: #A5A5A5;
+}
+.Центральная-кнопка {
+    display: block;
+    margin: 0 20%;
+    text-align: center;
+    color: #A5A5A5;
+}
+.Правая-кнопка {
+    display: flex;
+    justify-self: flex-end;
+    align-items: flex-end;
+    color: #A5A5A5;
+}
+.Иконки {
+    display: flex;
+    justify-content: space-between;
+    width: 264px;
+    margin: auto;
+    padding: 20px;
+    align-self: center;
+}
+.И {
+    display: block;
+    width: 26px;
+    height: 26px;
+    margin-right: 20px;
+}
+.Текст {
+    margin: auto;
+    text-align: center;
+    padding: 0;
+    display: block;
+    padding-inline-start: 40px;
+    align-self: center;
+}
+.Т {
+    display: inline-block;
+    margin-bottom: 5px;
+    padding-right: 27px;
+    color: #A5A5A5;
+    font-size: large;
+}
+footer {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    background-color: #1F1F1F;
+    height: 344px;
+    padding-top: 44px;
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
