@@ -1,6 +1,10 @@
-body{
-    font-family: 'Graphick-Medium.zip'
+.box {
+    display: flex;
+    flex-direction: row;
+  justify-content: space-around;
 }
-.head1{
-    text-align: end;
+
+.middle {
+  display:flex;
+  flex-direction: column;
 }
