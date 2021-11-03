@@ -180,7 +180,6 @@ color: gray;
      width: 1000px;
      zoom: 150%;}
 .traillerstext { 
-<<<<<<< HEAD
         position:absolute;
         left:361px;
         top: 2155px;
@@ -279,7 +278,6 @@ color: gray;
     font-family: 'GraphicB' ;
     src: url(./Fonts/GraphikLCG-Bold.ttf);
 }
-=======
     position:absolute;
     left:361px;
     top: 2155px;}
@@ -328,4 +326,3 @@ color: gray;
     color: #f4f4f4;
     border-radius: 10px;
     position: absolute;}
->>>>>>> e608a96569d1113aaa6993dde8003ad6b00b383b
