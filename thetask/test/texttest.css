@@ -1,0 +1,19 @@
+
+.parent {
+
+    display: flex;
+    background-color: tomato;
+    width: 200;
+    height: 200px;
+
+}
+
+button {
+    height: 50px;
+    width: 50px;
+}
+/* .child { */
+    /* background-color: turquoise; */
+    /* width: 500px; */
+    /* height: 500px; */
+/* } */

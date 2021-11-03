@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Paytone+One&display=swap');
+header{
+    position: fixed;  
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    background-color: #1F1F1F;
+    height: 60px;
+    padding-top: 15px;
+    margin-top: -6%;
+    font-family: 'Paytone One', sans-serif;
+    width: 100%;
+   }
+
+   body {
+    margin: 0;
+    background-color: white; 
+   }
+
+   .button {   
+    display: flex;
+    flex-wrap: wrap;
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;  
+    border-radius: 15px;
+}
+  
+.stroka{
+    display: block;
+    justify-content: space-between;
+    margin: auto;
+}
+
+.kino{
+    display: inline-block;
+    margin-bottom: 50px;
+    padding-right: 30px;
+    color: #A1A1A1;
+    font-size: large;
+}
+
+.img{
+    border-radius: 5px;
+}
+
+#Kinopoisk{
+    color: white;
+    margin-top: 20px;
+}
+
+
+.novosti{
+    display: inline-flex;
+    margin-top: 10%;
+    color:rgb(83, 38, 83);
+}
+
+
+.popular{
+    display: flex;
+    flex-direction: column;
+    margin-left: 3%;
+}
+
+.glavnaya{
+    display: flex;
+    flex-direction: column;
+    margin-left: 2%;
+}
+
+.video{
+    display: flex;
+    flex-direction: column;
+    margin-left: 2%;
+}
+
+#loko{
+    color: black;
+}
