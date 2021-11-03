@@ -330,6 +330,9 @@ a{
 .stroka2{
     display: flex;
 }
+.pic:hover{
+    cursor: pointer;
+}
 .kart{
     margin: 5px;
     border-radius: 5px;
@@ -348,8 +351,31 @@ a{
 .p1{
     margin-top: 60px;
 }
+.kart:hover{
+    cursor: pointer;
+}
 .block5{
     display: flex;
+}
+.photogod2{
+    cursor: pointer;
+}
+.photogod1:hover{
+    cursor: pointer;
+}
+.photogod2:hover{
+    cursor: pointer;
+}
+.photogod3:hover
+.photogod1{
+    cursor: pointer;
+}
+.lastp:hover{
+    color: white;
+    cursor: pointer;
+}
+.element:hover{
+    cursor: pointer;
 }
 .c{
     margin-top: 30px;
@@ -375,4 +401,35 @@ blok2{
     width: 205px;
     height: 110px;
     margin: 5px;
+}
+.FinalEnd{
+    width: 870px;
+    height: 350px;
+    background-color: rgb(15, 15, 15);
+}
+.FilmPicture:hover{
+    cursor: pointer;
+    
+}
+.photogod:hover{
+    cursor: pointer;
+}
+.lastphoto{
+    margin-left: 230px;
+    margin-top: 80px;
+}
+.lastp{
+    margin: 4px;
+    color: darkgrey;
+}
+.lastp:hover{
+    color: white;
+}
+.laststroka{
+    margin-left: 50px;
+    display: flex;
+}
+.lastphoto1{
+    margin-top: 30px;
+    margin-left: 140px;
 }
