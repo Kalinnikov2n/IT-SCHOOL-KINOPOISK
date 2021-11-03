@@ -131,6 +131,7 @@ color: gray;
     position:absolute;
     left:361px;
     top: 1090px;
+    font-family: 'GraphicB';
 }
 .choicepic2 {
     position:absolute;
@@ -142,11 +143,13 @@ color: gray;
 .choice2 { 
     position:absolute;
     left:361px;
-    top: 1450px;}
+    top: 1450px;
+    font-family: 'GraphicB';
+}
 .PhotoT {
     position:absolute;
     left: 170px;
-    top: 370px;
+    top: 355px;
     height: 125%;
     width: 500px;
     zoom: 210%;
@@ -156,6 +159,7 @@ color: gray;
     top: 680px;
     position:absolute;
     margin-left: 361px;
+    font-family: 'GraphicB' ;
 }
 
 .mainphoto {
@@ -175,8 +179,102 @@ color: gray;
      height: 160%;
      width: 1000px;
      zoom: 150%;}
-
 .traillerstext { 
         position:absolute;
         left:361px;
-        top: 2155px;}
+        top: 2155px;
+        font-family: 'GraphicB';}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.T1 {
+    font-size: 55%;
+    top: 128px;
+    position: absolute;
+    left: 1px;
+    font-family:'Graphic';
+    line-height: 1.5
+}
+.T2 {
+    font-size: 55%;
+    position: absolute;
+    left: 97px;
+    top: 128px;
+    font-family:'Graphic';
+    line-height: 1.5;
+}
+.T3 {
+    position:absolute;
+    font-size: 55%;
+    left: 191px;
+    top: 128px;
+    font-family:'Graphic';
+    
+}
+.T4 {
+    position: absolute;
+    font-size: 55%;
+    left: 286px;
+    top: 128px;
+    font-family:'Graphic';
+    line-height: 1.5
+}
+.T5 {
+    position: absolute;
+    font-size: 55%;
+    left: 379px;
+    top: 128px;
+    font-family:'Graphic';
+    line-height: 1.5
+
+}
+@font-face {
+    font-family: 'Graphic';
+    src: url(./Fonts/GraphikLCG-Regular.ttf);
+}
+@font-face {
+    font-family: 'GraphicB' ;
+    src: url(./Fonts/GraphikLCG-Bold.ttf);
+}
