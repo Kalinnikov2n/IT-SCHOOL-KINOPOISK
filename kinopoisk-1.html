@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>TrueKinoPoisk</title>
+    <link href="kinopoisk-1.css" rel="stylesheet" type="text/css">
+    <style>
+        .leftpic {
+         float: left; 
+         margin: 0 0 5px 5px; }
+       </style>
+</head>
+<body>
+<header>
+    <div class="headerNav">
+        <div class="logoContainer">
+            <img id="logo" src="img/icons/logo.png">
+        </div>
+        <div class="mainContainer">
+            <div class="mainContainerStyle">
+                <div class="headerNavStyle">
+                    <img class="icons" src="img/icons/play.png">
+                    <span>Онлайн-кинотеатр</span>
+                </div>
+                <div class="headerNavStyle">
+                    <img class="icons" src="img/icons/television.png">
+                    <span>Кино на любом ТВ</span>
+                </div>
+            </div>
+            <div class="search">
+                <div class="searchStyle">
+                    <div class="inputStyle">
+                        <input class="searchInput" type="text" placeholder="Фильмы, серилы, персоны">
+                    </div>
+                    <div class="controlContainerStyle">
+                        <a><img class="controlContainerIcon" src="img/icons/edit.png"></a>
+                        <a><img class="controlContainerIcon" src="img/icons/search.png"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="userContainer">
+            <div class="headerNavStyle">
+                <img id="fav" src="img/icons/favourite.png">
+            </div>
+            <div class="YandexPlusIcon">
+                <span>Попробовать плюс</span>
+            </div>
+            <div class="headerNavStyle">
+                <img id="user" src="img/icons/user.png">
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="main">
+    <div class="nav">
+        <div class="items"><img class="icons" src="img/icons/home.png">&nbsp;<b>Главная</b>
+            <hr size="3" width="17" color="ec6f2d" align="left"></div>
+        
+        <div class="items"><img class="icons" src="img/icons/play-button.png">&nbsp;Онлайн-кинотеатр</div>
+        <div class="items"><img class="icons" src="img/icons/films.png">&nbsp;Фильмы</div>
+        <div class="items"><img class="icons" src="img/icons/serials.png">&nbsp;Сериалы</div>
+        <div class="items"><img class="icons" src="img/icons/tickets.png">&nbsp;Билеты в кино</div>
+        <div class="items"><img class="icons" src="img/icons/media.png">&nbsp;Медиа</div>
+    </div>
+    <div class="p">
+        <div class="mainFilm">
+            <div class="mainFilmInfo">
+                <img src="img/filmImages/mainFilmLogo.png" style="height:65px;">
+                <div class="mainFilmInfoMainText">Держитесь крепче: новый сезон обещает величайшее приключение. <br>Только на Кинопоиске</div>
+                <div class="mainFilmInfoSubText">В главных ролях:</div>
+                <div>Джоди Уиттакер, Мандип Гилл, Джон Бишоп</div>
+                <div class="mainFilmInfoSubText">Режиссер:</div>
+                <div>Джейми Магнус Стоун, Azhur Saleem, Haolu Wang</div>
+                <div class="mainFilmInfoSubscribe">Смотрите по подписке</div>
+                <div class="mainFilmInfoSubscribeModule"><span>Смотреть</span><span>Буду смотреть</span></div>
+            </div>
+            <div class="mainFilmVideo">
+                <video style="height:100%;" preload="auto" no-controls autoplay loop muted>
+                    <source src="img/filmImages/mainFilm.mp4" type='video/mp4'>
+                </video>
+            </div>
+        </div>
+        <div class="carouselBlock">
+            <div class="carouselBlockHeader carouselBlockHeaderArrow">
+                <div>
+                    <span>Билеты в кино</span>
+                    <span>120</span>
+                </div>
+                <div>
+                    <span>Все билеты</span>
+                </div>
+            </div>
+            <div class="carousel"> <!--Вот здесь берите шаблоны для фильмов-->
+                <div class="carouselItem">
+                    <img class="poster" src="img/filmImages/img1.webp">
+                    <span><b>Вечные</b></span>
+                    <span>2021, фантастика</span>
+                    <span class="carouselItemRating">95%</span>
+                    <div class="carouselItemTicket"></div>
+                </div>
+                <div class="carouselItem">
+                    <img class="poster" src="img/filmImages/img2.webp">
+                    <span><b>Борис Годунов</b></span>
+                    <span>2021, музыка</span>
+                    <span class="carouselItemRating carouselItemRatingNone">-</span>
+                    <div class="carouselItemTicket"></div>
+                </div>
+                <div class="carouselItem">
+                    <img class="poster" src="img/filmImages/img3.webp">
+                    <span><b>Кощей. Начало</b></span>
+                    <span>2021, мультфильм</span>
+                    <span class="carouselItemRating">7.9</span>
+                    <div class="carouselItemTicket"></div>
+                </div>
+                <div class="carouselItem">
+                    <img class="poster" src="img/filmImages/img4.webp">
+                    <span><b>Неисправимый Рон</b></span>
+                    <span>2021, мультфильм</span>
+                    <span class="carouselItemRating">7.6</span>
+                    <div class="carouselItemTicket"></div>
+                </div>
+                <div class="carouselItem">
+                    <img class="poster" src="img/filmImages/img5.webp">
+                    <span><b>Верхний свет</b></span>
+                    <span>2014, драма</span>
+                    <span class="carouselItemRating">8.6</span>
+                    <div class="carouselItemTicket"></div>
+                </div>
+                <div class="carouselItem">
+                    <img class="poster" src="img/filmImages/img6.webp">
+                    <span><b>Вечные</b></span>
+                    <span>2018,...</span>
+                    <span class="carouselItemRating">7.9</span>
+                    <div class="carouselItemTicket"></div>
+                </div>
+            </div>
+        </div>
+        <div class="carouselBlock">
+            <div class="carouselBlockHeader">
+                <div>
+                    <span>Выбор редакции</span>
+                </div>
+            </div>
+            <div class="carouselRedactionChoiceBlock">
+                <div class="carouselRedactionChoiceItem">
+                    <img class="carouselRedactionChoiceItemImage" src="img/blockImages/blockImage1.webp">
+                </div>
+                <div class="carouselRedactionChoiceItem">
+                    <img class="carouselRedactionChoiceItemImage" src="img/blockImages/blockImage2.webp">
+                </div>
+                <div class="carouselRedactionChoiceItem">
+                    <img class="carouselRedactionChoiceItemImage" src="img/blockImages/blockImage3.webp">
+                </div>
+                <div class="carouselRedactionChoiceItem">
+                    <img class="carouselRedactionChoiceItemImage" src="img/blockImages/blockImage4.png">
+                </div>
+            </div>
+        </div>
+        <div class="YandexPlusAddBlock">
+            <div class="YandexPlusAddBlockIntro">
+                <img src="img/icons/YandexPlus.svg" style="height:26px; width:129px;">
+                <span>Тысячи фильмов и сериалов на КиноПоиск HD</span>
+                <span>В одной подписке с Яндекс.Музыкой</span>
+                <span>Попробовать плюс</span>
+            </div>
+            <div class="carousel"> <!--Вот здесь берите шаблоны для фильмов c плюсом-->
+                <div class="carouselItem">
+                    <img class="poster" src="img/filmImages/img3.webp">
+                    <span><b>Кощей. Начало</b></span>
+                    <span>2021, мультфильм</span>
+                    <span class="carouselItemRating">7.9</span>
+                    <div class="carouselItemPlus"></div>
+                </div>
+                <div class="carouselItem">
+                    <img class="poster" src="img/filmImages/img7.webp">
+                    <span><b>Голяк</b></span>
+                    <span>2019, комедия</span>
+                    <span class="carouselItemRating">8.6</span>
+                    <div class="carouselItemPlus"></div>
+                </div>
+                <div class="carouselItem">
+                    <img class="poster" src="img/filmImages/img8.webp">
+                    <span><b>Семейка Аддамс</b></span>
+                    <span>2019, мультфильм</span>
+                    <span class="carouselItemRating carouselItemRatingNone">6.5</span>
+                    <div class="carouselItemPlus"></div>
+                </div>
+                <div class="carouselItem">
+                    <img class="poster" src="img/filmImages/img9.webp">
+                    <span><b>Бесстыжие</b></span>
+                    <span>2011-2021, комедия</span>
+                    <span class="carouselItemRating">8.7</span>
+                    <div class="carouselItemPlus"></div>
+                </div>
+                <div class="carouselItem">
+                    <img class="poster" src="img/filmImages/img10.webp">
+                    <span><b>Жена олигарха</b></span>
+                    <span>2021, драма</span>
+                    <span class="carouselItemRating">7.0</span>
+                    <div class="carouselItemPlus"></div>
+                </div>
+                <div class="carouselItem">
+                    <img class="poster" src="img/filmImages/img11.webp">
+                    <span><b>Вечные</b></span>
+                    <span>2018,...</span>
+                    <span class="carouselItemRating carouselItemRatingNone">6.0</span>
+                    <div class="carouselItemPlus"></div>
+                </div>
+            </div>
+            <div class="carouselBlock carouselBlockYandexPlus">
+                <div class="carouselBlockHeader">
+                    <div>
+                        <span>Выбираем фильмы и сериалы</span>
+                    </div>
+                </div>
+                <div class="carouselRedactionChoiceBlock">
+                    <div class="carouselRedactionChoiceItem">
+                        <img class="carouselRedactionChoiceItemImage" src="img/blockImages/blockImageYandexPlus1.webp">
+                    </div>
+                    <div class="carouselRedactionChoiceItem">
+                        <img class="carouselRedactionChoiceItemImage" src="img/blockImages/blockImageYandexPlus2.webp">
+                    </div>
+                    <div class="carouselRedactionChoiceItem">
+                        <img class="carouselRedactionChoiceItemImage" src="img/blockImages/blockImageYandexPlus3.webp">
+                    </div>
+                    <div class="carouselRedactionChoiceItem">
+                        <img class="carouselRedactionChoiceItemImage" src="img/blockImages/blockImageYandexPlus4.webp">
+                    </div>
+                </div>
+            </div>
+            <div class="YandexPlusAddBlockDevices">
+                <div class="YandexPlusAddBlockDevicesText">
+                    <span>Смотрите где удобно</span><br>
+                    <span>На телевизоре, ноутбуке, PlayStation 4, смартфоне, планшете и Яндекс.Станции.</span>
+                </div>
+                <img src="img/other/YandexPlusDevices.png">
+            </div>
+        </div>
+        <div class="box" style="display:none;">
+            
+            <div class="box">
+            <div><font size="6"> <b>Популярное </b> </font>
+            <br><img src="pics/pic 1.png"width="297" height="177" hspace="10" vspace="10">
+            <br> <font size="4" color="orange" >1. </font> <font size="4" color="blue" >Что происходит в прокате: <br> «Дюна» не понравилась <br> американцам, а «Веном 2» <br> стал фильмом года в России </font>
+            <br> <font size="4" color="orange" >2. </font> <font size="4" color="blue" >«Угадай фильм по кадру»:<br> вспоминаем легенду, играем <br>в новую версию и получаем<br> подарки  </font>
+            <br> <font size="4" color="orange" >3. </font> <font size="4" color="blue" >Алек Болдуин случайно<br> убил оператора и ранил<br> режиссера на съемках. Как<br> это произошло и к чему <br>может привести? </font>
+            <br> <font size="4" color="orange" >4. </font> <font size="4" color="blue" >Сериалы ноября: «Колесо <br>времени», «Декстер» <br> и «Великая» </font>
+            <br> <font size="4" color="orange" >5. </font> <font size="4" color="blue" >«Кошмар на улице Вязов»: <br>перезагрузка слэшера или<br> культовая драма<br> взросления? </font>
+            <br> <font size="4" color="orange" >6. </font> <font size="4" color="blue" >Как познакомить детей с <br>Пикассо и Рембрандтом, <br>чтобы они не заскучали? <br>Через кино!  </font>
+            <br> <font size="4" color="orange" >7. </font> <font size="4" color="blue" >«Фильм Marvel, похожий на <br>: за что ругают и<br> хвалят «Вечных» Хлои<br> Чжао  </font>
+            <br> <font size="4" color="orange" >8. </font> <font size="4" color="blue" >ПодкастРепрессии и<br> кино: как фильмы <br>перерабатывают травмы <br>прошлого. Гость — Леонид <br>Парфенов </font>
+            <br> <font size="4" color="orange" >9. </font> <font size="4" color="blue" >Sci-fi-сериал<br> «Основание»: почему<br> он лучше «Дюны»<br> (и литературного <br>первоисточника)  </font>
+            <br> <font size="4" color="orange" >10. </font> <font size="4" color="blue" >Дружба<br> со Шварценеггером, звонок <br>Вайнштейна и успех<br> на Netflix: как Александр <br>Невский победил всех </font>
+        </div>
+            <div><font size="8"> <b>Главное сегодня </b></font>
+            <br><img src="pics/pic2.png"width="684" height="404"hspace="10" vspace="10" >
+            <br> <font size="7" color="blue">Внимание: андроид в городе! Анна <br>Николаевна исследует центр <br>Москвы</font>
+            
+            <div class = middle>
+             <div> <br><img src="pics/21.png" width="208" height="118"  hspace="10" vspace="10" class="leftpic" >
+          <br>  <font size="5" color="blue">
+            Кого играют Джоли, Хайек и звезды <br>«Игры престолов» в «Вечных»</font> </div>
+
+        <div>   <br><img src="pics/22.png"width="208" height="118" hspace="10" vspace="10" class="leftpic" >
+            <br> <font size="5" color="blue">
+                «Угадай фильм по кадру»: вспоминаем <br>легенду, играем в новую версию и<br> получаем подарки </font> </div>
+
+             <div>   <br><img src="pics/23.png"width="208" height="118" hspace="10" vspace="10" class="leftpic" >
+                <br><font size="5" color="blue"> 
+            Что смотрели на Кинопоиске<br> в октябре </font> </div>
+
+           <div>         <br><img src="pics/24.png"width="208" height="118" hspace="10" vspace="10" class="leftpic">
+                    <br><font size="5" color="blue">
+                        На Netflix появились игры (не в <br>кальмара!). Они пока работают только<br> на устройствах Android  </font>
+<br><img src="pics/25.png"width="689" height="67" hspace="10" vspace="10"> </div>
+           </div>  </div>
+          
+            </div>
+            <div><font size="6"> <b>Новые видео </b></font>
+            <br> <iframe width="296" height="172" src="https://www.youtube.com/embed/7kslF1r3PPA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+           <br> <iframe width="296" height="172" src="https://www.youtube.com/embed/L72FWLyN6NM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+       <br> <iframe width="296" height="172" src="https://www.youtube.com/embed/yVouF4a2QO8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <br> <iframe width="296" height="172" src="https://www.youtube.com/embed/wtRYP2RljO0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <br> <iframe width="296" height="172" src="https://www.youtube.com/embed/ndZRdbEZLxM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+            <br></br>
+            </div>
+        <!--П начало-->
+        <div class="filmCalendarBlock">
+            <div class="kashReceiptsInfo">
+                <div>
+                    <span>Календарь релизов</span>
+                    <span></span>
+                </div>
+            </div>
+            <div class="kashReceipts">
+                <div class="kashReceiptsColumn filmCalendarColumn">
+                    <h3>Скоро в кино</h3>
+                    <ol class="kashReceiptsFilms">
+                        <li>
+                            <div>
+                                <img src="img/filmImages/nanoFilmImage13.jfif">
+                                <div class="filmCalendarInfo">
+                                    <div class="filmCalendarInfoTitle">
+                                        <span>Спенсер</span><br>
+                                        <span>Spencer</span>
+                                    </div>
+                                    <div class="filmCalendarInfoRight">
+                                        <div>
+                                            <span>4</span>
+                                            <span>ноября</span>
+                                        </div>
+                                        <img src="img/icons/favourite.png" class="favouriteButton">
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <img src="img/filmImages/nanoFilmImage10.jfif">
+                                <div class="filmCalendarInfo">
+                                    <div class="filmCalendarInfoTitle">
+                                        <span>«Везёт»</span><br>
+                                        <span></span>
+                                    </div>
+                                    <div class="filmCalendarInfoRight">
+                                        <div>
+                                            <span>4</span>
+                                            <span>ноября</span>
+                                        </div>
+                                        <img src="img/icons/favourite.png" class="favouriteButton">
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <img src="img/filmImages/nanoFilmImage11.webp">
+                                <div class="filmCalendarInfo">
+                                    <div class="filmCalendarInfoTitle">
+                                        <span>Собор</span><br>
+                                        <span></span>
+                                    </div>
+                                    <div class="filmCalendarInfoRight">
+                                        <div>
+                                            <span>4</span>
+                                            <span>ноября</span>
+                                        </div>
+                                        <img src="img/icons/favourite.png" class="favouriteButton">
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <img src="img/filmImages/nanoFilmImage12.webp">
+                                <div class="filmCalendarInfo">
+                                    <div class="filmCalendarInfoTitle">
+                                        <span>Вечные</span><br>
+                                        <span>Eternals</span>
+                                    </div>
+                                    <div class="filmCalendarInfoRight">
+                                        <div>
+                                            <span>4</span>
+                                            <span>ноября</span>
+                                        </div>
+                                        <img src="img/icons/favourite.png" class="favouriteButton">
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <img src="img/filmImages/nanoFilmImageNotFound.svg" style="width:40px; height:60px;">
+                                <div class="filmCalendarInfo">
+                                    <div class="filmCalendarInfoTitle">
+                                        <span>Детектив на миллион 4: Расплата/span><br>
+                                        <span></span>
+                                    </div>
+                                    <div class="filmCalendarInfoRight">
+                                        <div>
+                                            <span>4</span>
+                                            <span>ноября</span>
+                                        </div>
+                                        <img src="img/icons/favourite.png" class="favouriteButton">
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ol>
+                </div>
+                <div class="kashReceiptsColumn filmCalendarColumn">
+                    <h3>Цифровые релизы</h3>
+                    <ol class="kashReceiptsFilms">
+                        <li>
+                            <div>
+                                <img src="img/filmImages/nanoFilmImage14.webp">
+                                <div class="filmCalendarInfo">
+                                    <div class="filmCalendarInfoTitle">
+                                        <span>Не дыши 2</span><br>
+                                        <span>Don't Breathe 2</span>
+                                    </div>
+                                    <div class="filmCalendarInfoRight">
+                                        <div>
+                                            <span>4</span>
+                                            <span>ноября</span>
+                                        </div>
+                                        <img src="img/icons/favourite.png" class="favouriteButton">
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <img src="img/filmImages/nanoFilmImage15.webp">
+                                <div class="filmCalendarInfo">
+                                    <div class="filmCalendarInfoTitle">
+                                        <span>На высоте мечты</span><br>
+                                        <span>In the Heights</span>
+                                    </div>
+                                    <div class="filmCalendarInfoRight">
+                                        <div>
+                                            <span>4</span>
+                                            <span>ноября</span>
+                                        </div>
+                                        <img src="img/icons/favourite.png" class="favouriteButton">
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <img src="img/filmImages/nanoFilmImage16.webp">
+                                <div class="filmCalendarInfo">
+                                    <div class="filmCalendarInfoTitle">
+                                        <span>Идеальная жена</span><br>
+                                        <span></span>
+                                    </div>
+                                    <div class="filmCalendarInfoRight">
+                                        <div>
+                                            <span>4</span>
+                                            <span>ноября</span>
+                                        </div>
+                                        <img src="img/icons/favourite.png" class="favouriteButton">
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <img src="img/filmImages/nanoFilmImage17.webp">
+                                <div class="filmCalendarInfo">
+                                    <div class="filmCalendarInfoTitle">
+                                        <span>Доктор Брейн</span><br>
+                                        <span>Dr. Brain</span>
+                                    </div>
+                                    <div class="filmCalendarInfoRight">
+                                        <div>
+                                            <span>4</span>
+                                            <span>ноября</span>
+                                        </div>
+                                        <img src="img/icons/favourite.png" class="favouriteButton">
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <img src="img/filmImages/nanoFilmImage18.webp">
+                                <div class="filmCalendarInfo">
+                                    <div class="filmCalendarInfoTitle">
+                                        <span>Приключения на шоколадной фабр..</span><br>
+                                        <span>Papa Moll</span>
+                                    </div>
+                                    <div class="filmCalendarInfoRight">
+                                        <div>
+                                            <span>4</span>
+                                            <span>ноября</span>
+                                        </div>
+                                        <img src="img/icons/favourite.png" class="favouriteButton">
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+        <!--П конец-->
+        <div class="newTrailersBlock">
+            <div class="newRel">
+            <span><b>Новые трейлеры</b></span>
+            <span>Трейлеры</span>
+            </div>
+            <div class ="trailers">
+                <div class="carousel filmTrailers"> 
+                    <div class="carouselItem trailerItem">
+                        <iframe width="232" height="165" src="https://www.youtube.com/embed/Zj2SIj3bacM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <span><b>Черный ящик</b></span>
+                        <span>2021, триллер</span>
+                    </div>
+                    <div class="carouselItem trailerItem"">
+                        <iframe width="232" height="165" src="https://www.youtube.com/embed/Wctg8f15VV4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <span><b>Морбиус</b></span>
+                        <span>2022, ужасы</span>
+                    </div>
+                    <div class="carouselItem trailerItem"">
+                        <iframe width="232" height="165" src="https://www.youtube.com/embed/nbatQheE4Q0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <span><b>Падение Луны</b></span>
+                        <span>2022, фантастика</span>
+                    </div>
+                    <div class="carouselItem trailerItem"">
+                        <iframe width="232" height="165" src="https://www.youtube.com/embed/fasg08O2z9U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <span><b>Битва при Чосинском Водохранил.</b></span>
+                        <span>2021, боевик</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="kashReceiptsBlock"><!--Кассовые сборы-->
+            <div class="kashReceiptsInfo">
+                <div>
+                    <span>Кассовые сборы за уик-энд</span>
+                    <span>29 октября — 31 октября</span>
+                </div>
+                <div>
+                    <span>Кассовые сборы</span>
+                </div>
+            </div>
+            <div class="kashReceipts">
+                <div class="kashReceiptsColumn">
+                    <h3>Россия и СНГ</h3>
+                    <ol class="kashReceiptsFilms">
+                        <li>
+                            <div>
+                                <img src="img/filmImages/nanoFilm1.webp">
+                                <div class="kashReceiptsFilmsInfo">
+                                    <div>
+                                        <span>Кощей. Начало</span>
+                                        <span>34.8 млн ₽</span>
+                                    </div>
+                                    <span>34.8 млн ₽ за 1 неделю</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <img src="img/filmImages/веном.jpeg">
+                                <div class="kashReceiptsFilmsInfo">
+                                    <div>
+                                        <span>Веном 2</span>
+                                        <span>32.3 млн ₽</span>
+                                    </div>
+                                    <span>23.5 млн ₽ за 5 недель</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <img src="img/filmImages/ron.jpeg">
+                                <div class="kashReceiptsFilmsInfo">
+                                    <div>
+                                        <span>Неисправимый Рон</span>
+                                        <span>31.6 млн ₽</span>
+                                    </div>
+                                    <span>156.9 млн ₽ за 2 недели</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <img src="img/filmImages/adams.jpeg">
+                                <div class="kashReceiptsFilmsInfo">
+                                    <div>
+                                        <span>Семейка Адамс: Горящий тур</span>
+                                        <span>29 млн ₽</span>
+                                    </div>
+                                    <span>420.5 млн ₽ за 4 недели</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <img src="img/filmImages/death.jpeg">
+                                <div class="kashReceiptsFilmsInfo">
+                                    <div>
+                                        <span>Не время умирать</span>
+                                        <span>24.5 млн ₽</span>
+                                    </div>
+                                    <span>846.5 млн ₽ за 4 недели</span>
+                                </div>
+                            </div>
+                        </li>
+                    </ol>
+                </div>
+                <div class="kashReceiptsColumn">
+                    <h3>Мир</h3>
+                    <ol class="kashReceiptsFilms">
+                        <li>
+                            <div>
+                                <img src="img/filmImages/death.jpeg">
+                                <div class="kashReceiptsFilmsInfo">
+                                    <div>
+                                        <span>Не время умирать</span>
+                                        <span>$51.9 млн</span>
+                                    </div>
+                                    <span>$472.5 млн за 5 недель</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <img src="img/filmImages/веном.jpeg">
+                                <div class="kashReceiptsFilmsInfo">
+                                    <div>
+                                        <span>Веном 2</span>
+                                        <span>$21.4 млн</span>
+                                    </div>
+                                    <span>$205.4 млн за 5 недель</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <img src="img/filmImages/duna.jpeg">
+                                <div class="kashReceiptsFilmsInfo">
+                                    <div>
+                                        <span>Дюна</span>
+                                        <span>$21.4 млн</span>
+                                    </div>
+                                    <span>$222.7 млн за 7 недель</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <img src="img/filmImages/halloween.jpeg">
+                                <div class="kashReceiptsFilmsInfo">
+                                    <div>
+                                        <span>Хэллоуин убивает</span>
+                                        <span>$8.2 млн</span>
+                                    </div>
+                                    <span>$29.5 млн за 3 недели</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <img src="img/filmImages/ron.jpeg">
+                                <div class="kashReceiptsFilmsInfo">
+                                    <div>
+                                        <span>Неисправимый Рон</span>
+                                        <span>$6.5 млн</span>
+                                    </div>
+                                    <span>$20.7 млн за 3 недели</span>
+                                </div>
+                            </div>
+                        </li>
+                    </ol>
+                </div>
+                <div class="kashReceiptsColumn">
+                    <h3>США и Канада</h3>
+                    <ol class="kashReceiptsFilms">
+                        <li>
+                            <div>
+                                <img src="img/filmImages/duna.jpeg">
+                                <div class="kashReceiptsFilmsInfo">
+                                    <div>
+                                        <span>Дюна</span>
+                                        <span>$15.4 млн</span>
+                                    </div>
+                                    <span>$69.3 млн за 2 недели</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <img src="img/filmImages/halloween.jpeg">
+                                <div class="kashReceiptsFilmsInfo">
+                                    <div>
+                                        <span>Хэллоуин убивает</span>
+                                        <span>$8.7 млн</span>
+                                    </div>
+                                    <span>$85.9 млн за 3 недели</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <img src="img/filmImages/death.jpeg">
+                                <div class="kashReceiptsFilmsInfo">
+                                    <div>
+                                        <span>Не время умирать</span>
+                                        <span>$7.8 млн</span>
+                                    </div>
+                                    <span>$133.3 млн за 4 недели</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <img src="img/filmImages/academy.jpeg">
+                                <div class="kashReceiptsFilmsInfo">
+                                    <div>
+                                        <span>Моя геройская академия</span>
+                                        <span>$6.4 млн</span>
+                                    </div>
+                                    <span>$6.4 млн за 1 неделю</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <img src="img/filmImages/soho.jpeg">
+                                <div class="kashReceiptsFilmsInfo">
+                                    <div>
+                                        <span>Прошлой ночью в Сохо</span>
+                                        <span>$4.2 млн</span>
+                                    </div>
+                                    <span>$4.2 млн за 1 неделю</span>
+                                </div>
+                            </div>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div> <!--конец контента-->
+</div>
+<footer>
+    <div class="firstFoot">
+        <img class="footIcon" src="img/icons/vk.png">
+        <img class="footIcon" src="img/icons/facebook.png">
+        <img class="footIcon" src="img/icons/twitter.png">
+        <img class="footIcon" src="img/icons/telegram.png">
+        <img class="footIcon" src="img/icons/instagram.png">
+        <img class="footIcon" src="img/icons/youtube.png">
+    </div>
+    <ul class="secondFoot">
+        <li class="ul-items">Вакансии</li>
+        <li class="ul-items">Реклама</li>
+        <li class="ul-items">Соглашение</li>
+        <li class="ul-items">Справка</li>
+        <li class="ul-items">Блог</li>
+        <li class="ul-items">Участие в исследованиях</li>
+        <li class="ul-items">Предложения</li>
+        <li class="ul-items">Служба поддержки</li>
+    </ul>
+    <div class="sectionButtons">
+        <button class="buttons">Загрузите в<br><b><big>App Store</big></b></button>
+        <button class="buttons">Доступно в<br><b><big>Google Play</big></b></button>
+        <button class="buttons">Откройте в<br><b><big>AppGallery</big></b></button>
+    </div>
+    <div class="footBottom">
+        <div class="leftBottom">
+        <span>003-2021, Кинопоиск &nbsp; 18+</span>
+        </div>
+        <div class="centerBottom">
+        <span>Телепрограмма &nbsp; Музыка &nbsp; Афиша</span>
+        </div>
+        <div class="rightBottom">
+        <span>Проект компании &nbsp; <b>Яндекс</b></span>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
