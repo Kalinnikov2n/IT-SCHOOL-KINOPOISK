@@ -362,43 +362,7 @@ footer {
     background-size: 10px;
     background-image: url("img/icons/plus.svg");
 }
-.calendariBlock {
-    padding: 0px 30px;
-}
-.calendar {
-    display: flex;
-    flex-direction: row;
-    width:100%;
-}
-.calendarColumn {
-    width: 50%;
-    padding-right: 15px;
-}
-.calendarColumn:last-of-type{
-    padding-right: 0px;
-    
-}
-.calendarColumnFilmImage {
-    width: 40px;
-    height: 60px;
-    border-radius: 3px;
- 
-}
-.calendarColumnFilm span {
-    position: relative;
-    top: -25px;
-}
-.calendarColumnFilm {
-    display:flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-.calendarColumnIconImage {
-    width: 28px;
-    height: 28px;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    border-radius: 3px;
-}
+
 .kashReceiptsBlock{
     margin-top: 30px;
     padding:0 30px;
@@ -447,7 +411,7 @@ footer {
     padding-bottom: 10px;
     border-bottom: 1px solid darkgray;
 }
-.kashReceiptsFilms li > div:last-of-type{
+.kashReceiptsFilms li:last-of-type > div{
     border-bottom: none;
 }
 .kashReceiptsFilms li > div img{
@@ -480,4 +444,56 @@ footer {
 }
 .kashReceiptsFilmsInfo:first-child{
     background-color: seagreen;
+}
+.filmCalendarBlock{
+    margin-top:30px;
+    padding:0 30px;
+}
+.filmCalendarColumn{
+    width:50%;
+}
+.filmCalendarInfo{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width:100%;
+}
+.filmCalendarInfoTitle{
+    margin-left:10px;
+    margin-top:10px;
+}
+.filmCalendarInfoTitle span{
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16px;
+}
+.filmCalendarInfoTitle span:nth-of-type(1){
+    color:#060077;
+}
+.filmCalendarInfoTitle span:nth-of-type(2){
+    color:rgba(31,31,31,.4);
+}
+.filmCalendarInfoRight{
+    display:flex;
+    flex-direction: row;
+}
+.filmCalendarInfoRight div{
+    display:flex;
+    flex-direction: column;
+    text-align: center;
+    color:#797979;
+}
+.filmCalendarInfoRight div span:nth-of-type(1){
+    font-size: 30px;
+}
+.favouriteButton{
+    height:20px;
+    width:20px;
+    padding:5px;
+    padding-left:4px;
+    border:1px solid darkgray;
+}
+.filmCalendarInfoRight .favouriteButton{
+    margin-top: 10px;
+    margin-left: 30px;
 }
