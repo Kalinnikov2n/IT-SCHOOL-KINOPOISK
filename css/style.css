@@ -169,17 +169,14 @@ a{
     height: 72px;
     width: 600px;
 }
-.gray{
-    color: rgb(167, 167, 167);
-    font-size: 30px;
-    font-weight: lighter;
-}
 .img_footer{
     height: 500px;
     border-radius: 20px;
     margin: 10px;
 }
 .imgButton{
+    position: absolute;
+    left: 10px;
     display: flex;
     justify-content: space-between;
 
@@ -190,6 +187,7 @@ a{
     right: 380px;
 }
 .img_footer{
+    height: 250px;
     box-shadow: 0px 0px 10px black
 }
 .imgItems{
@@ -200,4 +198,128 @@ a{
 }
 .imgItems:hover{
     color:black
+}
+.MainContent{
+    position: absolute;
+    left: 550px;
+    top: 72px;
+    width: 870px;
+    height: 500px;
+    background-color:rgb(235, 235, 235);
+}
+.imgSmille{
+    border-radius: 5px;
+    margin-top: 20px;
+    margin-left: 20px;
+    height: 350px;
+    cursor: pointer;
+}
+.imgTickets{
+    position: absolute;
+    left: 20px;
+    top: 450px;
+    font-weight: 700;
+}
+.MainContent1{
+    margin-left: 550px;
+    width: 870px;
+    height: 500px;
+    background-color:rgb(235, 235, 235);
+}
+.MainContent2{
+    margin-left: 550px;
+    width: 870px;
+    height: 3000px;
+    background-color:rgb(235, 235, 235);
+}
+.FilmPicture{
+    border-radius: 5px;
+    margin-left: 20px;
+    height: 250px;
+    width: 150px;
+}
+.MainContent3{}
+.vubor{
+    margin-left: 20px;
+    font-size: 30px;
+    font-weight: bolder;
+}
+.MainContent4{
+    display: flex;
+}
+.photogod{
+    margin: 8px;
+    height: 200px;
+    width: 200px;
+}
+.stolb{
+    width: 200px;
+    height: 800px;
+}
+.stolb1{
+    margin-left: 60px;
+    width: 300px;
+    height: 800px;
+}
+.stolb2{
+    margin-left: 70px;
+}
+.stroka{
+    margin-left: 20px;
+    font-size: 25px;
+    font-weight: 900;
+}
+.photogod1{
+    margin-left: 20px;
+    border-radius: 5px;
+    width: 220px;
+    height: 120px;
+}
+.element{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 200px;
+}
+.import{
+    font-size: 25px;
+    font-weight: bolder;
+}
+.stolbu{
+    display: flex;
+}
+.photogod2{
+    border-radius: 5px;
+    height: 250px;
+    width: 350px;
+}
+.stroka1{
+    font-size: 25px;
+    font-weight: bolder;
+}
+.podblock{
+    display: flex;
+}
+.photogod3{
+    border-radius: 5px;
+    height: 60px;
+    margin: 5px;
+}
+.b{
+    border-radius: 5px;
+    height: 130px;
+    width: 200px;
+}
+.MainContent5{
+    margin-top: 70px;
+}
+.border{
+    margin-left: 30px;
+    width: 800px;
+    height: 1px;
+    background-color: black;
+}
+.import1{
+    margin-left: 30px;
+    font-size: 25px;
+    font-weight: bolder;
 }
