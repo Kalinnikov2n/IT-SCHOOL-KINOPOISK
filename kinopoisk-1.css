@@ -688,9 +688,9 @@ header button {
 .newTrailersBlock{
     padding:0 30px;
 }
-.trailerItem{
-    margin-right: 20px;
-}
-.trailerItem:last-of-type{
-    margin-right: 0;
+.filmTrailers{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width:100%;
 }
