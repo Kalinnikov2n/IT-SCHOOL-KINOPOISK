@@ -697,14 +697,14 @@ span1 {
 
 #z1 {
     position: absolute;
-    top: 3020px;
-    left:550px;
+    margin-top: 20%;
+    margin-left:18%;
 }
 
 #z2 {
     position: absolute;
-    top: 2620px;
-    left: 600px;
+    top: 285%;
+    margin-left:15%;
 }
 
 #z3 {
