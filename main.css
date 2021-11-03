@@ -384,7 +384,7 @@ input {
 }
 #ph{
     border-radius: 25px;
-    padding:15px;
+    padding:1%;
 }
 p {
     /* font-size: 2em; */
@@ -408,20 +408,20 @@ p {
 
 #badge {
     position: absolute;
-    top: 1020px;
-    left: 1130px;
+    top: 110%;
+    left: 61%;
 }
 
 #badge1 {
     position: absolute;
-    top: 1020px;
-    left: 1600px;
+    top: 110%;
+    left: 87%;
 }
 
 #badge2 {
     position: absolute;
-    top: 800px;
-    left: 1420px;
+    top: 90%;
+    left: 77%;
 }
 
 h2 {
@@ -435,8 +435,8 @@ h2 {
 
 #badge3 {
     position: absolute;
-    top: 800px;
-    left: 940px;
+    top: 90%;
+    left: 51%;
 }
 
 h3 {
