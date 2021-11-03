@@ -1,0 +1,381 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+body {
+    margin: 0px;
+    font-family: 'Montserrat', Arial, Tahoma, Verdana, sans-serif;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 38px;
+    text-decoration: none;
+    background: #F2F2F2;
+}
+
+#article {
+    padding-top: 20px;
+    height: 100%;
+    width: 1120px;
+    display: block;
+    margin-right: 110px;
+    margin-left: 273px;
+    background: #FFFFFF;
+}
+
+#menu {
+    margin-top: 70px;
+    position: fixed;  
+    width: 188px;
+    min-height: 100%;
+    display: block;
+    flex-direction: column;
+    color: #777777;
+    margin-left: 110px;
+    float: left;
+    background: #FFFFFF;
+    border: 2px solid #F2F2F2;
+    padding: 20px 0px 0px 47px;
+}
+
+#header {
+    display:flex;
+    position: fixed;
+    background: #1f1f1f;
+    height: 70px;
+    width: 1920px;
+}
+
+.YP {
+    font-weight: bold;
+    font-size: 15px;
+    color: white;
+    text-align: center;
+    position: relative;
+    top: 17px;
+    left: 150px;
+    background: linear-gradient(130.16deg, #505add 34.4%, #be40c0 66.11%, #fba82b 96.37%);
+    border-radius: 50px;
+    width: 55px;
+    height: 20px;
+    border:0;
+}
+
+.header-font a {
+    float: right;
+    vertical-align: middle;
+    padding-top: 25px;
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 18px;
+    text-decoration: none;
+    color: #F2F2F2;
+}
+
+input {
+    position: relative;
+    top: 17px;
+    left: 50px;
+    font-size: 14px;
+    padding-left: 30px;
+    display: block;
+    width: 100%;
+    height: 30px;
+    float: right;
+    border: 0;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+}
+
+#footer {
+    display: block;
+    width: 1120px;
+    height: 350px;
+    float: left;
+    text-align: center;
+    font-size: 15 px;
+    background: #0c0c0c;
+    margin-left: 270px;
+    margin-right: 270px;
+    flex-direction: column;
+}
+
+.f-menu a {
+    padding-top: 30px;
+    color: #FFFFFF;
+    font-size: 15px;
+    margin-left: 30px;
+    font-family: Graphik Kinopoisk LC Web,Arial,Tahoma,Verdana,sans-serif;
+    opacity: .4;
+    text-decoration: none;
+}
+
+#social {
+    color: white;
+    opacity: .4;
+    margin-top: 60px;
+    }
+
+#img-s {
+    margin-right: 15px;
+}
+
+.loading {
+    margin-top: 40px;
+}
+
+hr {
+    margin-top: 48px;
+    opacity: .4;
+}
+
+#f {
+    margin-left: 288px;
+    margin-bottom: 50px;
+    color: #FFFFFF;
+    opacity: .4;
+    padding-top: 30px;
+}
+
+#b {
+    padding-top: 30px;
+}
+
+.icons {
+    width: 19px;
+    height: 19x;
+    filter: alpha(Opacity=50);
+    opacity: 0.5;
+    padding-right: 6px;
+}
+
+.card-image {
+    width: 150px;
+    height: 200px;
+    margin-bottom: 1px;
+    border-radius: 10px;
+}
+
+.card-fi{
+    float: left;
+    width: 154px;
+    margin-right: 3px;
+    margin-left: 20px;
+}
+
+.card {
+    float: left;
+    width: 154px;
+    margin-right: 3px;
+}
+
+.card-title {
+    font-size: x-small;
+    font-weight: 500;
+    margin-bottom: 1px;
+    line-height: 5px;
+    margin-top: 1px;
+}
+
+  .card-text {
+    font-size: 16px;
+    line-height: 1px;
+}
+
+.bot {
+    float: both;
+}
+
+.headfilm {
+    text-indent: 20px;
+}
+
+.pic {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    margin-left: 40px;
+    margin-right: 4px;
+}
+
+.ad {
+    margin-left: 130px;
+    margin-right: 60px;
+    margin-top: 20px;
+    padding-top: 30px;
+    height: 360px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 1.0) 45%, rgba(0, 0, 0, 0.0)), url('./ads/koshei_bg.png');
+    background-size: contain;
+    border-radius: 5px;
+}
+
+.glavnoe {
+    vertical-align: text-top;
+    margin-left: 30px;
+    display: inline-block;
+    padding: 0;
+    margin-bottom: 40px;
+    line-height: normal;
+    font-size: 18px;
+    font-weight: bold;
+    max-width: 200px;
+}
+
+.btn-news {
+    font-family: 'Montserrat', Verdana, Geneva, Tahoma, sans-serif;
+    width: 460px;
+    height: 50px;
+    background-color: white;
+    border: 1px solid #e4e4e4;
+    box-shadow: #F2F2F2 5px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-top: 25px;
+}
+
+.main-news {
+    color: #342f90;
+    font-size: 15px;
+    font-weight: bold;
+    padding-top: 20px;
+}
+
+img {
+    border-radius: 5px;
+}
+
+ul {
+    list-style-type: none;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+
+.vid {
+    font-size: 13px;
+    font-weight: normal;
+    color: #342f90;
+    padding-top: 15px;
+}
+
+li {
+    margin-left: -30px;
+    font-size: 13px;
+    font-weight: normal;
+    color: #342f90;
+    padding-top: 15px;
+}
+
+section {
+    margin-left: 100px;
+    margin-top: 40px;
+}
+
+td {
+    padding-top: 20px;
+    vertical-align: top;
+    border-bottom: 1px solid #F2F2F2;
+    
+}
+
+.special {
+    margin-bottom: 15px;
+}
+
+#logo-promo {
+    padding-left: 40px;
+    height: 65px;
+    width: auto;
+}
+
+#main-ad-text {
+    font-family: 'Montserrat', Arial, Tahoma, Verdana, sans-serif;
+    color: white;
+    font-size: 12px;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 20px;
+    padding-left: 40px;
+    padding-top: 5px;
+}
+
+#prod {
+    color: #333333;
+    font-family: 'Montserrat', Arial, Tahoma, Verdana, sans-serif;
+    font-size: 11px;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 20px;
+    padding-left: 40px;
+    padding-top: 5px;
+}
+
+#btn-txt {
+    font-family: 'Montserrat', Arial, Tahoma, Verdana, sans-serif;
+    padding-left: 40px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #868eff;
+}
+
+.btn-style {
+    display: inline-flex;
+    font-family: 'Montserrat', Arial, Tahoma, Verdana, sans-serif;
+    background: linear-gradient(130.16deg, #505add 34.4%, #be40c0 66.11%, #fba82b 96.37%);
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-left: 40px;
+    margin-top: 15px;
+    height: 40px;
+    padding: 11px 18px 11px 14px;
+    line-height: 18px;
+    border: 0;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.t-image{
+    width: 320px;
+    height: 200px;
+    margin-bottom: 1px;
+    border-radius: 10px;
+}
+.tre {
+    float: left; 
+    margin-right: 3px;
+    margin-bottom: 10px;
+    margin-left: 12px;
+}
+.vic {
+    margin-left: 20px;
+}
+.tb-imge {
+    height: 67px;
+    width: 50px;
+}
+.p-tab {
+    line-height: 20px;
+}
+.td1{
+    border-bottom: 1px solid #F2F2F2; 
+    padding-left: 50px;
+}
+.ot-col {
+    color:#2403dd;
+}
+.price {
+    color:coral;
+    float: right;
+    margin-right: 50px;
+    margin-left: 20px;
+}
+.ol-price {
+    color:darkgray
+}
+
