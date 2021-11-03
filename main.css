@@ -328,17 +328,14 @@ input {
     /* margin-left: 20%; */
 
 }
-<<<<<<< HEAD
 #task{
-    margin-left: 23%;
+    /* margin-left: 23%; */
 }
-=======
 .container{
-    margin-left: 23%;
+    /* margin-left: 23%; */
     position: relative;
 }
 
->>>>>>> 1eaab79360cfd97c78d0a4979c38953b98bd7728
 .container img {
 
     border-radius: 20px;
@@ -370,6 +367,8 @@ input {
     margin-left: 40%;
     top:100%;
     position:absolute;
+    margin-left: 30%;
+    top: 80%;
 
 }
 
@@ -408,20 +407,25 @@ p {
 
 #badge {
     position: absolute;
-    top: 110%;
+    top: 85%;
     left: 61%;
+}
+
+#badge2 h3{
+    top:-5%;
 }
 
 #badge1 {
     position: absolute;
-    top: 110%;
+    top: 85%;
     left: 87%;
 }
 
 #badge2 {
     position: absolute;
-    top: 90%;
-    left: 77%;
+    top: 19%;
+    left: 60%;
+    text-align: center;
 }
 
 h2 {
@@ -435,8 +439,8 @@ h2 {
 
 #badge3 {
     position: absolute;
-    top: 90%;
-    left: 51%;
+    top: 19%;
+    left: 73%;
 }
 
 h3 {
