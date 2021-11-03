@@ -153,7 +153,7 @@ color: gray;
 
 }
 .tickets {
-    top: 680px;
+    top: 730px;
     position:absolute;
     margin-left: 361px;
 }
@@ -177,6 +177,38 @@ color: gray;
      zoom: 150%;}
 
 .traillerstext { 
-        position:absolute;
-        left:361px;
-        top: 2155px;}
+    position:absolute;
+    left:361px;
+    top: 2155px;}
+
+.calendartext {
+    margin: left 600px;
+    margin-top: 2155px;
+}
+
+ .calendar1 {
+    margin-left:350px;
+    margin-top: 1350px;
+    width: 100%;}
+          
+.calendaritems1 {
+    
+    width: 10px;
+    height: 100px;
+    margin:60px;
+    zoom: 80%;
+ }   
+
+ .calendar2 {
+    
+    margin-left: 850px;
+    margin-top: -642px;
+    width: 100%;}
+          
+.calendaritems2 {
+    
+    width: 10px;
+    height: 100px;
+    margin:60px;
+    zoom: 80%;
+ }
