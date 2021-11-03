@@ -333,3 +333,92 @@ color: gray;
     font-family: 'Semibold';
     src: url(./Fonts/GraphikLCG-Semibold.ttf);
 }
+table{
+    margin-left: 500px;
+    position: absolute;
+    top: 2550px;
+    border-collapse: collapse;
+    width: 370px;
+}
+td {
+    text-align: left;
+    
+}
+td, tr {
+    padding: 1vw;
+}
+a {
+    font-family:'Graphic';
+    color: #000000;
+    font-size: 150%;
+}
+.headiing{
+    position: absolute;
+    left: 361px;
+    top: 2460px;
+    font-family: 'GraphicB';
+}
+.nh1 {
+    font-family:'Graphic';
+    position: absolute;
+    left: 480px;
+    top: 2700px;
+}
+.nh2 {
+    font-family:'Graphic';
+    position: absolute;
+    left: 485px;
+    top: 2830px;
+}
+.nh3{
+    font-family:'Graphic';
+    position: absolute;
+    left: 487px;
+    top: 2950px;
+}
+.nh4{
+    font-family:'Graphic';
+    position: absolute;
+    left: 487px;
+    top: 3080px;
+}
+.nh5{
+    font-family:'Graphic';
+    position: absolute;
+    left: 480px;
+    top: 2570px;
+}
+.bb1{
+    font-family:'Graphic';
+    position: absolute;
+    left: 980px;
+    top: 2575px;
+
+}
+.bb2{
+    font-family:'Graphic';
+    position: absolute;
+    left: 980px;
+    top: 2685px; ;
+
+}
+.bb3{
+    font-family:'Graphic';
+    position: absolute;
+    left: 980px;
+    top: 2817px;
+
+}
+.bb4{
+    font-family:'Graphic';
+    position: absolute;
+    left: 980px;
+    top: 2950px;
+
+}
+.bb5{
+    font-family:'Graphic';
+    position: absolute;
+    left: 980px;
+    top: 3070px;
+}
