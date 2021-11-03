@@ -35,7 +35,7 @@ footer {
     padding: 10px;
     background-color: #ffffff;
     width: 15%;
-    height: 400vh;
+    height: 580vh;
     margin-left: 15%;
     border-right: 1px solid rgba(31, 31, 31, .1);
 }
@@ -591,7 +591,7 @@ header button {
     display:flex;
     flex-direction: column;
     width:100%;
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 500;
     line-height: 16px;
     margin-left:10px;
