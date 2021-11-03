@@ -343,6 +343,8 @@ header {
   background: #484848;
   border-radius: 5px;
   margin-bottom: 35px;
+  background: url(src/thumbnails/banner.png) no-repeat  center ;
+  cursor: loading;
 }
 
 .movie-sliders {
@@ -365,7 +367,13 @@ header {
   font-weight: 700;
   font-size: 24px;
   margin-right: 10px;
+  
 }
+
+.name .title {
+  margin-bottom: 10px;
+}
+
 .tickets-title .count {
   font-size: 26px;
   color: rgba(31,31,31,.4);
@@ -400,6 +408,10 @@ header {
   cursor: pointer;
   width: 140px;
   margin-right: 20px;
+}
+
+.movie-item:last-child {
+  margin-right: 0;
 }
 
 .movie-item .thumbnail{
@@ -471,10 +483,11 @@ header {
 
 .chosen-items .item {
   background: #484848;
-  height: 225px;
-  min-width: 225px;
+  height: 220px;
+  min-width: 220px;
   border-radius: 10px;
   margin-right: 20px;
+  cursor: pointer;
 }
 
 
@@ -515,9 +528,60 @@ header {
 }
 
 .subquote {
-  margin-bottom: 32px;
-    font-size: 26px;
-    color: hsla(0,0%,100%,.7);
+  margin-bottom: 39px;
+  font-size: 26px;
+  color: hsla(0,0%,100%,.7);
+}
+
+.subscription {
+  width: 205px;
+  height: 44px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(
+    130.16deg,#505add 34.4%,#be40c0 66.11%,#fba82b 96.37%);
+  cursor: pointer;
+  margin-bottom: 50px;
+}
+
+.yand-block__descr .title{
+  color: white;
+}
+
+.yand-block__descr .description{
+  color: rgb(139, 139, 139);
+}
+
+.mar-bot {
+  margin-bottom: 74px;
+}
+
+.devices {
+  display: flex;
+  width: 100%;
+  height: 200px;
+  background-color: #222222;
+  align-items: center;
+  padding: 0 60px;
+  cursor: pointer;
+}
+
+.devices .title {
+  max-width: 400px;
+}
+
+.title .heading {
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.title .description {
+  font-size: 16px;
+  line-height: 24px;
+  color: #BDBDBD;
 }
 
 
@@ -540,6 +604,10 @@ header {
   .header-container {
     width: 1000px;
     
+  }
+
+  .devices {
+    display: none;
   }
 
   .content {
