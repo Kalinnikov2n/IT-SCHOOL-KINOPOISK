@@ -1,0 +1,435 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+.headerBackGround{
+    display: flex;
+    background-color: rgb(31, 31, 31);
+    margin: 0px;
+    height: 72px;
+}
+.block{
+    height: 72px;
+    width: 357px;
+}
+.block1{
+    height: 72px;
+    width: 70px;
+}
+.block4{
+    height: 72px;
+    width: 60px;
+}
+.img3{
+    transition: 0,3s;
+    margin-top: 14px;
+height: 45px;
+width: 100px;
+outline: none;
+cursor: pointer;
+}
+.online{
+    display: flex;
+    height: 72px;
+    width: 160px;
+    text-decoration: none;
+    outline: none;
+    cursor: pointer;
+}
+.triangle-right {
+    margin-top: 30px;
+    width: 0;
+    height: 0;
+    border-top: 6px solid transparent;
+    border-left: 12px solid whitesmoke;
+    border-bottom: 6px solid transparent;
+}
+.searchbar{
+    height: 30px;
+    color: whitesmoke;
+    background-color: rgb(61,61,61);
+}
+.join{
+    font-size: 15px;
+    margin-top: 30px;
+    margin-left: 10px;
+    border: none;
+    background-color: rgb(31, 31, 31);
+    color: rgb(201, 201, 201);
+    text-decoration: none;
+    
+    outline: none;
+    cursor: pointer;
+}
+.join:hover{
+    color: white; 
+}
+.kino{
+    display: flex;
+}
+.TV{
+    margin-top: 23px;
+    height: 25px;
+    width: 25px;
+}
+.kinoTV{
+    margin-top: 25px;
+    color: rgb(201, 201, 201);
+    text-decoration: none;
+    outline: none;
+    cursor: pointer;
+}
+.kinoTV:hover{
+    color: white;
+}
+.button1{
+    margin-top: 20px;
+    height: 30px;
+    width: 70px;
+    background-color: rgb(61, 61, 61);
+}
+.probel2{
+    height: 72px;
+    width: 10px;
+}
+.probel{
+    height: 72px;
+    width: 10px;
+}
+.online_text{
+    color: rgb(201, 201, 201);
+    margin-top: 27px;
+}
+.online_text:hover{
+    color: white;
+}
+.kinopoisk{
+    margin-top: 20px;
+    border: 0px;
+    padding: 0px;
+    background-color: rgb(31, 31, 31);
+    text-decoration: none;
+    outline: none;
+    cursor: pointer;
+}
+.img3:hover{
+    margin-top: 12px;
+    transform: scale(1.1); 
+}
+body{
+    margin: 0px;
+}
+.sideMenuBlock
+{
+    position: absolute;
+    left: 350px;
+    top: 100px;
+    width: 200px;
+    height: 300px;
+}
+.sideMenuButton {
+    border:           none;
+    background-color: white;
+    color:            #494545;
+    margin-left:      8px;
+    text-decoration:  none;
+    outline:          none;
+    cursor:           pointer;
+  }
+  .form{
+      margin-top: 18px;
+  }
+  .probel3{
+      height: 72px;
+      width: 250px;
+  }
+  .sideMenuButton:hover {
+    color:            rgb(0, 0, 0);
+  }
+.mainFooterBlock{
+    display: flex;
+    align-items: center;
+}
+.block2{
+    display: flex;
+    flex-direction: column;
+    height: 1500px;
+    width: 50px;
+}
+.text_tickets{
+    display: flex;
+    justify-content: flex-start;
+    font-size: 35px;
+    text-decoration: none;
+    color: black;
+    font-family: 'Roboto', sans-serif;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+.probel1{
+    height: 72px;
+    width: 600px;
+}
+.img_footer{
+    height: 500px;
+    border-radius: 20px;
+    margin: 10px;
+}
+.imgButton{
+    position: absolute;
+    left: 10px;
+    display: flex;
+    justify-content: space-between;
+
+}
+.imgButton{
+    position: relative;
+    top: 300px;
+    right: 380px;
+}
+.img_footer{
+    height: 250px;
+    box-shadow: 0px 0px 10px black
+}
+.imgItems{
+    transition: 0.3s; 
+}
+.imgItems:hover {
+    transform: scale(1.1); 
+}
+.imgItems:hover{
+    color:black
+}
+.MainContent{
+    position: absolute;
+    left: 550px;
+    top: 72px;
+    width: 870px;
+    height: 500px;
+    background-color:rgb(235, 235, 235);
+}
+.imgSmille{
+    border-radius: 5px;
+    margin-top: 20px;
+    margin-left: 20px;
+    height: 350px;
+    cursor: pointer;
+}
+.imgTickets{
+    position: absolute;
+    left: 20px;
+    top: 450px;
+    font-weight: 700;
+}
+.MainContent1{
+    margin-left: 550px;
+    width: 870px;
+    height: 500px;
+    background-color:rgb(235, 235, 235);
+}
+.MainContent2{
+    margin-left: 550px;
+    width: 870px;
+    height: 3000px;
+    background-color:rgb(235, 235, 235);
+}
+.FilmPicture{
+    border-radius: 5px;
+    margin-left: 20px;
+    height: 250px;
+    width: 150px;
+}
+.MainContent3{}
+.vubor{
+    margin-left: 20px;
+    font-size: 30px;
+    font-weight: bolder;
+}
+.MainContent4{
+    display: flex;
+}
+.photogod{
+    margin: 8px;
+    height: 200px;
+    width: 200px;
+}
+.stolb{
+    width: 200px;
+    height: 800px;
+}
+.stolb1{
+    margin-left: 60px;
+    width: 300px;
+    height: 800px;
+}
+.stolb2{
+    margin-left: 70px;
+}
+.stroka{
+    margin-left: 20px;
+    font-size: 25px;
+    font-weight: 900;
+}
+.photogod1{
+    margin-left: 20px;
+    border-radius: 5px;
+    width: 220px;
+    height: 120px;
+}
+.element{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 200px;
+}
+.import{
+    font-size: 25px;
+    font-weight: bolder;
+}
+.stolbu{
+    display: flex;
+}
+.photogod2{
+    border-radius: 5px;
+    height: 250px;
+    width: 350px;
+}
+.stroka1{
+    font-size: 25px;
+    font-weight: bolder;
+}
+.podblock{
+    display: flex;
+}
+.photogod3{
+    border-radius: 5px;
+    height: 60px;
+    margin: 5px;
+}
+.b{
+    border-radius: 5px;
+    height: 130px;
+    width: 200px;
+}
+.MainContent5{
+    display: flex;
+    margin-top: 20px;
+}
+.border{
+    margin-left: 30px;
+    width: 800px;
+    height: 1px;
+    background-color: black;
+}
+.import1{
+    margin-left: 30px;
+    font-size: 25px;
+    font-weight: bolder;
+}
+.verhushka{
+    margin-top: 70px;
+}
+.stroka2{
+    display: flex;
+}
+.pic:hover{
+    cursor: pointer;
+}
+.kart{
+    margin: 5px;
+    border-radius: 5px;
+    width: 100px;
+    height: 150px;
+}
+.import2{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-right: 0px;
+    height: 78px;
+    margin-left: 30px;
+    font-size: 25px;
+    font-weight: bolder;
+}
+.p1{
+    margin-top: 60px;
+}
+.kart:hover{
+    cursor: pointer;
+}
+.block5{
+    display: flex;
+}
+.photogod2{
+    cursor: pointer;
+}
+.photogod1:hover{
+    cursor: pointer;
+}
+.photogod2:hover{
+    cursor: pointer;
+}
+.photogod3:hover
+.photogod1{
+    cursor: pointer;
+}
+.lastp:hover{
+    color: white;
+    cursor: pointer;
+}
+.element:hover{
+    cursor: pointer;
+}
+.c{
+    margin-top: 30px;
+}
+.probel4{
+    width: 100px;
+}
+.probel5{
+    width: 190px;
+}
+blok1{
+    margin-top: 30px;
+}
+blok2{
+    margin-top: 30px;
+}
+.zxc{
+    margin-left: 5px;
+    display: flex;
+}
+.pic{
+    border-radius: 4px;
+    width: 205px;
+    height: 110px;
+    margin: 5px;
+}
+.FinalEnd{
+    width: 870px;
+    height: 350px;
+    background-color: rgb(15, 15, 15);
+}
+.FilmPicture:hover{
+    cursor: pointer;
+    
+}
+.photogod:hover{
+    cursor: pointer;
+}
+.lastphoto{
+    margin-left: 230px;
+    margin-top: 80px;
+}
+.lastp{
+    margin: 4px;
+    color: darkgrey;
+}
+.lastp:hover{
+    color: white;
+}
+.laststroka{
+    margin-left: 50px;
+    display: flex;
+}
+.lastphoto1{
+    margin-top: 30px;
+    margin-left: 140px;
+}
