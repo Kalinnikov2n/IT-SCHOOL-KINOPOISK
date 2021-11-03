@@ -133,16 +133,16 @@ color: gray;
     top: 1090px;
 }
 .choicepic2 {
-        position:absolute;
-        left:180px;
-        top: 760px;
-        height: 125%;
-        width: 500px;
-        zoom: 200%;}
-    .choice2 { 
-        position:absolute;
-        left:361px;
-        top: 1450px;}
+    position:absolute;
+    left:180px;
+    top: 760px;
+    height: 125%;
+    width: 500px;
+    zoom: 200%;}
+.choice2 { 
+    position:absolute;
+    left:361px;
+    top: 1450px;}
 .PhotoT {
     position:absolute;
     left: 180px;
@@ -161,11 +161,21 @@ color: gray;
     position:absolute;
     left:410px;
     top:100px;
-    
-    
     zoom: 88%;}
 
 .banner1 {position:absolute;
     left: 1900px;
     top: 3600px;
      zoom: 50%;}
+.traillers{
+     position:absolute;
+     left:180px;
+     top: 1100px;
+     height: 160%;
+     width: 1000px;
+     zoom: 200%;}
+
+.traillerstext { 
+        position:absolute;
+        left:361px;
+        top: 2155px;}
