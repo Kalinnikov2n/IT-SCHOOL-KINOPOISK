@@ -181,10 +181,6 @@ color: gray;
     left:361px;
     top: 2155px;}
 
-.calendartext {
-    margin: left 600px;
-    margin-top: 2155px;
-}
 
  .calendar1 {
     margin-left:350px;
@@ -212,3 +208,20 @@ color: gray;
     margin:60px;
     zoom: 80%;
  }
+.button1 {
+    width: 125px;
+    top: 550px;
+    left: 400px;height: 50px;
+    background: linear-gradient(140deg, blue, violet, orange);
+    color: #f4f4f4;
+    border-radius: 10px;
+    position: absolute;}
+.button2 {
+    top: 550px;
+    left: 550px;
+    width: 150px;
+    height: 50px;
+    background: gray;
+    color: #f4f4f4;
+    border-radius: 10px;
+    position: absolute;}
