@@ -4,7 +4,7 @@
     justify-self: flex-start;
     align-items: center;
     width: 15%;
-    height: 800vh;
+    height: 604vh;
     margin-left: 15%;
     /* margin-left: -17%; */
     /* margin-right: 16px; */
@@ -336,3 +336,21 @@ li {
 }
 
 
+
+#trai{
+    margin-left: -4%;
+}
+ 
+.tickets{
+    border-radius: 4px;
+    height: 210px;
+    width: 140px;
+}
+
+.plus {
+height: 800px;
+width: 875px;
+background: rgb(5, 5, 5);
+margin-left: -5.6%;
+
+}
