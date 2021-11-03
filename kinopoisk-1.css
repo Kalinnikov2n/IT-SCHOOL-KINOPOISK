@@ -366,10 +366,13 @@ footer {
 .calendar {
     display: flex;
     flex-direction: row;
+    background-color: salmon;
+    width:100%;
 }
 .calendarColumn {
-    width: 40%;
+    width: 50%;
     padding-right: 15px;
+    background-color: royalblue;
 }
 .calendarColumn:last-of-type{
     padding-right: 0px;
