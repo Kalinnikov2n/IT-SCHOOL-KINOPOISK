@@ -1,0 +1,563 @@
+header ul li{
+    list-style: none;
+    float: left;
+    text-align: center;
+}
+header ul li a{
+    display: block;
+    width: 200px;
+    text-decoration: none;
+    font-size: 17px;
+    color: gray;
+    height:30px;
+    padding-top: 10px;
+    cursor: pointer;
+}
+header ul li a:hover{
+    transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    -ms-transition: all 0.2s linear;
+    color:white;
+}
+header img{
+    padding-top: 13px;
+}
+header input{
+    position: absolute;
+    margin-top: 5px;
+    margin-left: 800px;
+    width: 300px;
+    height: 25px;
+    background: 0 0; 
+    background-image: initial; 
+    background-position-x: 0px; 
+    background-position-y: 0px; 
+    background-size: initial; 
+    background-attachment: initial; 
+    background-origin: initial; 
+    background-clip: initial; 
+    background-color: initial; 
+    
+    background-color: hsla(0,0%,94.9%,.15);
+}
+.log-in{
+    width: 300px;
+    margin-left: 20px;
+    height: 80px;
+}
+.log-in p{
+    float: left;
+    text-align: center;
+    list-style: none;
+    margin-top: 10px;
+    padding-left: 50px;
+    font-size: 20px;
+}
+.log-in a{
+    text-decoration: palegoldenrod;
+    color:slategrey;
+    cursor: pointer;
+}
+.log-in a:hover{
+    color: white;
+}
+header {
+    position: fixed;
+    background-color: #333333;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: 200px 1fr auto;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100%;
+    margin-top: 0%;
+    height: 72px;
+    padding: 15px 0 0 150px;
+}
+.leftpanel{
+    height: 100%;
+    width: 270px;
+    position: fixed; 
+    z-index: 1;
+    top: 0;
+    left: 85px;
+    background-color: #ffffff;
+    overflow-x: hidden;
+    padding-top: 90px;
+    font-family:'Semibold';
+}
+.leftpanel a{
+    padding: 6px 8px 6px 40px;
+    text-decoration: none;
+    font-size: 21px;
+    color: #818181;
+    display: block;
+    line-height: 30px;
+    
+}
+.leftpanel a:hover{
+    color: #666666;
+    transition: all 0.4s linear;
+    -o-transition: all 0.4s linear;
+    -webkit-transition: all 0.4s linear;
+    -moz-transition: all 0.4s linear;
+    -ms-transition: all 0.4s linear;
+}
+body{
+    overflow-x:hidden;
+    background: #f2f2f2;
+}
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+header a {
+color: gray;
+    text-decoration: none;
+}
+ 
+.scroll{
+    height: 1200px;
+}
+.choicepic {
+    position:absolute;
+    left:180px;
+    top: 580px;
+    height: 125%;
+    width: 500px;
+    zoom: 200%;}
+.choice { 
+    position:absolute;
+    left:361px;
+    top: 1090px;
+    font-family: 'GraphicB';
+}
+.choicepic2 {
+    position:absolute;
+    left:180px;
+    top: 760px;
+    height: 125%;
+    width: 500px;
+    zoom: 200%;}
+.choice2 { 
+    position:absolute;
+    left:361px;
+    top: 1450px;
+    font-family: 'GraphicB';
+}
+.PhotoT {
+    position:absolute;
+    left: 170px;
+    top: 355px;
+    height: 125%;
+    width: 500px;
+    zoom: 210%;
+
+}
+.tickets {
+    top: 700px;
+    position:absolute;
+    margin-left: 361px;
+    font-family: 'GraphicB' ;
+}
+
+.mainphoto {
+    position:absolute;
+    left:410px;
+    top:100px;
+    zoom: 88%;}
+
+.banner1 {position:absolute;
+    left: 1900px;
+    top: 3600px;
+     zoom: 50%;}
+.traillers{
+     position:absolute;
+     left:240px;
+     top: 1470px;
+     height: 160%;
+     width: 1000px;
+     zoom: 150%;}
+.traillerstext { 
+        position:absolute;
+        left:361px;
+        top: 2155px;
+        font-family: 'GraphicB';}
+.doctorlogo {position:absolute;
+    left:1500px;
+    top:450px;
+    zoom: 25%;} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.T1 {
+    font-size: 55%;
+    top: 128px;
+    position: absolute;
+    left: 1px;
+    font-family:'Graphic';
+    line-height: 1.5
+}
+.T2 {
+    font-size: 55%;
+    position: absolute;
+    left: 97px;
+    top: 128px;
+    font-family:'Graphic';
+    line-height: 1.5;
+}
+.T3 {
+    position:absolute;
+    font-size: 55%;
+    left: 191px;
+    top: 128px;
+    font-family:'Graphic';
+    line-height: 1.5;
+    
+}
+.T4 {
+    position: absolute;
+    font-size: 55%;
+    left: 286px;
+    top: 128px;
+    font-family:'Graphic';
+    line-height: 1.5
+}
+.T5 {
+    position: absolute;
+    font-size: 55%;
+    left: 379px;
+    top: 128px;
+    font-family:'Graphic';
+    line-height: 1.5
+
+}
+@font-face {
+    font-family: 'Graphic';
+    src: url(./Fonts/GraphikLCG-Regular.ttf);
+}
+@font-face {
+    font-family: 'GraphicB' ;
+    src: url(./Fonts/GraphikLCG-Bold.ttf);
+}
+
+
+ .calendar1 {
+    margin-left:350px;
+    margin-top: 1350px;
+    width: 100%;
+}
+          
+.calendaritems1 {
+    
+    width: 10px;
+    height: 100px;
+    margin:60px;
+    zoom: 80%;
+ }   
+
+ .calendar2 {
+    
+    margin-left: 850px;
+    margin-top: -642px;
+    width: 100%;}
+          
+.calendaritems2 {
+    
+    width: 10px;
+    height: 100px;
+    margin:60px;
+    zoom: 80%;
+ }
+.button1 {
+    width: 125px;
+    top: 550px;
+    left: 400px;height: 50px;
+    background: linear-gradient(140deg, blue, violet, orange);
+    color: #f4f4f4;
+    border-radius: 10px;
+    position: absolute;}
+.button2 {
+    top: 550px;
+    left: 550px;
+    width: 150px;
+    height: 50px;
+    background: gray;
+    color: #f4f4f4;
+    border-radius: 10px;
+    position: absolute;}
+@font-face {
+    font-family: 'Semibold';
+    src: url(./Fonts/GraphikLCG-Semibold.ttf);
+}
+table{
+    margin-left: 500px;
+    position: absolute;
+    top: 2550px;
+    border-collapse: collapse;
+    width: 370px;
+}
+td {
+    text-align: left;
+    
+}
+td, tr {
+    padding: 1vw;
+}
+a {
+    font-family:'Graphic';
+    color: #000000;
+    font-size: 150%;
+}
+.headiing{
+    position: absolute;
+    left: 361px;
+    top: 2460px;
+    font-family: 'GraphicB';
+}
+.nh1 {
+    font-family:'Graphic';
+    position: absolute;
+    left: 480px;
+    top: 2700px;
+}
+.nh2 {
+    font-family:'Graphic';
+    position: absolute;
+    left: 485px;
+    top: 2830px;
+}
+.nh3{
+    font-family:'Graphic';
+    position: absolute;
+    left: 487px;
+    top: 2950px;
+}
+.nh4{
+    font-family:'Graphic';
+    position: absolute;
+    left: 487px;
+    top: 3080px;
+}
+.nh5{
+    font-family:'Graphic';
+    position: absolute;
+    left: 480px;
+    top: 2570px;
+}
+.bb1{
+    font-family:'Graphic';
+    position: absolute;
+    left: 980px;
+    top: 2575px;
+
+}
+.bb2{
+    font-family:'Graphic';
+    position: absolute;
+    left: 980px;
+    top: 2685px; ;
+
+}
+.bb3{
+    font-family:'Graphic';
+    position: absolute;
+    left: 980px;
+    top: 2817px;
+
+}
+.bb4{
+    font-family:'Graphic';
+    position: absolute;
+    left: 980px;
+    top: 2950px;
+
+}
+.bb5{
+    font-family:'Graphic';
+    position: absolute;
+    left: 980px;
+    top: 3070px;
+}
+footer{
+    position: relative;
+    z-index: 2;
+    height: 400px;
+    left: 0px; bottom: 0px; 
+    background: black; 
+    color: black; 
+    width: 100%;
+}
+.foot{
+    width: 100%;
+    height: 80px;
+    float: left;
+}
+.foot ul{
+    margin-top: 10px;
+    margin-left: 37%;
+}
+.foot ul li{
+    /* padding-left: 60px; */
+    /* margin-left: 8%; */
+    list-style: none;
+    float: left;
+}
+.foot ul li a{
+    display: block;
+    width: 60px;
+    color: gray;
+    height: 10px;
+    padding-top: 25px;
+    cursor: pointer;
+}
+.foot ul li a:hover{
+    transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    -ms-transition: all 0.4s ease;
+    color: white;
+}
+.foot2{
+    width: 100%;
+    height: 80px;
+    float: left;
+}
+.foot2 ul{
+    margin-top: 10px;
+    margin-left: 10%;
+}
+.foot2 ul li{
+    /* padding-left: 60px; */
+    /* margin-left: 8%; */
+    list-style: none;
+    float: left;
+}
+.foot2 ul li a{
+    font-size: 14px;
+    font-family: Graphic;
+    display: block;
+    width: 150px;
+    color: gray;
+    height: 10px;
+    padding-top: 25px;
+    cursor: pointer;
+    text-decoration: none;
+}
+.foot2 ul li a:hover{
+    transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    -ms-transition: all 0.4s ease;
+    color: white;
+}
+.foot3{
+    width: 100%;
+    height: 80px;
+    float: left;
+}
+.foot3 ul{
+    margin-top: 10px;
+    margin-left: 30%;
+}
+.foot3 ul li{
+    /* padding-left: 60px; */
+    /* margin-left: 8%; */
+    list-style: none;
+    float: left;
+}
+.foot3 ul li a{
+    font-size: 20px;
+    display: block;
+    width: 200px;
+    color: gray;
+    height: 10px;
+    cursor: pointer;
+    text-decoration: none;
+}
+.foot3 ul li a:hover{
+    transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    -ms-transition: all 0.4s ease;
+    color: white;
+}
+.foot4{
+    width: 100%;
+    height: 80px;
+    float: left;
+}
+.foot4 ul{
+    margin-top: 100px;
+    margin-left: 120px;
+}
+.foot4 ul li{
+    padding-left: 40px;
+    /* margin-left: 8%; */
+    list-style: none;
+    float: left;
+}
+.foot4 ul li a{
+    font-size: 14px;
+    display: block;
+    width: 400px;
+    color: gray;
+    height: 10px;
+    cursor: pointer;
+    text-decoration: none;
+}
+.foot4 ul li a:hover{
+    transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    -ms-transition: all 0.4s ease;
+    color: white;
+}
