@@ -1,5 +1,69 @@
-
-   header {
+header ul li{
+    list-style: none;
+    float: left;
+    text-align: center;
+}
+header ul li a{
+    display: block;
+    width: 200px;
+    text-decoration: none;
+    font-size: 17px;
+    color: gray;
+    height:30px;
+    padding-top: 10px;
+    cursor: pointer;
+}
+header ul li a:hover{
+    transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    -ms-transition: all 0.2s linear;
+    color:white;
+}
+header img{
+    padding-top: 13px;
+}
+header input{
+    position: absolute;
+    margin-top: 5px;
+    margin-left: 800px;
+    width: 300px;
+    height: 25px;
+    background: 0 0; 
+    background-image: initial; 
+    background-position-x: 0px; 
+    background-position-y: 0px; 
+    background-size: initial; 
+    background-attachment: initial; 
+    background-origin: initial; 
+    background-clip: initial; 
+    background-color: initial; 
+    
+    background-color: hsla(0,0%,94.9%,.15);
+}
+.log-in{
+    width: 300px;
+    margin-left: 20px;
+    height: 80px;
+}
+.log-in p{
+    float: left;
+    text-align: center;
+    list-style: none;
+    margin-top: 10px;
+    padding-left: 50px;
+    font-size: 20px;
+}
+.log-in a{
+    text-decoration: palegoldenrod;
+    color:slategrey;
+    cursor: pointer;
+}
+.log-in a:hover{
+    color: white;
+}
+header {
     position: fixed;
     background-color: #333333;
     z-index: 2;
@@ -11,7 +75,7 @@
     margin-top: 0%;
     height: 72px;
     padding: 15px 0 0 150px;
-    }
+}
 .leftpanel{
     height: 100%;
     width: 250px;
@@ -49,13 +113,10 @@ body{
 }
 
 header a {
-color: #AAAAAA;
+color: gray;
     text-decoration: none;
 }
  
-header a:hover {
-    color:#FFFFFF;
-    }
 .scroll{
     height: 1200px;
 }
@@ -72,16 +133,16 @@ header a:hover {
     top: 1090px;
 }
 .choicepic2 {
-        position:absolute;
-        left:180px;
-        top: 760px;
-        height: 125%;
-        width: 500px;
-        zoom: 200%;}
-    .choice2 { 
-        position:absolute;
-        left:361px;
-        top: 1450px;}
+    position:absolute;
+    left:180px;
+    top: 760px;
+    height: 125%;
+    width: 500px;
+    zoom: 200%;}
+.choice2 { 
+    position:absolute;
+    left:361px;
+    top: 1450px;}
 .PhotoT {
     position:absolute;
     left: 180px;
@@ -101,6 +162,21 @@ header a:hover {
     position:absolute;
     left:410px;
     top:100px;
-    height: 125%;
-    width: 500px;
     zoom: 88%;}
+
+.banner1 {position:absolute;
+    left: 1900px;
+    top: 3600px;
+     zoom: 50%;}
+.traillers{
+     position:absolute;
+     left:180px;
+     top: 1100px;
+     height: 160%;
+     width: 1000px;
+     zoom: 200%;}
+
+.traillerstext { 
+        position:absolute;
+        left:361px;
+        top: 2155px;}
