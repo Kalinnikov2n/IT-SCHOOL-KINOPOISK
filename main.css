@@ -3,7 +3,7 @@ body {
     background-color: #f4f4f4;
     display: flex;
     height: 450vh;
-    justify-content: space-between;
+   
 
     margin: 0%;
      
@@ -226,6 +226,10 @@ input {
     color: black;
     filter: brightness(0%);
 }
+#cold{
+    margin-top:20%;
+    border-radius: 5px;
+}
 
 /* .photo1
 {  margin-top: 40px;
@@ -251,7 +255,7 @@ input {
 .igrok {
 
     position: absolute;
-    top: 30%;
+    top: 35%;
     left: 25%;
     color: #f4f4f4;
     font-stretch: ultra-condensed;
@@ -259,15 +263,15 @@ input {
 
 .roli {
     position: absolute;
-    top: 34%;
+    top:40%;
     left: 325%;
-    color: dimgray;
+    color:red;
     font-stretch: ultra-condensed;
 }
 
 .oscar {
     position: absolute;
-    top: 38%;
+    top: 48%;
     left: 25%;
     color: #f4f4f4;
     font-stretch: ultra-condensed;
@@ -341,13 +345,17 @@ input {
     padding: 10px;
     margin-left: 0%;
 }
-
+#tick{
+    margin-left: 500px;
+    font-size: 1.6em;
+   
+}
 .tvstd {
     filter: brightness(50%);
 }
 
 .btn {
-    position: absolute;
+    
     /* top: 45%;
     right: 70%; */
     transform: translate(-25%, -25%);
@@ -359,8 +367,9 @@ input {
     border: none;
     cursor: pointer;
     border-radius: 10px;
-    margin-left: 7%;
-    top:31%
+    margin-left: 40%;
+    top:100%;
+    position:absolute;
 
 }
 
@@ -368,7 +377,15 @@ input {
 .btn:hover {
     background-color: rgb(255, 136, 0);
 }
+#why{
+    margin-left: 23%;
+   
 
+}
+#ph{
+    border-radius: 25px;
+    padding:15px;
+}
 p {
     /* font-size: 2em; */
     font-family: 'graphicItal', Times, serif;
@@ -377,8 +394,9 @@ p {
 }
 
 #right {
-    float: right;
-    text-align: right;
+    margin-left: 700px;
+    color:black;
+    font-size: 16px;
 
 
 }
@@ -390,26 +408,26 @@ p {
 
 #badge {
     position: absolute;
-    top: 460px;
-    left: 940px;
+    top: 1020px;
+    left: 1130px;
 }
 
 #badge1 {
     position: absolute;
-    top: 460px;
-    left: 1570px;
+    top: 1020px;
+    left: 1600px;
 }
 
 #badge2 {
     position: absolute;
-    top: 100px;
-    left: 1320px;
+    top: 800px;
+    left: 1420px;
 }
 
 h2 {
     position: absolute;
-    top: 0;
-    left: 22px;
+    top: -20px;
+    left: 5px;
     width: 100%;
     color: white;
 
@@ -417,18 +435,21 @@ h2 {
 
 #badge3 {
     position: absolute;
-    top: 100px;
-    left: 670px;
+    top: 800px;
+    left: 940px;
 }
 
 h3 {
     position: absolute;
-    top: 0;
-    left: 24px;
+    top: -15px;
+    left: 9px;
     width: 100%;
     color: white;
 
 }
+
+
+
 
 
 
@@ -676,62 +697,62 @@ span1 {
 
 #z1 {
     position: absolute;
-    top: 1475px;
-    left: 430px;
+    top: 3020px;
+    left:550px;
 }
 
 #z2 {
     position: absolute;
-    top: 1560px;
-    left: 460px;
+    top: 2620px;
+    left: 600px;
 }
 
 #z3 {
     position: absolute;
-    top: 1640px;
-    left: 430px;
+    top: 2750px;
+    left: 660px;
 }
 
 #z4 {
     position: absolute;
-    top: 1720px;
-    left: 445px;
+    top: 2520px;
+    left: 500px;
 }
 
 #z5 {
     position: absolute;
-    top: 1810px;
-    left: 450px;
+    top: 2430px;
+    left: 600px;
 }
 
 #z6 {
     position: absolute;
-    top: 1910px;
-    left: 430px;
+    top: 4000px;
+    left: 500px;
 }
 
 #z7 {
     position: absolute;
-    top: 2000px;
-    left: 430px;
+    top: 2920px;
+    left: 620px;
 }
 
 #z8 {
     position: absolute;
-    top: 1100x;
+    top: 4000x;
     left: 430px;
 }
 
 #z9 {
     position: absolute;
-    top: px;
-    left: 430px;
+    top: 3150px;
+    left: 650px;
 }
 
 #z10 {
     position: absolute;
-    top: 1475px;
-    left: 430px;
+    top: 3110px;
+    left: 540px;
 }
 
 #sos {
