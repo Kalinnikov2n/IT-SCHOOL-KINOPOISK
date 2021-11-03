@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@600&display=swap" rel="stylesheet">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href='icon.png'>
+    <title>КиноПоиск. Все фильмы планеты.</title>
+</head> <link rel="stylesheet" href="styledown.css" >
+<body>
+  
+  <header>
+    <text class="Kino">КиноПоиск</text>
+    
+    <input class ="console" type="text" list="list">
+    <datalist id="list">
+    <option value="Главная">\
+    <option value="Онлайн-кинотеатр">
+    <option value="Фильмы">
+    <option value="Сериалы">
+    <option value="Билеты в кино">
+    <option value="Медиа">
+    </datalist>
+
+    <input class = "search" type="search" name="q" placeholder="Фильмы, сериалы, персоны"> 
+    <svg class = "nayti" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+    <circle cx="10" cy="10" r="7" />
+    <line x1="21" y1="21" x2="15" y2="15" />
+  </svg>
+   
+   <button class="text1">Онлайн-кинотеатр</button>
+   
+     <svg class="play" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-player-play" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+        <path d="M7 4v16l13 -8z" />
+      </svg>
+    <button class="playbut"></button>
+    
+    <button class="text2">Кино на любом ТВ</button>
+     <svg class="pc" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-devices-pc" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+        <path d="M3 5h6v14h-6z" />
+        <path d="M12 9h10v7h-10z" />
+        <path d="M14 19h6" />
+        <path d="M17 16v3" />
+        <path d="M6 13v.01" />
+        <path d="M6 16v.01" />
+      </svg>
+   <button class="pcbut"></button>
+
+  
+   <svg class="bookmark" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-bookmark" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+    <path d="M9 4h6a2 2 0 0 1 2 2v14l-5 -3l-5 3v-14a2 2 0 0 1 2 -2" />
+  </svg>
+
+   <svg class="chi"xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-credit-card" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+    <rect x="3" y="5" width="18" height="14" rx="3" />
+    <line x1="3" y1="10" x2="21" y2="10" />
+    <line x1="7" y1="15" x2="7.01" y2="15" />
+    <line x1="11" y1="15" x2="13" y2="15" />
+  </svg>
+
+    <svg class="log" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-login" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+        <path d="M14 8v-2a2 2 0 0 0 -2 -2h-7a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h7a2 2 0 0 0 2 -2v-2" />
+        <path d="M20 12h-13l3 -3m0 6l-3 -3" />
+      </svg>
+    <button class="zakl1"></button>
+    <button class="zakl2"></button>
+    <button class="zakl33"></button>
+    
+</header>
+
+
+
+<p class='leftbox'></p>
+<p class='rightbox'></p>
+<p class='menu'>
+  <button class=btnMenu> <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="16" height="16" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+    <polyline points="5 12 3 12 12 3 21 12 19 12" />
+    <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+    <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+  </svg>
+  Главная </button> <br>
+  <button class=btnMenu> <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-player-play" width="16" height="16" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+    <path d="M7 4v16l13 -8z" />
+  </svg>
+  Онлайн-кинотеатр </button> <br>
+  <button class=btnMenu> <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-movie" width="16" height="16" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+    <rect x="4" y="4" width="16" height="16" rx="2" />
+    <line x1="8" y1="4" x2="8" y2="20" />
+    <line x1="16" y1="4" x2="16" y2="20" />
+    <line x1="4" y1="8" x2="8" y2="8" />
+    <line x1="4" y1="16" x2="8" y2="16" />
+    <line x1="4" y1="12" x2="20" y2="12" />
+    <line x1="16" y1="8" x2="20" y2="8" />
+    <line x1="16" y1="16" x2="20" y2="16" />
+  </svg>
+  Фильмы </button><br>
+  <button class=btnMenu> <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-rectangle" width="16" height="16" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+    <rect x="3" y="5" width="18" height="14" rx="2" />
+  </svg>
+  Сериалы </button><br>
+  <button class=btnMenu> <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-ticket" width="16" height="16" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+    <line x1="15" y1="5" x2="15" y2="7" />
+    <line x1="15" y1="11" x2="15" y2="13" />
+    <line x1="15" y1="17" x2="15" y2="19" />
+    <path d="M5 5h14a2 2 0 0 1 2 2v3a2 2 0 0 0 0 4v3a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-3a2 2 0 0 0 0 -4v-3a2 2 0 0 1 2 -2" />
+  </svg>
+  Билеты в кино </button><br>
+  <button class=btnMenu> <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-news" width="16" height="16" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+    <path d="M16 6h3a1 1 0 0 1 1 1v11a2 2 0 0 1 -4 0v-13a1 1 0 0 0 -1 -1h-10a1 1 0 0 0 -1 1v12a3 3 0 0 0 3 3h11" />
+    <line x1="8" y1="8" x2="12" y2="8" />
+    <line x1="8" y1="12" x2="12" y2="12" />
+    <line x1="8" y1="16" x2="12" y2="16" />
+  </svg>
+  Медиа </button><br>
+</p>
+
+<p class="content">
+  <img class="pic1"src="youloveit_ru_koschei_the_true_story03.jpeg" >
+  <text class="pic1name">Кощей. Начало</text>
+  <text class="pic1clov">В давние времена люди и сказочные существа жили вместе. Пока в Дивноземское княжество не нагрянул Белый призрак, безжалостный монстр, способный уничтожить весь мир. Но лишь одному герою под силу остановить чудище.Он молод, силен, красив, а еще водит байк… Его зовут Кощей.</text>
+    <button class="btn"> <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-google-play" width="24" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <path d="M4 3.71v16.58a0.7 .7 0 0 0 1.05 .606l14.622 -8.42a0.55 .55 0 0 0 0 -.953l-14.622 -8.419a0.7 .7 0 0 0 -1.05 .607z" />
+      <line x1="15" y1="9" x2="4.5" y2="20.5" />
+      <line x1="4.5" y1="3.5" x2="15" y2="15" />
+    </svg>Смотреть</button>
+    <button class="btn2"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-plus" width="24" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <line x1="12" y1="5" x2="12" y2="19" />
+      <line x1="5" y1="12" x2="19" y2="12" />
+    </svg>Буду смотреть</button>
+</p>
+<div class="big-block">
+  <text class="textbil">Билеты в кино 33 ></text>
+   <text class="textall">Все билеты</text>
+
+ <div class="photo-mesto"><img class="vech" src="https://www.kino-teatr.ru/movie/posters/big/3/135253.jpg">
+  
+  <img class="vech" src="https://artmoskovia.ru/wp-content/uploads/2021/10/poster_koshei_mainartwork70x100_1005_2-scaled.jpg">
+  <img class="vech" src="https://avatars.mds.yandex.net/get-kinopoisk-image/4774061/58a86807-b6e2-45dc-8780-c38f24e6a4ea/300x450">
+  <img class="vech" src="https://www.kinonews.ru/insimgs/2021/poster/poster102818_1.jpg">
+  <img class="vech" src="https://upload.wikimedia.org/wikipedia/ru/f/f1/%D0%94%D1%8E%D0%BD%D0%B0_%D0%BE%D1%84%D0%B8%D1%86%D0%B8%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9_%D0%BF%D0%BE%D1%81%D1%82%D0%B5%D1%80.jpg">
+  <img class="vech" src="https://avatars.mds.yandex.net/get-kinopoisk-image/4774061/f97bd8aa-c62a-4074-80a2-f9cc18db1b96/600x900">
+ </div>
+  <div class="text-mesto1">
+    <text>Вечные</text> 
+    <text class="kosh-text">Кощей. Начало</text> 
+    <text class="venom-text">Веном</text>
+    <text class="ron-text">Неисправный Рон</text>
+    <text class="dun-text">Дюна</text>
+    <text class="hel">Хеллоуин убивает</text>
+
+    <p class="otst1">2021 г. Боевик 
+      <text class="kosh-abz">2021 г. Мультик</text>
+      <text class="venom-abz">2021 г. Боевик</text>
+      <text class="ron-abz">2021 г. Мультик</text>
+      <text class="dun-abz">2021 г. Приключения</text>
+      <text class="hel-abz">2021 г. Ужасы</text>
+    </p>
+  </div>
+  </div>
+  <div class="vybor">
+
+    <text >Выбор редакции </text>
+    <div class="vybor-text" >
+        <img class="n" src="n1.png" >
+        <img class="n" src = "n2.png">
+        <img class="n" src="n3.png">
+        <img class="n" src="n4.png">
+    </div>
+  </div>
+
+  <div class="image-wrap image-flex3" >
+        <img class="ykral" src="ykral.png">
+        <img class="p1pic" src="p1.png">
+        <text class="text-vibor">Выбираем фильмы и сериалы</text>
+    <p class="photofilm">
+      <img class="pgotoser"  src="pc1.png" width="250" height="250"> 
+      <img class="pgotoser"  src="pc2.jpg" width="250" height="250">
+      <img class="pgotoser"  src="pc3.jpg" width="250" height="250">
+      <img class="pgotoser-out"  src="pc4.jpg" width="250" height="250">
+    </p>
+    <p class="spizdil"><img class="spizdilphoto" src="spizdil.png">
+    </p>
+  
+    
+
+    </div>
+    </div>
+  </div>
+  </div>
+
+<p class="novosti">
+  <text>Популярное</text>
+  <text class="glavtyd">Главное сегодня</text> 
+  <text class="newvideo">Новые видео</text>
+</p>
+
+<div class="container">
+<div class="pervdoch">
+  <img class="pervcont" src="screeen.png">
+  <p class="texttest"><a href="https://vk.com/it_comm">1.Встречайте: у Кинопоиска новый знак, логотип и визуальный стиль
+   <br> 2.Что происходит в прокате: «Дюна» не понравилась американцам, а «Веном 2» стал фильмом года в России
+   <br>3.«Угадай фильм по кадру»: вспоминаем легенду, играем в новую версию и получаем подарки 
+   <br>4.Сериалы ноября: «Колесо времени», «Декстер» и «Великая» 
+   <br>5.Алек Болдуин случайно убил оператора и ранил режиссера на съемках. Как это произошло и к чему может привести? 
+   <br>6.Кого играют Джоли, Хайек и звезды «Игры престолов» в «Вечных» </a>
+
+  </p>
+</div>
+<div class="vtordoch">
+  <img class="vtorcont"src="picch.jpg">
+  <img class="vtordich"src="glavpgoto.png">
+  <button class="buttn">Больше материалов</button>
+</div>
+<div class="tretdoch"></div>
+<img class="tretcont"src="vidpic.png">
+</div>
+    
+  
+   <p><text class="newtrailer">Новые трейлеры</text>
+  <text class="trailer">Трейлеры</text></p>
+    <video class="video" width="200" height="150" controls="controls" poster="video.jpg" preload="auto">
+      <source src="https://vk.com/it_comm?z=video-172338160_456239174%2Fvideos-172338160%2Fpl_-172338160_-2">
+     </video>
+     <video class="video-2" width="200" height="160" controls="controls" poster="fall.png" preload="auto">
+      <source src="https://www.youtube.com/watch?v=mW0tEoTNyCo">
+     </video>
+     <video class="video-3" width="200" height="198" controls="controls" poster="ok.png" preload="auto">
+      <source src="https://www.youtube.com/watch?v=VRT02gOPGLc&t=187s">
+     </video>
+  
+   
+  
+  
+  
+
+
+<center><footer>
+    
+   <br></br>
+   <div class='icons'>
+   <a href="https://vk.com/kinopoisk"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-vk" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5"  stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+        <path d="M10 6h2v12c-4.5 -1 -8 -6.5 -9 -12" />
+        <path d="M20 6c-1 2 -3 5 -5 6h-3" />
+        <path d="M20 18c-1 -2 -3 -5 -5 -6" />
+      </svg></a>
+
+      <a href="https://www.facebook.com/kinopoisk"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-facebook" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+        <path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3" />
+      </svg></a>
+
+      <a href="https://twitter.com/kinopoiskru"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+        <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z" />
+      </svg></a>
+
+      <a href="https://telegram.me/kinopoisk"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-telegram" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+        <path d="M15 10l-4 4l6 6l4 -16l-18 7l4 2l2 6l3 -4" />
+      </svg></a>
+
+      <a href="https://www.instagram.com/kinopoisk/"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-instagram" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+        <rect x="4" y="4" width="16" height="16" rx="4" />
+        <circle cx="12" cy="12" r="3" />
+        <line x1="16.5" y1="7.5" x2="16.5" y2="7.501" />
+      </svg> </a>
+
+      <a href="https://www.youtube.com/user/kinopoisk"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-youtube" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+        <rect x="3" y="5" width="18" height="14" rx="4" />
+        <path d="M10 9l5 3l-5 3z" />
+      </svg></a></div> <br></br>
+      <text class="under">
+       Вакансии
+       Реклама
+       Соглашение 
+       Справка
+       Блог
+       Участие в исследованиях
+       Предложения 
+       Служба поддержки
+      </text>
+      <br></br>
+      <a href="https://apps.apple.com/ru/app/id477718890?amp%253Bat=1000lqjf&amp%253Bct=mobile&amp%253Buo=4&referrer=appmetrica_tracking_id%3D170895231946863928%26ym_tracking_id%3D5602695506887992500%26appmetrica_deep_link%3Dkp%253A%252F%252FmainView"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-appstore" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M8 16l1.106 -1.99m1.4 -2.522l2.494 -4.488" />
+      <path d="M7 14h5m2.9 0h2.1" />
+      <path d="M16 16l-2.51 -4.518m-1.487 -2.677l-1.003 -1.805" />
+       </svg>
+
+      <a href="https://play.google.com/store/apps/details?id=ru.kinopoisk&referrer=appmetrica_tracking_id%3D603240792315703184%26ym_tracking_id%3D9517950257591674553%26appmetrica_deep_link%3Dkp%253A%252F%252Fmainview"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-google-play" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+       <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <path d="M4 3.71v16.58a0.7 .7 0 0 0 1.05 .606l14.622 -8.42a0.55 .55 0 0 0 0 -.953l-14.622 -8.419a0.7 .7 0 0 0 -1.05 .607z" />
+     <line x1="15" y1="9" x2="4.5" y2="20.5" />
+     <line x1="4.5" y1="3.5" x2="15" y2="15" />
+      </svg> </a>
+
+      <a href="https://appgallery.huawei.com/?referrer=appmetrica_tracking_id%3D1179706852124993595%26ym_tracking_id%3D2644547418694259525#/app/C101036423"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-apps" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <rect x="4" y="4" width="6" height="6" rx="1" />
+     <rect x="4" y="14" width="6" height="6" rx="1" />
+     <rect x="14" y="14" width="6" height="6" rx="1" />
+     <line x1="14" y1="7" x2="20" y2="7" />
+     <line x1="17" y1="4" x2="17" y2="10" />
+      </svg></a>
+    
+  <hr> 
+  <style>
+    .GG-center {
+     position: relative;
+     top: 20px;
+    }
+ </style>
+  <text class="GG-center">Телепрограмма Музыка Афиша</text>
+  <style>
+    .GG-left {
+        position: relative;
+        top: 20px;
+     float: left;
+    }
+ </style>
+    <text class="GG-left">© 2003 — 2021, КиноПоиск 18+</text>
+    
+    <style>
+        .GG-right {
+            position: relative;
+            top: 20px;
+         float: right;
+        }
+     </style>
+      <span class="GG-right">Проект компании Яндекс</span>
+    
+</footer></center>
+
+</body>
+</html>
