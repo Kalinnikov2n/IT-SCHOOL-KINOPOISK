@@ -398,3 +398,13 @@ footer {
     border-radius: 3px;
 }
 
+.box {
+    display: flex;
+    flex-direction: row;
+  justify-content: space-around;
+}
+
+.middle {
+  display:flex;
+  flex-direction: column;
+}
