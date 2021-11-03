@@ -368,7 +368,7 @@ footer {
     flex-direction: row;
 }
 .calendarColumn {
-    width: 50%;
+    width: 40%;
     padding-right: 15px;
 }
 .calendarColumn:last-of-type{
