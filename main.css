@@ -310,7 +310,9 @@ input {
     font-family: "graphicItal";
 
 }
-
+#task{
+    margin-left: 23%;
+}
 .container img {
 
     border-radius: 20px;
@@ -524,13 +526,28 @@ h3 {
 
 
 
-
+#prog {
+    margin-left: 19%;
+}
 
 .POP {
     font-size: 1.6em;
     margin-left: 20%;
 }
-
+#what{
+    top: 360 px;
+        margin-left: 15%;
+        margin-right: 50%;
+}
+#blue{
+    font-size: 1em;
+        color: blue;
+        margin-left: 15%;
+        margin-right: 30%;
+}
+#blue:hover {
+        color: rgb(255, 115, 0);
+    }
     /* h4 {
         top: 360 px;
         margin-left: 15%;
@@ -544,9 +561,7 @@ h3 {
 
     }
 
-    p:hover {
-        color: rgb(255, 115, 0);
-    } */
+     */
 
 span {
     color: orange;
@@ -648,12 +663,20 @@ span1 {
 
 #s {
     border-radius: 10px;
-
-
 }
-
+#hot{
+    color:blue;
+    margin-right: -20%;
+}
+#hot:hover{
+    color:orange;
+}
 #red {
-    font-size: 2em;
+    font-size: 1.6em;
+    color:blue;  
+}
+#red:hover{
+    color:orange;
 }
 
 #box {
@@ -679,16 +702,22 @@ span1 {
 }
 
 #bt1 {
-    font-size: 1.6em;
+    font-size: 1.4em;
 
 }
 
 #hamatova {
-    height: 200px;
-    width: 350px;
+    height: 155px;
+    width: 230px;
     border-radius: 10px;
     margin-left: 130px;
+    color:blue;
+   
 }
+#hamatova:hover{
+    color:orange;
+}
+
 
 #p1 {
     height: 25px;
@@ -699,8 +728,8 @@ span1 {
 }
 
 #Duna {
-    height: 200px;
-    width: 350px;
+    height: 155px;
+    width: 230px;
     border-radius: 10px;
     margin-left: 130px;
     margin-top: -100px;
@@ -709,7 +738,7 @@ span1 {
 #i2 {
     height: 25px;
     width: 40px;
-    margin-left: -350px;
+    margin-left: -240px;
     margin-top: -150px;
     border-radius: 100px;
 }
@@ -717,11 +746,16 @@ span1 {
 #D {
     margin-left: 130px;
     margin-top: 5px;
+    color:blue
 }
 
+
+#D:hover{
+    color:orange;
+}
 #play {
-    height: 200px;
-    width: 350px;
+    height: 155px;
+    width: 240px;
     border-radius: 10px;
     margin-left: 130px;
     margin-top: 30px;
@@ -731,7 +765,7 @@ span1 {
 #i3 {
     height: 25px;
     width: 40px;
-    margin-left: -350px;
+    margin-left: -240px;
     margin-top: -150px;
     border-radius: 100px;
 }
@@ -739,11 +773,15 @@ span1 {
 #oct {
     margin-left: 130px;
     margin-top: 5px;
+    color:blue
+}
+#oct:hover{
+    color:orange;
 }
 
 #loq {
-    height: 200px;
-    width: 350px;
+    height: 155px;
+    width: 230px;
     border-radius: 10px;
     margin-left: 130px;
     margin-top: 30px;
@@ -753,7 +791,7 @@ span1 {
 #i4 {
     height: 25px;
     width: 40px;
-    margin-left: -350px;
+    margin-left: -240px;
     margin-top: -150px;
     border-radius: 100px;
 }
@@ -761,11 +799,15 @@ span1 {
 #l {
     margin-left: 130px;
     margin-top: 5px;
+    COLOR:BLUE;
+}
+#l:hover{
+    color:orange;
 }
 
 #jony {
-    height: 200px;
-    width: 350px;
+    height: 155px;
+    width: 230px;
     border-radius: 10px;
     margin-left: 130px;
     margin-top: 30px;
@@ -775,7 +817,7 @@ span1 {
 #i5 {
     height: 25px;
     width: 40px;
-    margin-left: -350px;
+    margin-left: -240px;
     margin-top: -150px;
     border-radius: 100px;
 }
@@ -783,4 +825,8 @@ span1 {
 #j {
     margin-left: 130px;
     margin-top: 5px;
+    color:blue;
+}
+#j:hover{
+    color:orange;
 }
