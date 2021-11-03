@@ -100,6 +100,17 @@ header a:hover {
     position:absolute;
     left:410px;
     top:100px;
-    height: 125%;
-    width: 500px;
+    
+    
     zoom: 88%;}
+
+.banner1 {position:absolute;
+    left: 1900px;
+    top: 3600px;
+     zoom: 50%;}
+h3 {
+    
+    left:10000px;
+    top:5000px;
+    
+}
