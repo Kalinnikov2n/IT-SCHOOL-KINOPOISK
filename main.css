@@ -106,6 +106,7 @@ header {
     -ms-transition: all 0.4s linear;
 }
 body{
+    overflow-x:hidden;
     background: #f2f2f2;
 }
 *{
@@ -421,4 +422,142 @@ a {
     position: absolute;
     left: 980px;
     top: 3070px;
+}
+footer{
+    position: relative;
+    z-index: 2;
+    height: 400px;
+    left: 0px; bottom: 0px; 
+    background: black; 
+    color: black; 
+    width: 100%;
+}
+.foot{
+    width: 100%;
+    height: 80px;
+    float: left;
+}
+.foot ul{
+    margin-top: 10px;
+    margin-left: 37%;
+}
+.foot ul li{
+    /* padding-left: 60px; */
+    /* margin-left: 8%; */
+    list-style: none;
+    float: left;
+}
+.foot ul li a{
+    display: block;
+    width: 60px;
+    color: gray;
+    height: 10px;
+    padding-top: 25px;
+    cursor: pointer;
+}
+.foot ul li a:hover{
+    transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    -ms-transition: all 0.4s ease;
+    color: white;
+}
+.foot2{
+    width: 100%;
+    height: 80px;
+    float: left;
+}
+.foot2 ul{
+    margin-top: 10px;
+    margin-left: 10%;
+}
+.foot2 ul li{
+    /* padding-left: 60px; */
+    /* margin-left: 8%; */
+    list-style: none;
+    float: left;
+}
+.foot2 ul li a{
+    font-size: 14px;
+    font-family: Graphic;
+    display: block;
+    width: 150px;
+    color: gray;
+    height: 10px;
+    padding-top: 25px;
+    cursor: pointer;
+    text-decoration: none;
+}
+.foot2 ul li a:hover{
+    transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    -ms-transition: all 0.4s ease;
+    color: white;
+}
+.foot3{
+    width: 100%;
+    height: 80px;
+    float: left;
+}
+.foot3 ul{
+    margin-top: 10px;
+    margin-left: 30%;
+}
+.foot3 ul li{
+    /* padding-left: 60px; */
+    /* margin-left: 8%; */
+    list-style: none;
+    float: left;
+}
+.foot3 ul li a{
+    font-size: 20px;
+    display: block;
+    width: 200px;
+    color: gray;
+    height: 10px;
+    cursor: pointer;
+    text-decoration: none;
+}
+.foot3 ul li a:hover{
+    transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    -ms-transition: all 0.4s ease;
+    color: white;
+}
+.foot4{
+    width: 100%;
+    height: 80px;
+    float: left;
+}
+.foot4 ul{
+    margin-top: 100px;
+    margin-left: 120px;
+}
+.foot4 ul li{
+    padding-left: 40px;
+    /* margin-left: 8%; */
+    list-style: none;
+    float: left;
+}
+.foot4 ul li a{
+    font-size: 14px;
+    display: block;
+    width: 400px;
+    color: gray;
+    height: 10px;
+    cursor: pointer;
+    text-decoration: none;
+}
+.foot4 ul li a:hover{
+    transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    -ms-transition: all 0.4s ease;
+    color: white;
 }
