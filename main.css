@@ -3,11 +3,12 @@ body {
     background-color: #f4f4f4;
     display: flex;
     height: 450vh;
-    /* justify-content: space-between; */
+    justify-content: space-between;
 
     margin: 0%;
-    <<<<<<< HEAD overflow: scroll;
-
+     
+    
+    overflow-x: hidden;
 
 
 }
@@ -18,7 +19,10 @@ font-family: 'Graphic';
 
 
 }
-
+.bigheads{
+    position: fixed;
+    width: 100vw;
+}
  .header {
     border-collapse: collapse;
     border-spacing: 50px;
@@ -28,7 +32,7 @@ font-family: 'Graphic';
     vertical-align: middle;
     margin: 0%;
     font-family: 'Graphic';
-    position;
+    width: 100%;
 
 
 }
@@ -231,46 +235,55 @@ input {
 } */
 
 .raschet {
-    margin-left: 30%;
+    margin-left: 5%;
     margin-top: 5%;
+    
+}
+.content{
+    /* background-image: url(./public/images/холодныи_расчет.jpg); */
+    margin-left: 23%;
+    width: 500px  ;
+    /* background-image: url(//kinopoisk-ru.clstorage.net/oE1522a34/318b9eVTSj3b/YpDkR3kzG6WL6putjnhKoDnRFn7yMBXUC8u69tjSHRhR8B4oOiqxeyJP2ZET1q_eryT6pmzls-_Daegk1485O1aQ4OYo9t6xPytOjXsND9FMdEa_R0VHYyn4-DWacBt_Nkd63E7Kof7X-niElsLqL24w3MD4oKTqJr_6EZTbfkhwQsXl7RJpxG3YC92PCDmU6cMFe3Bi1sLq6Agl-dGbTmaXG70c7-JtJ8qptUVxicoOg11QjrOHOMbdmMHX-D35AnAn9lyzukQd6YiPnHkp1voxNjogA-eBu0uK9kkSu15Ftysfb5yiXVRJGJclcwhIz6CfsFzBFBn2PisilCre-jDTZ5TvAwlGLqvorf75WFabUgfq4KJWgIjouWZb0hn_BOVI_-_cE19EWxvm9SE5ys4DbXMeAyZpxh4pM5aJTznjwYXWPYPbd86JG118aJlnuUPVyTFS9dAreYqnW-AYrsflKQ1PXgLOd1mZR8aDm4iOkv9j79H3-9fu-_NHKkw5wyFlxF-zeKSfyXuNXVooR4vzhljQ4deSiZiqBsshuS3UZJm9_L5zDuV7iva1QtgqDSIdgK_TxpjH3rjxRBicevHhZCTekzqkDnhZzE6KO9arkNUKQIAWcstYysY5s5tN9AVZDbzfwBwnidrkxcCqS7wBzSPOIbeIRS75c4WajpoRg5WGf1GZxB3L2-xMW3nW6fGVW5IDFlNZ2ehEimEK3kZHuM5vPvOP14v45kYw-Yuf4_3h_HCnGIdua1I26o4bkPLHBxyBeOZsifq87PsadqiTpUkCkTRS-MrKtCjha8xnV7n-bazRzBY7u2TG4Rk7LbDsYS0gxlp1X9oht6lMSSOAplT_ATl2bRu6rb8KmBRaEHZ7E1BW0viYyRS6QLs_haXrfc1u4Y6FmkmnVGNI-K3z3_OP0AZ6hL7bc9cazCugcaZkbLE6pz3YGI3fK4qmm9HniVNyl_Or-0kXaAJ5zyf324_dHhDvN7vKlnRDKLqf09-BLABUOmV82zF3Cu_6UcKHN02S2tSvGlvcDHhJRetxJDujwvfCmPnItPjx64535viN3u3T_iWIOdcmkXoYHJFeMX6TpglV31kytWt8OjCjpkSN8PjGfxvYn58oKFS70je6k-Kk8CjqiHTaQ0kcNdXJTW7MoC3EGiiW9nCISf9xXlPu4fWIBH7p8NV6bZrQgEVUjqKbNN0piZ5cinimu8G1-UDSFnP4uAjl6gIqjxe16s6tbnOO9Ior9eaBKjmeET8SjuHWCFftyUOHym2a8pClRyzz6tTeSfvtPzioZigx5emikNcSSSioVsrxCK5kZ7rNjT3BHdfbybaH86garJE-UgwjJggGXpnTNzi-y8DzZaV8gRpEXIl63i1quoWp4FcoIBKEQCnLeQXqorsv1-X4va3dE__Gedqm5XLJi54QjxJcMvRJdO-7Med6f5hDEbc2jKCZBa3YeM4OKJgGGgE1KHHAlQKJSbhGmMAZXkX0GO8NbCP-tHvbpqVAi_q8g78AXCGkW_Ss2jHXWN2Y05KHBV2i6ETN2jttfqhb5VqRV5kw4cUQ6KuKNroCuY5GJOtcfNyDbUcK-KbE44qJblAcca4RJEm3TljD1dh-mkGghZXMoZs2TTu5HG5aiLWIk-fpYQAGMUlZy0Q58qtu1pdo_eyc8511q7sml_F6ug2yv8E_wjc4F87Y8CV6DnnyQ-flX7G6Ro5KeX8eCnpl61InCkJi1ILrK8l0-ZIrXXYn-P5s79FvFmq5l8ZDmiu_gs_RLfBk2YQMaUMGizxbsMGkF38B-qbueeqf7rgIFYoyZ1qAkFfQm1obRKgR2r91dsvfrT5QzDWqqpQEoIq6nfM8Ibzxxkl1XChhlxh-alOT97cfk2p1L0mKHM8LaDaaAfYYomEWgUq420d58CqvJVbJj2zcoNzFSljUptKpGVxh_5G9sqRp9s2KsNWZDOpxwZTHD1CKZu-bmUxtC0kWeLBUCKMxRHJa27r2qGFb_gSGmO-OLqHcxUu4xEVwyqlMIz-iP4GV-IQcCiP3SJwKE2OXFm-AWuftibkOfUm7Ngmh1ngiMPfziPiaNpmhy1-md2s_DhzyPRVpKPTkA3ur3mOtId5iBdt0_fkRVugcK_Kx9SYfgmnX3YvI_O94qwbooXSbABHHAkho-CRIsincJ9ba7cyMgd0X6rsE9fKIS-_C_KI_kcX4dj6YMeeoDHgiQtRVD7BIpk05Sc7umqlmO8I3K6MABkOa-trmmHF5jFX0O9x933OOpBhrFcQTyxjNMuwCTrEliLS8WCAlGJxIcaLHRg-iWnctmIju7Vs4ZfhR9jqw4MawuwvodtpAu2_k9RmcT3yRDwS6CofFQojYjhAtsByCJ9omrtoyNfquiSNgdwQ8QEm23YsYHM166HT7IReIUTFV43soC3a787ltFke4rAwsU302eegVVLH620-DDKHd0-WJRD2KkLcpHspy4_cH7pL6dH-peU4sa4lmeYHHu2JxB4AZSNj1KCBafYWUiT4NTjMc9HnptKcR-zsvc_3D_POGGEYPyUHWib4JIILEZCyTONbNm2r_rAsYNhow5HgxwCai6kpKhTpiu68Ux7n9_h6zjgUJGSb1URpL7YLtgEzQpxo23qrQltie20LgBBbNson1_pv4j_-ZOZeIMWYLkWHXo1j5S2SZsQift5U7_-8tIx1WuxtlNjDI265B_3KsMjWJ9A5LEdcrvqmSwYbkzPNZlp15O49NqotV2nGnaXPTRDK7-mkGmZC5f_elit_NbDOuV_upBsYDKqvfox2R_JG1ilY9-OGEm2xI4kPF9G-TS4SdmEqvfCgIBfkjJxrSsQaCutqKtVvRWO7FRxseb27ATOdK-1Ukgfr7vLDNsyyDNso03rqi9skdmcGwl9Vf4Km2zkhbXU042Cb5syVKIFLVwdhIKsaawgltZdbo7r7cwtzXq6rFRLLaSU5ALAGu4yar8); */
+    background-repeat: no-repeat;
+    
 }
 
 .igrok {
 
     position: absolute;
-    top: 55%;
-    left: 32%;
+    top: 30%;
+    left: 25%;
     color: #f4f4f4;
     font-stretch: ultra-condensed;
 }
 
 .roli {
     position: absolute;
-    top: 62%;
-    left: 32%;
+    top: 34%;
+    left: 325%;
     color: dimgray;
     font-stretch: ultra-condensed;
 }
 
 .oscar {
     position: absolute;
-    top: 65%;
-    left: 32%;
+    top: 38%;
+    left: 25%;
     color: #f4f4f4;
     font-stretch: ultra-condensed;
 }
 
 .regisser {
     position: absolute;
-    top: 68%;
-    left: 32%;
+    top: 42%;
+    left: 25%;
     color: dimgray;
     font-stretch: ultra-condensed;
 }
 
 .pol {
     position: absolute;
-    top: 68%;
+    top: 42%;
     left: 36%;
     color: #f4f4f4;
     font-stretch: ultra-condensed;
@@ -278,8 +291,8 @@ input {
 
 .smotr {
     position: absolute;
-    top: 71%;
-    left: 32%;
+    top: 50%;
+    left: 28%;
     color: blueviolet;
     font-stretch: ultra-condensed;
 }
@@ -291,8 +304,8 @@ input {
     color: #f4f4f4;
     border-radius: 10px;
     position: absolute;
-    top: 78%;
-    left: 32%;
+    top: 57%;
+    left: 28%;
 }
 
 .button2 {
@@ -302,17 +315,26 @@ input {
     color: #f4f4f4;
     border-radius: 10px;
     position: absolute;
-    top: 78%;
+    top: 57%;
     left: 40%;
 }
 
 .content {
     font-family: "graphicItal";
+    /* margin-left: 20%; */
 
 }
+<<<<<<< HEAD
 #task{
     margin-left: 23%;
 }
+=======
+.container{
+    margin-left: 23%;
+    position: relative;
+}
+
+>>>>>>> 1eaab79360cfd97c78d0a4979c38953b98bd7728
 .container img {
 
     border-radius: 20px;
@@ -326,8 +348,8 @@ input {
 
 .btn {
     position: absolute;
-    top: 45%;
-    right: 70%;
+    /* top: 45%;
+    right: 70%; */
     transform: translate(-25%, -25%);
     -ms-transform: translate(-25%, -25%);
     background-color: rgb(255, 123, 0);
@@ -337,6 +359,9 @@ input {
     border: none;
     cursor: pointer;
     border-radius: 10px;
+    margin-left: 7%;
+    top:31%
+
 }
 
 
@@ -404,6 +429,83 @@ h3 {
     color: white;
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
