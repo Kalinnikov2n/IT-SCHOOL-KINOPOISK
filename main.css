@@ -1,5 +1,69 @@
-
-   header {
+header ul li{
+    list-style: none;
+    float: left;
+    text-align: center;
+}
+header ul li a{
+    display: block;
+    width: 200px;
+    text-decoration: none;
+    font-size: 17px;
+    color: gray;
+    height:30px;
+    padding-top: 10px;
+    cursor: pointer;
+}
+header ul li a:hover{
+    transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    -ms-transition: all 0.2s linear;
+    color:white;
+}
+header img{
+    padding-top: 13px;
+}
+header input{
+    position: absolute;
+    margin-top: 5px;
+    margin-left: 800px;
+    width: 300px;
+    height: 25px;
+    background: 0 0; 
+    background-image: initial; 
+    background-position-x: 0px; 
+    background-position-y: 0px; 
+    background-size: initial; 
+    background-attachment: initial; 
+    background-origin: initial; 
+    background-clip: initial; 
+    background-color: initial; 
+    
+    background-color: hsla(0,0%,94.9%,.15);
+}
+.log-in{
+    width: 300px;
+    margin-left: 20px;
+    height: 80px;
+}
+.log-in p{
+    float: left;
+    text-align: center;
+    list-style: none;
+    margin-top: 10px;
+    padding-left: 50px;
+    font-size: 20px;
+}
+.log-in a{
+    text-decoration: palegoldenrod;
+    color:slategrey;
+    cursor: pointer;
+}
+.log-in a:hover{
+    color: white;
+}
+header {
     position: fixed;
     background-color: #333333;
     z-index: 2;
@@ -11,7 +75,7 @@
     margin-top: 0%;
     height: 72px;
     padding: 15px 0 0 150px;
-    }
+}
 .leftpanel{
     height: 100%;
     width: 250px;
@@ -59,79 +123,49 @@ color: gray;
 .choicepic {
     position:absolute;
     left:180px;
-    top:500px;
+    top: 580px;
     height: 125%;
     width: 500px;
     zoom: 200%;}
 .choice { 
     position:absolute;
     left:361px;
-    top:940px;
+    top: 1090px;
+}
+.choicepic2 {
+        position:absolute;
+        left:180px;
+        top: 760px;
+        height: 125%;
+        width: 500px;
+        zoom: 200%;}
+    .choice2 { 
+        position:absolute;
+        left:361px;
+        top: 1450px;}
+.PhotoT {
+    position:absolute;
+    left: 180px;
+    top: 370px;
+    height: 125%;
+    width: 500px;
+    zoom: 200%;
+}
+.tickets {
+    top: 680px;
+    position:absolute;
+    margin-left: 361px;
 }
 
-header ul li{
-    list-style: none;
-    float: left;
-    text-align: center;
-}
-header ul li a{
-    display: block;
-    width: 200px;
-    text-decoration: none;
-    font-size: 17px;
-    color: gray;
-    height:30px;
-    padding-top: 10px;
-    cursor: pointer;
-}
-header ul li a:hover{
-    transition: all 0.4s ease;
-    -o-transition: all 0.4s ease;
-    -webkit-transition: all 0.4s ease;
-    -moz-transition: all 0.4s ease;
-    -ms-transition: all 0.4s ease;
-    color:white;
-}
-header img{
-    padding-top: 13px;
-}
-header input{
-    position: absolute;
-    margin-top: 5px;
-    margin-left: 800px;
-    width: 300px;
-    height: 25px;
-    background: 0 0; 
-    background-image: initial; 
-    background-position-x: 0px; 
-    background-position-y: 0px; 
-    background-size: initial; 
-    background-attachment: initial; 
-    background-origin: initial; 
-    background-clip: initial; 
-    background-color: initial; 
+.mainphoto {
+    position:absolute;
+    left:410px;
+    top:100px;
     
-    background-color: hsla(0,0%,94.9%,.15);
-}
-.log-in{
-    width: 100px;
-    float: left;
-    margin-left: 40px;
-    height: 80px;
-}
-.log-in p{
-    float: left;
-    margin-bottom: 10px;
-    margin-top: 12px;
-    text-align: center;
-    list-style: none;
-    float: left;
-}
-.log-in a{
-    text-decoration: palegoldenrod;
-    color:slategrey;
-    cursor: pointer;
-}
-.log-in a:hover{
-    color: white;
-}
+    
+    zoom: 88%;}
+
+.banner1 {position:absolute;
+    left: 1900px;
+    top: 3600px;
+     zoom: 50%;}
