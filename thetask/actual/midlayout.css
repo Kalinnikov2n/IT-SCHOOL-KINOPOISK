@@ -5,16 +5,22 @@ body {
     display: flex;
     width: 1030px;
     height: 400px;
-    ;
     
 }
 
+.insideleftbox {
+    margin-top: 100px;
+    margin-left: 10px;
+    text-align: left
+}
 .leftbox {
+    align-items: center;
     color: white;
-    text-align: left/justify;
     background-color: black
 }
 
+
 .rightbox {
+    
     background-color: black
 }
