@@ -366,3 +366,13 @@ blok1{
 blok2{
     margin-top: 30px;
 }
+.zxc{
+    margin-left: 5px;
+    display: flex;
+}
+.pic{
+    border-radius: 4px;
+    width: 205px;
+    height: 110px;
+    margin: 5px;
+}
