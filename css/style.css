@@ -310,7 +310,8 @@ a{
     width: 200px;
 }
 .MainContent5{
-    margin-top: 70px;
+    display: flex;
+    margin-top: 20px;
 }
 .border{
     margin-left: 30px;
@@ -322,4 +323,46 @@ a{
     margin-left: 30px;
     font-size: 25px;
     font-weight: bolder;
+}
+.verhushka{
+    margin-top: 70px;
+}
+.stroka2{
+    display: flex;
+}
+.kart{
+    margin: 5px;
+    border-radius: 5px;
+    width: 100px;
+    height: 150px;
+}
+.import2{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-right: 0px;
+    height: 78px;
+    margin-left: 30px;
+    font-size: 25px;
+    font-weight: bolder;
+}
+.p1{
+    margin-top: 60px;
+}
+.block5{
+    display: flex;
+}
+.c{
+    margin-top: 30px;
+}
+.probel4{
+    width: 100px;
+}
+.probel5{
+    width: 190px;
+}
+blok1{
+    margin-top: 30px;
+}
+blok2{
+    margin-top: 30px;
 }
