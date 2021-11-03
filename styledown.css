@@ -1,23 +1,28 @@
+body{
+    margin: 0;
+}
 header{
-    background-color: rgb(12,12,12);
-    opacity: 0.9;
+    position: sticky;
+    z-index: 1;
+    top: 0px;
+    background-color: rgb(26, 25, 25);
     height: 80px;
+    width: 100%;
     color: whitesmoke;
     font-family: Geneva, Tahoma, sans-serif;
-
 }
 
 
 .Kino{
     position: absolute;
     left: 130px;
-    top: 25px;
+    top: 20px;
     font-size: xx-large;
 }
 
 .console{
  position: relative ;
-    top: 25px;
+    top: 20px;
     left: 160px;
     height: 40px;
     opacity: 0;
@@ -26,7 +31,7 @@ header{
 
 .search{
     position: fixed;
-    top: 28px;
+    top: 23px;
     right: 350px;
     left: 770px;
     width: 330px;
@@ -36,7 +41,7 @@ header{
 
 .nayti{
     position: fixed;
-    top: 39px;
+    top: 34px;
     left: 1050px;
 }
 
@@ -44,7 +49,7 @@ header{
     position: fixed;
     right: 870px;
     left: 350px;
-    top: 39px;
+    top: 34px;
     color: gray;
     background-color: Transparent;
     background-repeat:no-repeat;
@@ -59,7 +64,7 @@ header{
     position: fixed;
     right: 600px;
     left: 550px;
-    top: 40px;
+    top: 35px;
     color: gray;
     background-color: Transparent;
     background-repeat:no-repeat;
@@ -84,7 +89,7 @@ header{
 .start{
     position: fixed;
 
-    top: 24px;
+    top: 19px;
     background-color: Transparent;
     background-repeat:no-repeat;
     border: none;
@@ -99,13 +104,13 @@ header{
 .play{
     position: fixed;
     left: 330px;
-    top: 37px;
+    top: 32px;
 }
 
 .playbut{
     position: fixed;
     left: 330px;
-    top: 33px;
+    top: 28px;
     height: 27px;   
     width: 25px;
     background-color: Transparent;
@@ -119,13 +124,13 @@ header{
 .pc{
     position: fixed;
     left: 520px;
-    top: 36px;
+    top: 31px;
 }
 
 .pcbut{
     position: fixed;
     left: 520px;
-    top: 30px;
+    top: 25px;
     height: 30px;
     width: 30px;
     background-color: Transparent;
@@ -137,30 +142,29 @@ header{
 
 .log{
     position: fixed;
-    top: 35px;
-    left: 1300px;
-    right: 10px;
-
-    background-size: contain
+    top: 30px;
+    margin-left: 70vw;
+    margin-right: 10vw;
+    background-size: contain;
 
 }
 .chi{
     position: fixed;
-    left: 1250px;
-    top: 35px;
+    top: 30px;
+    margin-left: 68vw;
 }
 .bookmark{
     position: fixed;
-    left: 1211px;
-    top: 35px;
+    margin-left: 66vw;
+    top: 30px;
 }
 
 .zakl1{
     position: absolute;
     height: 23px;
     width: 15px;
-    top: 35px;
-    left: 1218px;
+    top: 30px;
+    margin-left: 66vw;
     background-color: Transparent;
     background-repeat:no-repeat;
     border: none;
@@ -174,8 +178,8 @@ header{
     position: absolute;
     height: 25px;
     width: 40px;
-    left: 1245px;
-    top: 35px;
+    margin-left: 68vw;
+    top: 30px;
     background-color: Transparent;
     background-repeat:no-repeat;
     border: none;
@@ -189,8 +193,8 @@ header{
     position: absolute;
     height: 25px;
     width: 25px;
-    left: 1298px;
-    top: 35px;
+    margin-left: 70vw;
+    top: 30px;
     background-color: Transparent;
     background-repeat:no-repeat;
     border: none;
@@ -202,14 +206,17 @@ header{
 
 footer{
     position: relative;
-    background-color: rgb(12,12,12);
+    background-color: rgb(0, 0, 0);
     opacity: 0.9;
     height: 230px;
-    width: 1200px;
+    width: 86vw;
+    
 }
 
 .under{
+    color: rgb(122, 122, 122);
     font-size: 18px;
+    word-spacing: 25px;
 }
 hr{
     background-color:rgb(12,12,12) ;
@@ -219,7 +226,338 @@ hr{
 
 .GG-center{
     margin: auto;
+    color: grey;
 }
 .GG-right{
     text-align: right;
+    color: grey;
 }
+.GG-left{
+    color: grey;
+}
+.icons{
+        letter-spacing: 50px;
+}
+.menu{
+    position: sticky;
+    top: 0;
+    width: 200px;
+    line-height: 2.5;
+    margin-left: 7.5vw;
+    padding-top: 90px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.btnMenu{
+    color: gray;
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden; 
+    opacity: 1;
+    font-size: 16px;
+    margin-left: 10px;
+}
+.btnMenu:hover{
+    opacity: 0.6;
+}
+.leftbox{
+    position: sticky;
+    top: 80px;
+    float: left;
+    margin: 0;
+    width: 7vw;
+    height: 100vh;
+    background-color: rgb(241, 241, 241);
+}
+.rightbox{
+    position: sticky;
+    top: 80px;
+    float: right;
+    margin: 0;
+    width: 7vw;
+    height: 100vh;
+    background-color: rgb(241, 241, 241);
+}
+.content{
+    height: 45vh;
+    background-color: black;
+    border-radius: 10px 40px 40px 10px;
+    margin-right: 10vw;
+    margin-left: 25vw;
+}
+.pic1{
+    height: 45vh;
+    float: right;
+    width: 44vw;
+    border-radius: 36px;
+}
+.btn{
+    margin-top: 35vh ;
+    font-size: 2vh;
+     margin-left: 2vw;
+     background-color: darkorange;
+     color: whitesmoke;
+     border-radius: 5px 5px 5px 5px;
+     font-family: Geneva, Tahoma, sans-serif;
+}
+.btn2{
+    font-size: 2vh;
+    margin-left: 0.5vw;
+    position: absolute;
+    margin-top: 35vh;
+    background-color:rgb(39,39,39);
+    opacity: 0.4;
+    color: whitesmoke;
+    border-radius: 5px 5px 5px 5px;
+    font-family: Geneva, Tahoma, sans-serif;
+}
+.pic1name{
+    position: absolute;
+    margin-top: 5vh;
+    font-size: 3vh;
+    font-size: 2vw;
+    margin-left: 3vw;
+    margin-right: 46.5vw;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: darkorange;
+}
+.pic1clov{
+    font-size: 1vw;
+    color: whitesmoke;
+    position: absolute;
+    margin-top: 10vh;
+    margin-left: 1vw;
+    width: 19vw;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.big-block{
+    height: 35vh;
+
+margin-top: 5vh;
+
+background-color: white;
+margin-right: 10vw;
+    margin-left: 25vw;
+
+color: black;
+}
+
+.textbil{
+    width: 100%;
+    font-size: 3vh;
+    font-size: 1.5vw;
+}
+.textall{
+    float: right;
+    margin-right: 3vw;
+    font-size: 3vh;
+    font-size: 1.5vw;
+}
+
+.photo-mesto{
+    width: 67vw;
+    height: 14vh;
+
+}
+.vech{
+    height: 24vh;
+    padding-right: 0.8vw;
+    width: 10vw;
+    border-radius: 7px ;
+}
+.text-mesto1{
+    margin-top: 10vh;
+    font-size: 2vh;
+    font-size: 1vw;
+}
+.otst1{
+margin-top: 0vh;
+}
+
+.kosh-text{
+    margin-left: 7vw;
+}
+.kosh-abz{
+    margin-left: 4vw;
+}
+.venom-text{
+    margin-left: 3.2vw;
+}
+.venom-abz{
+    margin-left: 2.8vw;
+}
+.ron-text{
+    margin-left: 7vw;
+}
+.ron-abz{
+    margin-left: 3.5vw;
+}
+.dun-text{
+    margin-left: 3vw;
+}
+.dun-abz{
+    margin-left: 3.3vw;
+}
+.hel{
+margin-left: 7.4vw;
+}
+.hel-abz{
+margin-left: 1vw;
+}
+.vybor{
+    font-size: 3vh;
+    font-size: 1.5vw;
+    margin-right: 7vw;
+    margin-left: 25vw;
+    width: 68vw;
+}
+.n{
+    height: 24.7vh;
+    width: 16.7vw;
+
+}
+
+.image-flex3 {
+    position: sticky;
+    margin-right: 7vw;
+    margin-left: 25vw;
+    background-color: rgb(20,20,20);
+    
+  }
+  
+  
+  .ykral{
+    margin-top: 4vh;
+        height: 25vh;
+        width: 30vw;
+        margin-left: 20vw;
+        margin-right: 20.7vw;
+  }
+  .p1pic{
+      margin-top: 1.5vh;
+      width: 68vw;
+  }
+  .text-vibor{
+    margin-left: 4vw;
+        font-size: 3vh;
+        margin-top: vh;
+        color: whitesmoke;
+  }
+  .photofilm{
+    margin-left: 0.5vw;
+  }
+  .pgotoser{
+    height: 25vh;
+    width: 16vw;
+    padding-right: 0.7vw;
+  }
+  .pgotoser-out{
+    height: 25vh;
+    width: 16vw;
+  }
+  
+  .spizdilphoto{
+    height: 23vh;
+    width: 60vw;
+        margin-left: 4vw;
+        margin-right: 4vw;
+        margin-top: 3vh;
+        margin-bottom: 4.2vh;
+  }
+  .spizdil{
+    height: 30vh;
+  }
+  
+
+
+
+
+
+  
+.buttn{
+    width: 24vw;
+    height: 4vh;
+    margin-left: 7vw;
+    font-family:   'Trebuchet MS', sans-serif;
+}
+.container{
+    display: flex;
+    margin-left: 25vw;
+    margin-right: 7vw;
+    height: 80vh;
+}
+.pervdoch{
+    flex-grow: 1;
+height: 10vh;
+width: 10vh;
+}
+.vtordoch{
+    flex-grow: 1;
+    height: 10vh;
+    width: 10vh;
+}
+.tretdoch{
+    flex-grow: 1;
+    height: 10vh;
+    width: 10vh;
+}
+.pervcont{
+    margin-left: 4vw ;
+        margin-right: 4vw;
+        height: 14vh;
+;
+}
+.vtorcont{
+margin-left: 7vw;
+margin-left: 7vw;
+height: 20vh;
+width: 23.5vw;
+}
+.tretcont{
+    margin-right: 6vw;
+}
+.novosti{
+    margin-left: 29vw;
+    margin-bottom: 2vh;
+    margin-right: 13vw;
+    margin-top: 4vh;
+    font-size: 2vw;
+}
+.newvideo{
+    float: right;
+}
+.glavtyd{
+    margin-left: 9.4vw;
+    margin-right: 13vw;
+}
+.texttest{
+    width: 85%;
+    font-size: 2vh;
+    margin-left: 4vw;
+}
+.vtordich{
+    margin-left: 6.8vw;
+    margin-top: 1vh;
+    height: 40vh;
+    width: 24vw;
+}
+
+.newtrailer{
+    margin-left: 29vw;
+    font-size: 3vh;
+}
+.trailer{
+    float: right;
+    margin-right: 14vw;
+    font-size: 3vh;
+}
+.video{
+    margin-left: 29vw;
+    padding-right: 1vw;
+}
+.video-2{
+    padding-right: 1vw;
+    
+}
+
