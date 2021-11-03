@@ -35,7 +35,7 @@ footer {
     padding: 10px;
     background-color: #ffffff;
     width: 15%;
-    height: 220vh;
+    height: 400vh;
     margin-left: 15%;
     border-right: 1px solid rgba(31, 31, 31, .1);
 }
@@ -447,3 +447,219 @@ header button {
     color: #A5A5A5;
     font-size: large;
     }
+.mainFilm{
+    display:flex;
+    position:relative;
+    overflow: hidden;
+    margin:0 30px;
+    height:400px;
+    border-radius:5px;
+    margin-top: 30px;
+}
+.mainFilmInfo{
+    z-index:2;
+    width:70%;
+    color:#fff;
+    font-size: 12px;
+    line-height: 1.5;
+    padding:40px;
+    background-image: linear-gradient(90deg,#0c0c0c 65%,rgba(12,12,12,.5),rgba(31,31,31,0));
+}
+.mainFilmInfoMainText{
+    font-size: 14px;
+    line-height: 1.43;
+}
+.mainFilmInfoSubText{
+    margin-top:8px;
+    opacity:0.4;
+}
+.mainFilmVideo{
+    height:400px;
+    position:absolute;
+    left:220px;
+}
+.mainFilmInfoSubscribe{
+    margin-top: 12px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: 600;
+    color: #868eff;
+}
+.mainFilmInfoSubscribeModule span:nth-of-type(1){
+    background: linear-gradient(130.16deg,#505add 34.4%,#be40c0 66.11%,#fba82b 96.37%);
+    margin-right: 8px;
+    font-size: 15px;
+    font-weight: 500;
+    line-height:18px;
+    height: 40px;
+    padding: 11px 18px 11px 14px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.mainFilmInfoSubscribeModule span:nth-of-type(1)::before{
+    content: "";
+    font-size: 0;
+    vertical-align: middle;
+    width: 0;
+    height: 0;
+    margin-right: 9px;
+    border-color: transparent;
+    border-left-color: #fff;
+    border-style: solid;
+    border-width: 7px 0 7px 12px;
+}
+.mainFilmInfoSubscribeModule span:nth-of-type(2){
+    display:inline-flex;
+    padding: 11px 18px 11px 10px;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 16px;
+    cursor: pointer;
+    background-color: hsla(0,0%,40%,.3);
+    border-radius:4px;
+}
+.mainFilmInfoSubscribeModule span:nth-of-type(2)::before{
+    content:"";
+    display: block;
+    width: 16px;
+    height: 14px;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: 10px;
+    background-image: url("img/icons/plus.svg");
+}
+
+.kashReceiptsBlock{
+    margin-top: 30px;
+    padding:0 30px;
+    margin-bottom:30px;
+}
+.kashReceiptsInfo{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: 1px solid #0c0c0c;
+}
+.kashReceiptsInfo div:first-of-type span:first-of-type{
+    font-size: 30px;
+    font-weight: 700;
+    margin-right:10px;
+}
+.kashReceiptsInfo div:first-of-type{
+    padding-bottom:5px;
+}
+.kashReceiptsInfo div:last-of-type{
+    padding-top:13px;
+}
+.kashReceipts{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.kashReceiptsColumn{
+    width:33%;
+    margin-right: 20px;
+}
+.kashReceiptsColumn:last-of-type{
+    margin-right: 0px;
+}
+.kashReceiptsFilms{
+    margin-top:-30px;
+    margin-bottom:50px;
+}
+.kashReceiptsFilms li > div{
+    display:flex;
+    flex-direction: row;
+    width:100%;
+    position:relative;
+    top:30px;
+    margin-top:10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid darkgray;
+}
+.kashReceiptsFilms li:last-of-type > div{
+    border-bottom: none;
+}
+.kashReceiptsFilms li > div img{
+    border-radius:4px;
+}
+.kashReceiptsFilmsInfo{
+    display:flex;
+    flex-direction: column;
+}
+.kashReceiptsFilmsInfo{
+    display:flex;
+    flex-direction: column;
+    width:100%;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16px;
+    margin-left:10px;
+}
+.kashReceiptsFilmsInfo div{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+.kashReceiptsFilmsInfo div span:first-of-type{
+    color:#060077;
+}
+.kashReceiptsFilmsInfo div span:last-of-type{
+    color:#f60;
+}
+.kashReceiptsFilmsInfo:first-child{
+    background-color: seagreen;
+}
+.filmCalendarBlock{
+    margin-top:30px;
+    padding:0 30px;
+}
+.filmCalendarColumn{
+    width:50%;
+}
+.filmCalendarInfo{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width:100%;
+}
+.filmCalendarInfoTitle{
+    margin-left:10px;
+    margin-top:10px;
+}
+.filmCalendarInfoTitle span{
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16px;
+}
+.filmCalendarInfoTitle span:nth-of-type(1){
+    color:#060077;
+}
+.filmCalendarInfoTitle span:nth-of-type(2){
+    color:rgba(31,31,31,.4);
+}
+.filmCalendarInfoRight{
+    display:flex;
+    flex-direction: row;
+}
+.filmCalendarInfoRight div{
+    display:flex;
+    flex-direction: column;
+    text-align: center;
+    color:#797979;
+}
+.filmCalendarInfoRight div span:nth-of-type(1){
+    font-size: 30px;
+}
+.favouriteButton{
+    height:20px;
+    width:20px;
+    padding:5px;
+    padding-left:4px;
+    border:1px solid darkgray;
+}
+.filmCalendarInfoRight .favouriteButton{
+    margin-top: 10px;
+    margin-left: 30px;
+}
