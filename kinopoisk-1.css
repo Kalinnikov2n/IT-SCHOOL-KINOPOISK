@@ -663,3 +663,26 @@ header button {
     margin-top: 10px;
     margin-left: 30px;
 }
+.box {
+    display: flex;
+    flex-direction: row;
+  justify-content: space-around;
+}
+
+.middle {
+  display:flex;
+  flex-direction: column;
+}
+
+.newRel {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.trailers {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
