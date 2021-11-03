@@ -1,0 +1,753 @@
+if(top.location.href.indexOf('#!/')){
+    newUrl=top.location.href.split("#!/");
+    if(newUrl[1]){
+        top.location="/"+newUrl[1];
+    }
+}
+
+
+
+$(function(){
+    KP.navigator.toggleCheckbox("genre");
+    KP.navigator.toggleCheckbox("country");
+    $("body").click(function(){
+        KP.navigator.openSelect();
+    });
+    $( ".bestMoviesNav input,.bestMoviesNav select" ).bind("change",function(){
+        KP.navigator.update();
+    });
+});
+
+if(typeof(KP)=='undefined')
+    KP={};
+KP.navigator={
+    selectTimer: null,
+    updateTimer: null,
+    lastRequest: null,
+    selectBlockClose: null,
+    blockUpdate: false,
+
+    showPopup: function(number,num,link){
+        if(number>0){
+            $(".keywordsPopup .result").html("Найдено: <a href='#' onclick='KP.navigator.loadResult()'>"+num+"</a>");
+            $(".submit").fadeIn();
+            $(".keywordsPopup").show("slow").animate({height:68},function(){
+                $(".keywordsPopup .nice_button").fadeIn();
+            });
+        } else {
+            $(".keywordsPopup .result").html("Ничего не найдено :(");
+            $(".submit").fadeOut();
+            $(".keywordsPopup .nice_button").hide();
+            $(".keywordsPopup").show("slow").animate({height:30});
+        }
+    },
+    blockSelect: function(){
+        KP.navigator.selectBlockClose=true;
+        KP.navigator.selectTimer=setTimeout(function(){KP.navigator.selectBlockClose=false},200);
+    },
+    openSelect: function(selector){
+        if(!KP.navigator.selectBlockClose){
+            KP.navigator.selectBlockClose=true;
+            KP.navigator.selectTimer=setTimeout(function(){KP.navigator.selectBlockClose=false},100);
+            if(selector){
+                if($("#"+selector).css("display")=='block')
+                    $("#"+selector).hide();
+                else
+                    $("#"+selector).show();
+                $(".selectList:not(#"+selector+")").hide();
+            } else {
+                $(".selectList").hide();
+            }
+        }
+    },
+    toggleCheckbox: function(type, selector, obj){
+        if(obj){
+            $all = $(obj).parents(".selectList").find("."+type+"_"+$(obj).val() + " input");
+            $all.prop("checked", $(obj).prop('checked'));
+
+            if(!obj.checked){
+                $all.parents(".selectItem").removeClass("act");
+                $input=$(selector).find("input").get(0);
+                if($input)
+					$input.disabled=false;
+                $(selector).removeClass("inactive");
+
+                //
+
+            } else {
+                $all.parents(".selectItem").addClass("act");
+                $input=$(selector).find("input").get(0);
+                if($input){
+					$input.disabled=true;
+					$input.checked=false;
+				}
+				$(selector).removeClass("act")
+                           .addClass("inactive");
+            }
+        }
+
+        if(obj && type == 'genre'){
+            if(obj.checked && $(obj).parents('#genreList').length>0) {
+                if($(obj).val() == '999') $('#is_serial')[0].checked=true;
+                if($(obj).val() == '14') $('#is_mult')[0].checked=true;
+            }
+
+            if($(obj).parents('#exclude_genreList').length>0) {
+                if($(obj).val() == '999') $('#is_serial')[0].checked=!obj.checked;
+                if($(obj).val() == '14') $('#is_mult')[0].checked=!obj.checked;
+            }
+        }
+
+        var itemList=[];
+        var itemCount=0;
+        var exclude_itemCount = 0;
+        var itemListUnique=[];
+        var exclude_itemList=[];
+        var exclude_itemListUnique=[];
+
+        $("#"+type+"List input:checked").each(function(){
+            if(!itemListUnique[$(this).val()]){
+                itemList[itemList.length]=$(this).attr("data-name");
+                itemCount++;
+                itemListUnique[$(this).val()]=$(this).val();
+            }
+        });
+
+        $("#exclude_"+type+"List input:checked").each(function(){
+            if(!exclude_itemListUnique[$(this).val()]){
+                exclude_itemList[exclude_itemList.length]=$(this).attr("data-name");
+
+                exclude_itemListUnique[$(this).val()]=$(this).val();
+                exclude_itemCount++;
+            }
+        });
+
+        var Selects=[]
+        Selects["genre"]=["Выберите жанры","Исключающий жанр"];
+        Selects["country"]=["Страны производства","Исключающая страна"];
+        $("#"+type+"ListTitle").html(Selects[type][0]+(itemCount ? " ("+itemCount+")" : ""));
+        $("#exclude_"+type+"ListTitle").html(Selects[type][1]+(exclude_itemCount ? " ("+exclude_itemCount+")" : ""));
+
+        if(itemCount){
+            $("#"+type+"ListTitles .list").html(itemList.join(", "));
+            $("#"+type+"ListTitles").fadeIn();
+        } else {
+            $("#"+type+"ListTitles .list").html("");
+            $("#"+type+"ListTitles").fadeOut();
+        }
+
+        if(itemCount > 1){
+            $("#"+type+"ListTitles2 .list").html(itemList.join(", "));
+            $("#"+type+"ListTitles2").fadeIn();
+        } else {
+            $("#"+type+"ListTitles2 .list").html("");
+            $("#"+type+"ListTitles2").fadeOut();
+            $("#"+type+"ListTitles input").prop("disabled",false);
+            $("#"+type+"ListTitles2 input").prop("checked",false);
+        }
+
+
+        if(exclude_itemCount){
+            $("#exclude_"+type+"ListTitles .list").html(exclude_itemList.join(", "));
+            $("#exclude_"+type+"ListTitles").fadeIn();
+
+        } else {
+            $("#exclude_"+type+"ListTitles .list").html("");
+            $("#exclude_"+type+"ListTitles").fadeOut();
+        }
+    },
+
+
+    syncronizeYears: function(Start, End, Source){
+        if(!years)
+            years = [ $("#start_year").val(), $("#end_year").val() ];
+
+        Start = parseInt(Start,10);
+        End = parseInt(End,10);
+        if(Start < 1890 || Start > 2012 || End < 1890 || End > 2012) {
+            return false;
+        }
+
+        if(!Start) Start = years[0];
+        if(!End) End = years[1];
+
+
+        if(years[0] != Start && End < Start) {
+            End = Start;
+        }
+
+        if(years[1] != End && End < Start ) {
+            Start = End ;
+        }
+
+        if(years[0] != Start && End - Start > 10) {
+            End = Start + 10;
+        }
+        if(years[1] != End && End - Start > 10) {
+            Start = End - 10;
+        }
+
+        $( "#yearrange" ).slider( "values" , 0 , Start );
+        $( "#yearrange" ).slider( "values" , 1 , End );
+        $("#start_year").val(Start);
+        $("#end_year").val(End);
+
+        if(Source == 'yearrange' || Source == 'start_year' || Source == 'end_year'){
+            $("#years_list").val('');
+            $("#years_decade_list").val('');
+        }
+
+        if(Source == 'years_list') {
+            $("#years_decade_list").val('');
+        }
+        KP.navigator.update();
+        years = [ Start, End ];
+        return years;
+    },
+
+    validateInterval: function(type, what, max, min, obj){
+        if(obj.value == '') {
+            return;
+        }
+        val = obj.value.replace(',','.').replace(/[^\d\.]/g,'');
+        val_ar = val.split(".");
+        val = val_ar[0] + (val.indexOf(".") > 0 ? "." + val_ar[1] : "");
+        val = isNaN(parseFloat(val)) ? min : val;
+        normVal = Math.max(min, Math.min(val , max));
+        val = parseFloat(val) != normVal ? normVal : val;
+        obj.value = val;
+        if(type == 'min'){
+            if(parseFloat(val) > $("#"+what+"_max").val()) {
+                $("#"+what+"_max").val(val);
+                $("#"+what+"range" ).slider( "values" , 1 , val );
+            }
+            $( "#"+what+"range" ).slider( "values" , 0 , val );
+        } else {
+            if(parseFloat(val) < $("#"+what+"_min").val()) {
+                $("#"+what+"_min").val(val);
+                $("#"+what+"range" ).slider( "values" , 0 , val );
+            }
+            $( "#"+what+"range" ).slider( "values" , 1 , val );
+        }
+        KP.navigator.update();
+    },
+
+    clearRange : function(name){
+        var min_field = $( "#"+name+"_min" ).get(0);
+        var max_field = $( "#"+name+"_max" ).get(0);
+        max_field.value = max_field.defaultValue;
+        min_field.value = min_field.defaultValue;
+        $( "#"+name+"range" ).slider("values", 1, max_field.value);
+        $( "#"+name+"range" ).slider("values", 0, min_field.value);
+        KP.navigator.update();
+    },
+
+    changeGrossSelect:function(type){
+        var step,max,currency;
+        if(type=="domestic"){
+            step=50;
+            max=800;
+            currency = "млн $";
+        }
+
+        if(type=="overseas"){
+            step=100;
+            max=2000;
+            currency = "млн $";
+        }
+
+        if(type=="rus"){
+            step=10;
+            max=120;
+            currency = "млн руб.";
+        }
+        current=0;
+
+        html="<option value=''>-</option>";
+        while(current<=max){
+            current+=step;
+            html+="<option value='"+current+"'>"+current+"</option>";
+        }
+        $(".gross_select").html(html);
+        $(".gross_currency").html(currency);
+
+    },
+
+    clearForm: function(){
+        KP.navigator.blockUpdate = true;
+        $( ".bestMoviesNav select" ).val('');
+        $( ".bestMoviesNav select" ).prop('disabled',false);
+        $( ".bestMoviesNav input[type='checkbox']" ).prop("checked",false);
+        $( ".bestMoviesNav input[type='checkbox']" ).prop("disabled",false);
+        $( ".bestMoviesNav #rating_min" ).val(6);
+        $( ".bestMoviesNav #rating_max" ).val(10);
+        $( ".bestMoviesNav #ex_rating_min" ).val(1);
+        $( ".bestMoviesNav #ex_rating_max" ).val(10);
+        $( ".bestMoviesNav #tomat_rating_min" ).val(0);
+        $( ".bestMoviesNav #tomat_rating_max" ).val(100);
+        $( ".bestMoviesNav #review_procent_min" ).val(0);
+        $( ".bestMoviesNav #review_procent_max" ).val(100);
+
+        $( "#ratingrange" ).slider("values", 0, 6);
+        $( "#ratingrange" ).slider("values", 1, 10);
+        $("#ex_ratingrange" ).slider( "values" , 0,  1 );
+        $("#ex_ratingrange" ).slider( "values" , 1,  10 );
+        $("#tomat_ratingrange" ).slider( "values" , 0,  0 );
+        $("#tomat_ratingrange" ).slider( "values" , 1,  100 );
+        $("#review_procentrange" ).slider( "values" , 0,  0 );
+        $("#review_procentrange" ).slider( "values" , 1,  100 );
+
+        $( "#order_field" ).val('');
+
+        $( ".bestMoviesNav #min_vote" ).val(500);
+        $("#num_voterange" ).slider("value", 500);
+
+
+        $( "#is_serial, #is_film, #is_mult" ).prop("checked",true);
+        KP.navigator.toggleCheckbox("genre");
+        KP.navigator.toggleCheckbox("country");
+        KP.navigator.serializeForm();
+        KP.navigator.blockUpdate = false;
+        //KP.navigator.update();
+    },
+
+    serializeForm: function(serialize_folders){
+        var data=$( ".bestMoviesNav" ).serializeObject();
+        if($('#exclude_folders_check').prop('checked')){
+            var selectedF=$("#MyKP_Folder_0").attr("data-selected");
+            if(selectedF.replace(/;/g,"") != "") {
+                data['m_act[folders]']=selectedF;
+            } else if (serialize_folders) {
+                ClickFolders($('#MyKP_Folder_0 .title'),true);
+                data['m_act[folders]'] = '';
+                $("#MyKP_Folder_0 .list dd").each(function(){
+                    data['m_act[folders]'] += $(this).attr('value')+';';
+                });
+            }
+        }
+        if(data['m_act[ex_rating][max]']==10) data['m_act[ex_rating][max]']=null;
+        if(data['m_act[rating][max]']==10) data['m_act[rating][max]']=null;
+        if(data['m_act[review_procent][max]']==100) data['m_act[review_procent][max]']=null;
+        if(data['m_act[tomat_rating][max]']==100) data['m_act[tomat_rating][max]']=null;
+
+        if(data['m_act[ex_rating][min]']==1) data['m_act[ex_rating][min]']=null;
+        if(data['m_act[rating][min]']==6) data['m_act[rating][min]']=null;
+        if(data['m_act[review_procent][min]']==0) data['m_act[review_procent][min]']=null;
+        if(data['m_act[tomat_rating][min]']==0) data['m_act[tomat_rating][min]']=null;
+
+
+        if(data['m_act[num_vote]'] == 500) data['m_act[num_vote]']=null;
+
+
+        var rangeObjects=["budget" , "ex_rating", "gross", "rating", "review_procent", "tomat_rating", "years"];
+        for(var p in rangeObjects){
+            if(data['m_act['+rangeObjects[p]+'][min]'] && data['m_act['+rangeObjects[p]+'][max]'] && parseInt(data['m_act['+rangeObjects[p]+'][min]'],10) > parseInt(data['m_act['+rangeObjects[p]+'][max]'],10)){
+                data['m_act['+rangeObjects[p]+'][max]']=null;
+                $("[name='m_act["+rangeObjects[p]+"][max]']").val("");
+                alert("Минимальное значение не может быть больше максимального");
+            }
+
+            var max=data['m_act['+rangeObjects[p]+'][max]'];
+            var min=data['m_act['+rangeObjects[p]+'][min]'];
+            data['m_act['+rangeObjects[p]+'][max]']=null;
+            data['m_act['+rangeObjects[p]+'][min]']=null;
+            if(max || min)
+                data['m_act['+rangeObjects[p]+']']=(min ? min : '')+":"+(max ? max : '');
+
+        }
+
+
+        if(data['m_act[gross_type]'] && !data['m_act[gross]']) data['m_act[gross_type]']=null;
+
+
+        var arrayObjects=["country" , "ecountry", "genre", "egenre"];
+        for(var p in arrayObjects){
+            if(data['m_act['+arrayObjects[p]+'][]'] && (typeof(data['m_act['+arrayObjects[p]+'][]'])=='array' || typeof(data['m_act['+arrayObjects[p]+'][]'])=='object') ){
+                data['m_act['+arrayObjects[p]+']']=data['m_act['+arrayObjects[p]+'][]'].join(",");
+            } else
+            if(data['m_act['+arrayObjects[p]+'][]'] && (typeof(data['m_act['+arrayObjects[p]+'][]'])=='string') ){
+                data['m_act['+arrayObjects[p]+']']=data['m_act['+arrayObjects[p]+'][]'];
+            }
+        }
+        if(data['m_act[is_film]'] == 'on' && data['m_act[is_serial]'] == 'on' && data['m_act[is_mult]'] == 'on') {
+            data['m_act[is_film]']=null;
+            data['m_act[is_serial]']=null;
+            data['m_act[is_mult]']=null;
+        }
+
+        if(data['m_act[num_vote]'] && data['m_act[num_vote]']<10){
+            data['m_act[num_vote]']=null;
+            $("[name='m_act[num_vote]']").val("10");
+            alert("Минимальное количество оценок не может быть меньше 10");
+        }
+        if(data['m_act[num_vote]'] && data['m_act[num_vote]'] == "2500+") {
+            data['m_act[num_vote]'] = 2530;
+        }
+        return this.trimArray(data);
+
+    },
+
+    trimArray: function(array){
+        var ret={};
+        if(typeof(array) == "array" || typeof(array) == "object"){
+            for(var k in array){
+                var newval=this.trimArray(array[k]);
+                if(newval)
+                ret[k]=this.trimArray(array[k]);
+            }
+            return ret;
+        } else {
+            return array;
+        }
+    },
+
+    update: function(){
+
+        if(KP.navigator.blockUpdate) return false;
+        clearTimeout(KP.navigator.updateTimer);
+        KP.navigator.updateTimer=setTimeout(function(){
+            $("#results").html("");
+            var request=KP.navigator.serializeForm(true);
+
+            if(JSON.stringify(KP.navigator.lastRequest) == JSON.stringify(request)) {
+                return;
+            }
+
+            $.get("/top/navigator/ajax/getCount/",request,function(res){
+                KP.navigator.lastRequest = request;
+                KP.navigator.showPopup(res["number"],res["num"],res["link"]);
+                if(res["number"])
+                    KP.navigator.link='#!'+res["link"];
+                else KP.navigator.link='#';
+            },"json");
+        },1000);
+    },
+
+    loadResult: function(){
+        $('.loader').show();
+        KP.navigator.blockUpdate = true;
+        clearTimeout(KP.navigator.updateTimer);
+        if(typeof(KP.navigator.link)!='undefined' && KP.navigator.link!='#'){
+
+            if(typeof(window.history) != "undefined" && typeof(window.history.pushState) != "undefined"){
+                window.history.pushState(null, null, KP.navigator.link.replace("#!",""));
+            } else {
+                top.location=KP.navigator.link;
+            }
+
+            //top.location=KP.navigator.link;
+        }
+
+        if ($('#exclude_folders_check').prop('checked') && $("#MyKP_Folder_0").attr('data-selected') == '') {
+            ClickFolders($('#MyKP_Folder_0 .title'),true);
+            $('#MyKP_Folder_0 .list dd').each(function(){
+                MyMoviesClickFolder(this, '#', 0, true);
+            });
+        }
+
+        var request=KP.navigator.serializeForm();
+        $.get("/top/navigator/ajax/loadFilms/",request,function(res){
+            $('.loader').hide();
+            $("#results").html("<table cellspacing=0 cellpadding=3 width=100% border=0 >"+res+"</table>");
+
+            if (
+                window.Ya &&
+                window.Ya.Kinopoisk &&
+                window.Ya.Kinopoisk.Widgets &&
+                window.Ya.Kinopoisk.Widgets.ott &&
+                window.Ya.Kinopoisk.Widgets.ott.initElements
+            ) {
+                window.Ya.Kinopoisk.Widgets.ott.initElements();
+            }
+
+            setTimeout(function(){
+                InitFlap();
+                MyMoviesInit();
+                scrollTo(getElementTop("results"),function(){
+                    $(".submit").fadeOut();
+                    $(".keywordsPopup").hide("slow");
+                });
+            },100);
+            InitPages();
+            KP.navigator.blockUpdate = false;
+        });
+    }
+
+
+}
+
+$.fn.serializeObject = function()
+{
+   var o = {};
+   var a = this.serializeArray();
+
+   $.each(a, function() {
+       if (o[this.name]) {
+           if (!o[this.name].push) {
+               o[this.name] = [o[this.name]];
+           }
+           o[this.name].push(this.value || '');
+       } else {
+           o[this.name] = this.value || '';
+       }
+   });
+   return o;
+};
+/* ===============================  OLD STUFF =================================*/
+
+
+var request_mymovies;
+function addMyMoviesFilm(id)
+{
+    if (isGuest()) {
+        $.app.notice($.app.notices.authRequired, {"action":"использования сервиса &laquo;Мои фильмы&raquo;"});
+        return false;
+    }
+
+    if ($('#mymovies_l_'+id).css('display') == 'none') {
+        return false;
+    }
+
+    $('#mymovies_l_'+id).css('display', 'none');
+    $('#mymovies_li_'+id).css('display', 'none');
+    $('#mymovies_s_'+id).css('display', 'inline');
+
+    var now = new Date();
+
+    $.get('/handler_mustsee.php', {add_film: id, rnd: now.getTime()}, function(data){
+        $('#mymovies_s_'+id).css('display', 'none');
+        if (data.indexOf('<!-- impossibleAlert:') > 1) {
+            reg = /<!-- impossibleAlert:(\d+) -->/;
+            res = data.match(reg);
+            to_folder = parseInt(res[1]);
+
+            $('#mymovies_l_'+id).css('display', 'inline');
+            $('#mymovies_li_'+id).css('display', 'inline');
+            alert(
+                'Вы добавляете фильм в папку, в которой не могут находится оцененные фильмы.<br />'+
+                'Свойства папки можно изменить в разделе <a href="/level/78/movies/list/type/'+to_folder+'/" class="all">Мой КиноПоиск</a>.'
+            );
+        } else {
+            $('#mymovies_u_'+id).css('display', 'inline');
+        }
+    }).fail(function (xhr, status, error) {
+        return $.app.onHandlerXhrFail(xhr, status, error, function () {
+            $('#mymovies_l_' + id).css('display', 'inline');
+            $('#mymovies_li_' + id).css('display', 'inline');
+        });
+    });
+}
+
+
+function navigator_valid()
+{
+    if (document.getElementById('m_act[tomat_rating]').value) {
+        document.getElementById('m_act[tomat_rating]').value = parseInt(document.getElementById('m_act[tomat_rating]').value);
+    }
+
+    if (!document.getElementById('m_act[film]').checked && !document.getElementById('m_act[serial]').checked && !document.getElementById('m_act[mult]').checked) {
+        alert("Пожалуйста выберите режим поиска: фильм, сериал или мультфильм.");
+        return false;
+    }
+
+    return true;
+}
+
+
+function makeGenreSelectedLIst(obj, excluding)
+{
+    var ret_arr = Array();
+    for (i=0; i < obj.options.length; i++) {
+        if (obj.options[i].selected == true) {
+            ret_arr[ret_arr.length] = obj.options[i].text;
+        }
+    }
+
+    if (excluding && excluding.length) {
+        for(var j = 0; j < excluding.length; j++) {
+            for (var i=0; i < ret_arr.length; i++) {
+                if (ret_arr[i] == excluding[j]) {
+                    ret_arr.splice(i, 1);
+                }
+            }
+        }
+    }
+    if (ret_arr.length > 0) {
+        if (document.getElementById('genre_selected')) document.getElementById('genre_selected').innerHTML=implode(' + ', ret_arr);
+        if (document.getElementById('m_act[genre_and]')) document.getElementById('m_act[genre_and]').style.display = 'inline';
+        if (document.getElementById('m_act[genre_or]')) document.getElementById('m_act[genre_or]').style.display = 'inline';
+        if (document.getElementById('genre_and_desc')) document.getElementById('genre_and_desc').style.display = 'inline';
+    } else {
+        if (document.getElementById('genre_selected')) document.getElementById('genre_selected').innerHTML = '';
+        if (document.getElementById('m_act[genre_and]')) document.getElementById('m_act[genre_and]').style.display = 'none';
+        if (document.getElementById('m_act[genre_or]')) document.getElementById('m_act[genre_or]').style.display = 'none';
+        if (document.getElementById('genre_and_desc')) document.getElementById('genre_and_desc').style.display = 'none';
+    }
+
+    return true;
+}
+
+
+function implode(glue, pieces)
+{
+    return ( ( pieces instanceof Array ) ? pieces.join ( glue ) : pieces );
+}
+
+
+
+var years = false;
+$(function(){
+    KP.navigator.lastRequest=KP.navigator.serializeForm();
+
+    $('#exclude_folders_check').click(function(){
+        if (isGuest()) {
+            $.app.notice($.app.notices.authRequired, {'action':"использования сервиса «Мои фильмы»"});
+            $(this).removeAttr("checked");
+        } else {
+            if(!$(this).prop('checked')) {
+                $("#MyKP_Folder_0").attr("data-selected","");
+                $("#MyKP_Folder_0").removeClass("MyKP_Folder_Select_added");
+                $("#MyKP_Folder_0 .title,#MyKP_Folder_0 .list_title").html("Мои фильмы");
+                $("#MyKP_Folder_0 .list dd").removeClass("slc");
+                $("#MyKP_Folder_0 .list dd").removeClass("act_slc");
+                KP.navigator.update();
+            } else {
+                $("#MyKP_Folder_0").addClass("MyKP_Folder_Select_added");
+                // грузим результаты с отфильтрованными папками
+                KP.navigator.update();
+            }
+        }
+    });
+
+    $( "#yearrange" ).slider({
+        range: true,
+        min: 1890,
+        max: 2012,
+        values: [ $("#start_year").val(), $("#end_year").val() ? $("#end_year").val() : 2012 ],
+        slide: function( event, ui ) {
+            KP.navigator.syncronizeYears(ui.values[0], ui.values[1], 'yearrange');
+        }
+    });
+
+
+    $( "#ratingrange" ).slider({
+        range: true,
+        min: 1,
+        max: 10,
+        step: .1,
+        values: [ $("#rating_min").val(), $("#rating_max").val() ? $("#rating_max").val() : 10 ],
+        slide: function( event, ui ) {
+            $("#rating_min").val(ui.values[0]);
+            $("#rating_max").val(ui.values[1]);
+        },
+        change: function(event, ui){
+            KP.navigator.update();
+        }
+    });
+
+    $( "#ex_ratingrange" ).slider({
+        range: true,
+        min: 1,
+        max: 10,
+        step: .1,
+        values: [ $("#ex_rating_min").val(), $("#ex_rating_max").val() ? $("#ex_rating_max").val() : 10],
+        slide: function( event, ui ) {
+            $("#ex_rating_min").val(ui.values[0]);
+            $("#ex_rating_max").val(ui.values[1]);
+        },
+        change: function(event, ui){
+            KP.navigator.update();
+        }
+    });
+
+    $( "#tomat_ratingrange" ).slider({
+        range: true,
+        min: 0,
+        max: 100,
+        step: 1,
+        values: [ $("#tomat_rating_min").val(), $("#tomat_rating_max").val() ? $("#tomat_rating_max").val() : 100],
+        slide: function( event, ui ) {
+            $("#tomat_rating_min").val(ui.values[0]);
+            $("#tomat_rating_max").val(ui.values[1]);
+        },
+        change: function(event, ui){
+            KP.navigator.update();
+        }
+    });
+
+    $( "#review_procentrange" ).slider({
+        range: true,
+        min: 0,
+        max: 100,
+        step: 1,
+        values: [ $("#review_procent_min").val(), $("#review_procent_max").val() ? $("#review_procent_max").val()  : 100],
+        slide: function( event, ui ) {
+            $("#review_procent_min").val(ui.values[0]);
+            $("#review_procent_max").val(ui.values[1]);
+        },
+        change: function(event, ui){
+            KP.navigator.update();
+        }
+    });
+
+
+    $( "#budgetrange" ).slider({
+        range: true,
+        min: 0,
+        max: 550,
+        step: 1,
+        values: [ $("#budget_min").val(), $("#budget_max").val() ? $("#budget_max").val() : 550 ],
+        slide: function( event, ui ) {
+            $("#budget_min").val(ui.values[0]);
+            $("#budget_max").val(ui.values[1]);
+        },
+        change: function(event, ui){
+            KP.navigator.update();
+        }
+    });
+
+    $( "#grossrange" ).slider({
+        range: true,
+        min: 0,
+        max: 550,
+        step: 1,
+        values: [ $("#gross_min").val(), $("#gross_max").val() ],
+        slide: function( event, ui ) {
+            $("#gross_min").val(ui.values[0]);
+            $("#gross_max").val(ui.values[1]);
+        },
+        change: function(event, ui){
+            KP.navigator.update();
+        }
+    });
+
+
+
+    $( "#num_voterange" ).slider({
+        min: 100,
+        max: 2501,
+        step: 5,
+        value: parseInt($("#min_vote").val()) == $("#min_vote").val() ? (parseInt($("#min_vote").val()) < 2501 && parseInt($("#min_vote").val()) > 100 ? parseInt($("#min_vote").val()) : (parseInt($("#min_vote").val()) > 2501 ? 2501 : 100)) : 2501,
+        slide: function( event, ui ) {
+
+            if(parseInt(ui.value) > 0){
+                if(parseInt(ui.value) < 100) {
+                    ui.value= 100;
+                }
+                if(parseInt(ui.value) > 2500) {
+                    ui.value = "2500+";
+                }
+                $("#min_vote").val(ui.value);
+            }
+        },
+        change: function(event, ui){
+            KP.navigator.update();
+        }
+    });
+
+});
+
+
+function isNumber(n) {
+  return !isNaN(parseFloat(n)) && isFinite(n);
+}
