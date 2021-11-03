@@ -156,7 +156,7 @@ color: gray;
 
 }
 .tickets {
-    top: 730px;
+    top: 700px;
     position:absolute;
     margin-left: 361px;
     font-family: 'GraphicB' ;
@@ -251,6 +251,7 @@ color: gray;
     left: 191px;
     top: 128px;
     font-family:'Graphic';
+    line-height: 1.5;
     
 }
 .T4 {
