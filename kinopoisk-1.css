@@ -6,29 +6,38 @@ body {
 
 header {
     background-color: #1f1f1f;
-    height: 72px;
     display: flex;
+    flex-direction: column;
+    justify-content: space-around;
     align-items: center;
-    
 }
 
 footer {
     display: flex;
     justify-content: space-around;
-    background-color: #1f1f1f;
-    margin-left: 15%;
-    margin-right: 15%;
+    flex-direction: column;
+    background-color: #1F1F1F;
     height: 344px;
+    padding-top: 44px;
+    width: 100%;
+    }
+
+.headerNav {
+    padding: 0 34px 0 50px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-around;
+    margin: 0 15%;
+    width: 75%;
 }
 
 .nav {
     padding: 10px;
     background-color: #ffffff;
     width: 15%;
-    height: 100vh;
+    height: 220vh;
     margin-left: 15%;
     border-right: 1px solid rgba(31, 31, 31, .1);
-
 }
 
 .p {
@@ -45,40 +54,129 @@ footer {
     display: flex;
     justify-content: space-around;
     background-color: #f4f4f4;
+}
 
-
+.logoContainer {
+    display: flex;
+    align-items: center;
+    height: 72px;
 }
 
 #logo {
-    height: 80px;
-    margin: 25px;
-    margin-left: 50px;
-    margin-right: 50px;
+    height: 72px;
 }
 
-.menu  {
+.headerNavStyle  {
     text-align: center;
     color: #a5a5a5;
-    padding-left: 40px;
     align-items: center;
     display: inline-flex;
-    
-    
+    margin-left: 40px;
 }
 
-.menu .icons {
-    width: 25px;
-    height: 25px;
+.mainContainer {
+    display: flex;
 }
 
+.mainContainerStyle {
+    display: flex;
+}
+
+.headerNavStyle .icons {
+    width: 20px;
+    height:20px;
+}
+
+.YandexPlusIcon {
+    display: block;
+    justify-self: flex-start;
+}
+.YandexPlusIcon span {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 15px;
+    font-size: 12px;
+    font-weight: 500;
+    color: #ffffff;
+    padding: 8px 16px;
+    width: auto;
+    border-radius: 4px;
+    background: linear-gradient(130.16deg,#505add 34.4%,#be40c0 66.11%,#fba82b 96.37%);
+}
 
 .icons {
     width: 16px;
     height: 16px;
-    margin-right: 5px;
+    margin-right: 7px;
+}
+
+.searchStyle{
+    margin: 0;
+    padding: 0;
+    border-radius: 4px;
+    background-color: #ffffff;
+    height: 30px;
+    display: flex;
+}
+
+.inputStyle {
+    display: flex;
+}
+
+.searchInput {
+    background-color: #ffffff;
+    border-radius: 4px;
+    height: 30px;
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0;
+    padding: 8px 0 8px 16px;
+    font-family: Graphik Kinopoisk LC Web,Arial,Tahoma,Verdana,sans-serif;
+    font-size: 15px;
+    display: block;
+    border: 0;
+}
+
+.controlContainerStyle {
+    display: flex;
+    padding: 0 5px;
     
 }
 
+.controlContainerIcon {
+    justify-content: center;
+    align-items: center;
+    box-sizing: content-box;
+    display: flex;
+    padding: 0 5px;
+    height: 18px;
+    width: 18px;
+    margin: 0;
+    padding: 8px 0 8px 16px;
+}
+.search {
+    display: flex;
+    align-items: center;
+    height: 72px;
+    text-align: center;
+    margin-left: 40px;
+    
+}
+
+
+header button {
+    position: absolute; 
+    top: 0;
+    right: 0px;
+    width: 42px;
+    height: 42px;
+    border: none;
+}
+.userContainer {
+    text-align: center;
+    align-items: center;
+    display: flex;
+}
 #user {
     width: 40px;
 }
@@ -281,3 +379,71 @@ footer {
     color: white;
     opacity: 0.7;
 }
+
+.sectionButtons {
+    align-self: center;
+    margin: 35px 0 56px;
+    }
+    .buttons {
+    width: 160px;
+    height: 45px;
+    color: #A5A5A5;
+    background-color: rgb(87, 87, 87);
+    border-radius: 3px;
+    margin: 0 10px;
+    }
+    .footBottom {
+    display: inline-flex;
+    align-self: center;
+    text-align: center;
+    width: 60%;
+    padding: 28px 0 29px;
+    font-size: 16px;
+    border-top: 1px solid hsla(0,0%,100%,.05);
+    }
+    .leftBottom {
+    display: block;
+    justify-self: flex-start;
+    color: #A5A5A5;
+    }
+    .centerBottom {
+    display: block;
+    margin: 0 20%;
+    text-align: center;
+    color: #A5A5A5;
+    }
+    .rightBottom {
+    display: flex;
+    justify-self: flex-end;
+    align-items: flex-end;
+    color: #A5A5A5;
+    }
+    .firstFoot {
+    display: flex;
+    justify-content: space-between;
+    width: 264px;
+    margin: auto;
+    padding: 20px;
+    align-self: center;
+    }
+    .footIcon {
+    display: block;
+    width: 26px;
+    height: 26px;
+    margin-right: 20px;
+    }
+    .secondFoot {
+    margin: auto;
+    text-align: center;
+    padding: 0;
+    display: block;
+    padding-inline-start: 40px;
+    align-self: center;
+    }
+    .ul-items {
+    display: inline-block;
+    margin-bottom: 5px;
+    padding-right: 27px;
+    color: #A5A5A5;
+    font-size: large;
+    }
